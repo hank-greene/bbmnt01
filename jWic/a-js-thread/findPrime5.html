@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Find a Prime</title>
+</head>
+<body>
+	<script id="worker" type="text/js-worker">
+		self.onmessage = function(event) {
+			findPrime();
+		}
+
+		function findPrime()
+		{
+			var n = 1;
+			var prime;
+			while (true) {
+				n++;
+				prime = true;
+				for (var i = 2; i <= Math.sqrt(n); i++)
+					if (n % i == 0) {
+						prime = false;
+						break;
+					}
+				if (prime)  postMessage(n);		 
+			}
+		}			
+	</script>
+	
+	<script id="worker2" type="text/js-worker">
+	// https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+	// this sleep function only works in an async function
+	// ms = milliseconds
+	// https://stackoverflow.com/questions/758688/sleep-in-javascript-delay-between-actions
+		function sleep(ms){
+			return new Promise(resolve => setTimeout(resolve, ms));
+		}
+	
+		self.onmessage = async function(event) {
+			for (i=0; i<10; i++) {
+				displayI(i);
+				await sleep(2000);
+			}
+		}
+		
+		function displayI(x) {
+			postMessage(x);
+		}
+	</script>
+	
+	
+	<form>
+		<label for="prime">Find prime 1: </label><input type="text" id="prime" value="" disabled/> 
+		<input type="button" value="Start" onclick="startFind()"/>
+		<input type="button" value="End" onclick="stopFind()"/>
+		</br>		
+		<label for="prime">Find prime 2: </label><input type="text" id="prime2" value ="" disabled/> 
+		<input type="button" value="Start" onclick="startFind2()"/>
+		<input type="button" value="End" onclick="stopFind2()"/>
+	</form>
+	
+	<script type="text/javascript">
+		var worker;
+	
+		function startFind() {
+			var script = document.getElementById('worker').textContent;
+			var blob = new Blob([script]);
+			
+			worker = new Worker(window.URL.createObjectURL(blob));
+			worker.onmessage = function(event) {
+				document.getElementById('prime').value = event.data;
+			}
+			worker.postMessage('Start');
+		}
+	
+		function stopFind() {
+			worker.terminate();
+		}
+	</script>
+	
+	<script type="text/javascript">
+		var worker2;
+	
+		function startFind2() {
+			//alert("startFind2");
+			var script2 = document.getElementById('worker2').textContent;
+			var blob2 = new Blob([script2]);
+			
+			worker2 = new Worker(window.URL.createObjectURL(blob2));
+			worker2.onmessage = function(event) {
+				document.getElementById('prime2').value = event.data;
+			}
+			worker2.postMessage('Start');
+		}
+	
+		function stopFind2() {
+			//alert("stopFind2");
+			worker2.terminate();
+		}
+	</script>
+		
+</body>
+</html>
