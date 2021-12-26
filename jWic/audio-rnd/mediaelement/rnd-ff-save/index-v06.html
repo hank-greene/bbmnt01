@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="index-v06_files/mediaelementplayer.css">
+    <style>
+
+        html, body {
+            overflow-x: hidden;
+        }
+
+        #container {
+            padding: 0 20px 50px;
+        }
+        .error {
+            color: red;
+        }
+        a {
+            word-wrap: break-word;
+        }
+
+        code {
+            font-size: 0.8em;
+        }
+
+        #player2-container .mejs__time-buffering, #player2-container .mejs__time-current, #player2-container .mejs__time-handle,
+        #player2-container .mejs__time-loaded, #player2-container .mejs__time-hovered, #player2-container .mejs__time-marker, #player2-container .mejs__time-total {
+            height: 2px;
+        }
+
+        #player2-container .mejs__time-total {
+            margin-top: 9px;
+        }
+        #player2-container .mejs__time-handle {
+            left: -5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            top: -5px;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            border: none;
+        }
+        #player2-container .mejs__time-handle-content {
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+		<form action="#" method="get">
+			<select name="lang">
+			</select>
+			<select name="stretching">
+			</select>
+		</form>
+        <div class="players" id="player2-container">
+            <div class="media-wrapper">
+                <span class="mejs__offscreen">Audio Player</span><div id="mep_0" class="mejs__container mejs__container-keyboard-inactive mejs__audio" tabindex="0" role="application" aria-label="Audio Player" style="width: 945px; height: 40px; min-width: 241px;"><div class="mejs__inner"><div class="mejs__mediaelement"><mediaelementwrapper id="player2"><audio id="player2_html5" preload="none" style="max-width: 100%; width: 100%; height: 100%;" src="index-v06_files/AshboryBYU.mp3">
+                    <source src="index-v06_files/AshboryBYU.mp3" type="audio/mp3">
+                </audio></mediaelementwrapper></div><div class="mejs__layers"><div class="mejs__poster mejs__layer" style="display: none; width: 100%; height: 100%;"></div></div><div class="mejs__controls"><div class="mejs__button mejs__playpause-button mejs__play"><button type="button" aria-controls="mep_0" title="Play" aria-label="Play" tabindex="0"></button></div><div class="mejs__time mejs__currenttime-container" role="timer" aria-live="off"><span class="mejs__currenttime">00:00</span></div><div class="mejs__time-rail"><span class="mejs__time-total mejs__time-slider"><span class="mejs__time-buffering" style="display: none;"></span><span class="mejs__time-loaded"></span><span class="mejs__time-current"></span><span class="mejs__time-hovered no-hover"></span><span class="mejs__time-handle"><span class="mejs__time-handle-content"></span></span><span class="mejs__time-float" style="display: none; left: 0px;"><span class="mejs__time-float-current">00:00</span><span class="mejs__time-float-corner"></span></span></span></div><div class="mejs__time mejs__duration-container"><span class="mejs__duration">00:00</span></div><div class="mejs__button mejs__volume-button mejs__mute"><button type="button" aria-controls="mep_0" title="Mute" aria-label="Mute" tabindex="0"></button></div><a class="mejs__horizontal-volume-slider" href="javascript:void(0);" aria-label="Volume Slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" role="slider"><span class="mejs__offscreen">Use Up/Down Arrow keys to increase or decrease volume.</span><div class="mejs__horizontal-volume-total"><div class="mejs__horizontal-volume-current" style="left: 0px; width: 100%;"></div><div class="mejs__horizontal-volume-handle" style="left: 100%;"></div></div></a></div></div></div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <script src="index-v06_files/mediaelement-and-player.js"></script>
+    <script src="index-v06_files/demo.js"></script>
+
+
+</body></html>
