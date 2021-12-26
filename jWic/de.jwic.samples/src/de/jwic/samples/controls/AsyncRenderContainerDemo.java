@@ -1,0 +1,136 @@
+/*******************************************************************************
+ * Copyright 2015 xWic group (http://www.xwic.de)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License").
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * 		http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software 
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and 
+ * limitations under the License.
+ *  
+ *******************************************************************************/
+/*
+ * de.jwic.samples.controls.AsyncRenderContainerDemo 
+ */
+package de.jwic.samples.controls;
+
+import de.jwic.base.ControlContainer;
+import de.jwic.base.Dimension;
+import de.jwic.base.IControlContainer;
+import de.jwic.controls.AsyncRenderContainer;
+import de.jwic.controls.ErrorWarning;
+import de.jwic.controls.InputBox;
+import de.jwic.controls.LabelControl;
+import de.jwic.controls.LazyInitializationHandler;
+import de.jwic.controls.combo.DropDown;
+import de.jwic.controls.layout.TableLayoutContainer;
+import de.jwic.samples.controls.propeditor.PropertyEditorView;
+
+/**
+ * @author lippisch
+ */
+public class AsyncRenderContainerDemo extends ControlContainer {
+
+	private AsyncRenderContainer arContainer1;
+	private AsyncRenderContainer arContainer2;
+	
+	/**
+	 * @param container
+	 * @param name
+	 */
+	public AsyncRenderContainerDemo(IControlContainer container) {
+		super(container);
+		final ErrorWarning error = new ErrorWarning(this,"errors");
+		// Adding a control that takes a long time to render
+		arContainer1 = new AsyncRenderContainer(this, "arContainer1");
+		new SlowRenderingControl(arContainer1, null);
+		arContainer1.setWaitBlockDimension(new Dimension(600, 150));
+		arContainer1.setWaitText("Searching for the answer...");
+		
+		final PropertyEditorView propEditor = new PropertyEditorView(this, "propEditor");
+		propEditor.setBean(arContainer1);
+		
+
+		// A complex control, without delay.
+		arContainer2 = new AsyncRenderContainer(this, "arContainer2");
+
+		TableLayoutContainer tlc = new TableLayoutContainer(arContainer2);
+		tlc.setColumnCount(2);
+		tlc.setWidth("400");
+		new LabelControl(tlc).setText("Your Name");
+		
+		InputBox inp = new InputBox(tlc);
+		inp.setWidth(200);
+		inp.setEmptyInfoText("Enter Name Here");
+		
+		new LabelControl(tlc).setText("Your Favorit Color");
+		
+		DropDown dd = new DropDown(tlc, "dd");
+		dd.setWidth(200);
+		dd.addElement("Green");
+		dd.addElement("Blue");
+		dd.addElement("Red");
+		dd.addElement("Gray");
+		dd.addElement("Black");
+		
+		// delayed creation.
+		AsyncRenderContainer arContainer3 = new AsyncRenderContainer(this, "arContainer3");
+		arContainer3.setLazyInitializationHandler(new LazyInitializationHandler() {
+			LabelControl control;
+			@Override
+			public void initialize(IControlContainer container) {
+				
+				try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+				control = new LabelControl(container);
+				control.setText("The creation of this control has taken 2 seconds. But once created, it is just there...");
+			}
+
+			@Override
+			public void success() {
+				control.setText(control.getText()+" Also we have both success and fail method for handling when the create is ok or not. in this case it is");
+			}
+
+			@Override
+			public void failure(Throwable t) {
+				
+			}
+		});
+		
+		
+		final AsyncRenderContainer arContainer4 = new AsyncRenderContainer(this, "arContainer4");
+		arContainer4.setWaitText("This one will fail miserably");
+		
+		arContainer4.setLazyInitializationHandler(new LazyInitializationHandler() {
+			@Override
+			public void initialize(IControlContainer container) {
+				try {
+					Thread.sleep(1000);
+					throw new RuntimeException("Some random thing when wrong this control's init");
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+			
+			@Override
+			public void success() {
+				
+			}
+			
+			@Override
+			public void failure(Throwable t) {
+				error.showError(t.getMessage() +". See! told you so :)");
+			}
+		});
+		
+	}
+
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!-- jWic Application '$context.applicationSetup.name' | http://www.jwic.de -->
+<html>
+<head>
+	<title>#if($page.title)$page.title#else $page.name#end</title>
+	<META http-equiv="x-ua-compatible" content="IE=8">
+	<META http-equiv="Cache-Control" content="no-cache">
+	<META http-equiv="Pragma" content="no-cache">
+	<META http-equiv="Expires" content="-1">
+	<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	#* PRODUCTION-MINIFY-START *#
+	#* This part is replaced during the build process with a single CSS and a single JS *#
+	
+    <script src="$contextPath/jwic/lib/jQuery/js/jquery-1.8.2.js"></script>
+    <script src="$contextPath/jwic/lib/jQuery/js/jquery-ui-1.9.1.custom.js"></script>
+    <script src="$contextPath/jwic/jwic_core.js"></script>
+    <script src="$contextPath/jwic/mobile/jwic_mobile.js"></script>
+    <script src="$contextPath/jwic/lib/noty/jquery.noty.js"></script>
+    <script src="$contextPath/jwic/lib/noty/layouts/top.js"></script>
+    <script src="$contextPath/jwic/lib/noty/themes/default.js"></script>
+
+    <link rel="stylesheet" href="$contextPath/mobile/themes/MobileDefault/DefaultStyle.min.css" />
+	<link rel="stylesheet" href="$contextPath/mobile/themes/MobileDefault/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />  
+    <script src="$contextPath/jwic/mobile/lib/jquery.mobile-1.4.5.min.js"></script>
+
+    <script src="$contextPath/mobile/jquery.mobile.datepicker.js"></script>
+
+    <link rel="stylesheet" href="$contextPath/mobile/jquery.mobile.datepicker.css" />
+    <link rel="stylesheet" href="$contextPath/mobile/jquery.mobile.datepicker.theme.css" />
+    <link rel="stylesheet" href="$contextPath/jwic/mobile/jwic-mobile.css" />
+
+	<script src="$contextPath/cp/de/jwic/controls/mobile/MControlsLibrary.static.js"></script>
+
+    <script src="$contextPath/mobile/jquery.mobile.datepicker.js"></script>
+    
+    #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+    
+    <link href="$contextPath/mobile/audio/jplayer/css/jplayer.blue.monday.min.css" rel="stylesheet" type="text/css" />
+    #*   <script src="$contextPath/mobile/audio/jquery.min.js"></script>   *#
+    <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.min.js"></script>
+    <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.js"></script>
+    <script src="$contextPath/mobile/audio/jplayer/jquery.jplayer.swf"></script>
+    <script type="text/javascript">
+	//<![CDATA[
+	$(document).ready(function(){
+	
+		$("#jquery_jplayer_1").jPlayer({
+			ready: function (event) {
+				$(this).jPlayer("setMedia", {
+					title: "Bubble",
+					m4a: "http://jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+					oga: "http://jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+				});
+			},
+			swfPath: "../../dist/jplayer",
+			supplied: "m4a, oga",
+			wmode: "window",
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: true,
+			toggleDuration: true
+		});
+	});
+	//]]>
+	</script>
+    
+    #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+	#* PRODUCTION-MINIFY-END *#
+	<script language="JavaScript">
+		var _contextPath = "$contextPath";
+		JWic.contextPath = "$contextPath";
+		
+		## jWic disables the auto-enhancement of controls.
+		jQuery.mobile.ignoreContentEnabled = true;
+		
+	</script>
+
+	#*  stackoverflow.com/questions/9419263/playing-audio-with-javascript
+	    https://osvaldas.info/audio-player-responsive-and-touch-friendly
+	    https://osvaldas.info/examples/audio-player-responsive-and-touch-friendly/
+	    https://www.codemag.com/Article/1605051/Taming-the-HTML5-Audio-Control
+	    http://alexkatz.me/posts/building-a-custom-html5-audio-player-with-javascript/
+	    https://ourcodeworld.com/articles/read/148/top-7-best-html5-media-player-javascript-plugins
+	    http://www.instantshift.com/2012/06/08/15-free-html5-audio-players-for-your-website-and-blogs/
+	    http://www.schillmania.com/projects/soundmanager2/
+	    https://plyr.io/
+	    https://github.com/sampotts/plyr
+	    https://www.mediaelementjs.com/
+	    https://www.script-tutorials.com/html5-audio-player-with-playlist/
+	    https://freefrontend.com/css-music-players/
+	    https://webdesign.tutsplus.com/tutorials/create-a-customized-html5-audio-player--webdesign-7081
+	    https://www.sitepoint.com/10-jquery-html5-audio-players/
+	    http://kolber.github.io/audiojs/
+	    http://kolber.github.io/audiojs/demos/test6.html
+	    https://www.labnol.org/internet/light-youtube-embeds/27941/
+	    https://www.cincopa.com/media-platform/services/add-music-to-website
+	    https://blog.bitsrc.io/5-open-source-html5-video-players-for-2018-38fa85932afb
+	    https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
+	    http://www.java2s.com/Open-Source/Javascript_Free_Code/HTML5/Download_html5_audio_player_Free_Java_Code.htm
+	    http://www.bestjquery.com/demo/html5-audio-player/page/2/
+	    w3schools.com/jsref/met_audio_play.asp
+	    https://blog.eduonix.com/web-programming-tutorials/learn-build-audio-player-using-html5/
+	*#
+	
+	#* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+	#*      MediaElement                                                   *#
+	
+    <link rel="stylesheet" href="$contextPath/mobile/audio2/mediaelementplayer.css">
+	
+    <style>
+        html, body {
+            overflow-x: hidden;
+        }
+        #container {
+            padding: 0 20px 50px;
+        }
+        .error {
+            color: red;
+        }
+        a {
+            word-wrap: break-word;
+        }
+
+        code {
+            font-size: 0.8em;
+        }
+
+        #player2-container .mejs__time-buffering, #player2-container .mejs__time-current, #player2-container .mejs__time-handle,
+        #player2-container .mejs__time-loaded, #player2-container .mejs__time-hovered, #player2-container .mejs__time-marker, #player2-container .mejs__time-total {
+            height: 2px;
+        }
+
+        #player2-container .mejs__time-total {
+            margin-top: 9px;
+        }
+        #player2-container .mejs__time-handle {
+            left: -5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ffffff;
+            top: -5px;
+            cursor: pointer;
+            display: block;
+            position: absolute;
+            z-index: 2;
+            border: none;
+        }
+        #player2-container .mejs__time-handle-content {
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 12px;
+        }
+    </style>
+    
+	#* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+	
+	<script type="text/javascript">
+		var soundPlayer = {
+		  audio: null,
+		  muted: false,
+		  playing: false,
+		  _ppromis: null,
+		  puse: function () {
+			  this.audio.pause();
+		  },
+		  play: function (file) {
+			  if (this.muted) {
+				  return false;
+			  }
+			  if (!this.audio && this.playing === false) {
+				  this.audio = new Audio(file);
+				  this._ppromis = this.audio.play();
+				  this.playing = true;
+		
+				  if (this._ppromis !== undefined) {
+					  this._ppromis.then(function () {
+						  soundPlayer.playing = false;
+					  });
+				  }
+		
+			  } else if (!this.playing) {
+		
+				  this.playing = true;
+				  this.audio.src = file;
+				  this._ppromis = soundPlayer.audio.play();
+				  this._ppromis.then(function () {
+					  soundPlayer.playing = false;
+				  });
+			  }
+		  }
+		};		
+	</script>
+
+    #* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - *#
+	<link rel="stylesheet" href="css/reset.css" />
+	<link rel="stylesheet" href="css/demo.css" />
+	<link rel="stylesheet" href="css/audioplayer.css" />
+	<script>
+		/*	VIEWPORT BUG FIX
+			iOS viewport scaling bug fix, by @mathias, @cheeaun and @jdalton  */
+		(function(doc) {	
+				var addEvent='addEventListener',
+				type='gesturestart',
+				qsa='querySelectorAll',
+				scales=[1,1],
+				meta=qsa in doc?doc[qsa]('meta[name=viewport]'):[];
+				
+			function fix() {
+				meta.content='width=device-width,minimum-scale='+scales[0]+',maximum-scale='+scales[1];
+				doc.removeEventListener(type,fix,true);
+			}
+			
+			if((meta=meta[meta.length-1])&&addEvent in doc) {
+				fix();
+				scales=[.25,1.6];
+				doc[addEvent](type,fix,true);
+			}
+		 }
+		(document));
+	</script>

@@ -1,0 +1,25 @@
+$insert.control("sg")
+<br/>
+<table>
+	<tr>
+		<th valign="top" colspan="2" align="left">
+			$insert.control("btAddNewColumn")
+			$insert.control("btAddNewRow")
+			$insert.control("btResetData")
+			$insert.control("btSetValuesInBackend")
+		</th>
+	</tr>
+	<tr><td style="padding-top: 10px">&nbsp;</td></tr>
+	<tr>
+		<th align="left">Selection Data (latest first)</th>
+		<th align="left">Edit Data</th>
+	</tr>
+	<tr>
+		<th>$insert.control("ibSelectionData")</th>
+		<th>$insert.control("ibEditData")</th>
+		<th valign="top">
+			$insert.control("btSubmitChanges")
+			$insert.control("btDummy")			
+		</th>
+	</tr>
+</table>

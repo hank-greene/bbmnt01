@@ -1,0 +1,9 @@
+<p>Some operations may take a longer time to complete. During this time, the user should not be able to perform other actions but see an indicator that his request is processed.
+If the server response takes longer than 500ms, jWic automatically blocks all further input by displaying an invisible/transparent layer on top of all controls and an animated
+icon to the user. Actions done by the user within those 500ms are queued and will be send to the server after the response is received.</p>
+
+<p>$insert.control("button")</p>
+
+
+<p>While waiting, try to click this button:<br>
+ $insert.control("anotherButton")</p>

@@ -1,0 +1,34 @@
+##https://askubuntu.com/questions/779222/why-ubuntu-cant-play-mp3-files-by-default
+##https://help.ubuntu.com/community/RestrictedFormats
+##https://help.ubuntu.com/community/RestrictedFormats/MP3
+
+<table>
+	<tr>
+		<td>
+			
+			##http://alexkatz.me/posts/building-a-custom-html5-audio-player-with-javascript/
+			<br>
+			
+			soundPlayer.play( $insert.control("echoName") );
+	
+			<!--audio id="music" preload="true"-->
+			<audio id="music">
+			  <source src=$control.echo>
+			  <source src="http://localhost:8080/amp3s/1987-edification.mp3">
+			</audio>
+			<div id="audioplayer">
+			  <button id="pButton" class="play" onclick="soundPlayer.play('$insert.control("echoName-x")');></button>
+			  <div id="timeline">    
+				<div id="playhead"></div>
+			  </div>
+			</div>
+			
+		</td>
+	    <!--button onclick="soundPlayer.play('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');">PlayTRex</button-->
+	    <!--button onclick="soundPlayer.play('http://localhost:8080/amp3s/jc-gooch-side-1.mp3');">PlayCrowe</button-->
+	</tr>
+</table>
+  
+  
+  
+  
