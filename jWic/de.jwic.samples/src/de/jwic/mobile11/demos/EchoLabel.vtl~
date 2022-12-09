@@ -1,3 +1,0 @@
-<span #if($control.cssClass) class="$control.cssClass"#end 
-      #if($control.styles.size() != 0) style="$control.computeStyle()" #end 
-      #if($control.audio) onclick="soundPlayer.play('$control.echo')" #end >$control.text</span>
