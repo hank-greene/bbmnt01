@@ -1,0 +1,42 @@
+<div id="maincontainer">
+  <div id="topsection_wrapper">
+    <div id="topsection">
+        <div id="topsection_top_row">
+        
+			<table>
+				<tr>
+					<td><img src="$jwic.linkResource($control.sessionContext.application, "jwic_logo.gif")"></td>
+					<td><h3>Magnetic Echos</h3></td>
+				</tr>
+			</table>
+          
+        </div>
+        <div id="topsection_bottom_row">
+	      <div id="menu">
+	      
+          </div>
+        </div>
+    </div>
+  </div>
+  <div id="contentwrapper">
+    <div id="rightcolumn">
+    </div>
+    <div id="contentcolumn">
+
+		<br>
+		Value: $insert.control("label")<br>
+		$insert.control("btInc") $insert.control("btDec")
+		<br>
+		$insert.control("echo")
+		<br>
+		$insert.control("selector01")<br> 
+		$insert.control("selector02")<br>
+		$insert.control("audioButton")<br>
+		$insert.control("media01")<br>
+		<br><br>
+	    <button onclick="soundPlayer.play('https://interactive-examples.mdn.mozilla.net/media/examples/t-rex-roar.mp3');">PlayTRex</button>
+		
+    </div>
+  </div>
+</div>
+

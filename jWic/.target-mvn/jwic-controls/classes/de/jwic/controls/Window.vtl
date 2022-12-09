@@ -1,0 +1,12 @@
+#set($fld = $control.getField("height")) <input type="hidden" id="$fld.id" name="$fld.id" value="$fld.value">
+#set($fld = $control.getField("width") ) <input type="hidden" id="$fld.id" name="$fld.id" value="$fld.value">
+#set($fld = $control.getField("top")   ) <input type="hidden" id="$fld.id" name="$fld.id" value="$fld.value">
+#set($fld = $control.getField("left")  ) <input type="hidden" id="$fld.id" name="$fld.id" value="$fld.value">
+	
+<div id="win_${control.controlID}" style="display:none; overflow: visible;" class="dialog">
+	#foreach($cn in $control.controls)
+		<span>
+			$insert.control($cn.name)
+		</span>
+	#end
+</div>

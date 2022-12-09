@@ -1,0 +1,1013 @@
+<style type="text/css">
+
+body{
+    margin:0;
+    padding:0;
+    line-height: 1.5em;
+}
+
+b{font-size: 110%;}
+em{color: red;}
+
+#maincontainer{
+    /* width: 900px; Width of main container, legacy setting*/
+    width: 600px; /* for magnetic echos */
+    margin: 0 auto; /*Center container on page*/
+}
+
+#topsection_wrapper {
+}
+
+#topsection{
+    background: #EAEAEA;
+    height: 61px; /*Height of top section*/
+    padding-left: 10px;
+}
+
+#topsection_top_row {
+    height: 30px;
+    margin: 0;
+    padding-left: 15px;
+}
+
+
+#topsection_bottom_row {
+    height: 30px; /*Height of top section*/
+}
+
+#topsection h1{
+    margin: 0;
+    padding-top: 15px;
+}
+
+#contentwrapper{
+    float: left;
+    width: 100%;
+}
+
+#contentcolumn{
+    margin: 0px 0px 0px 0px; /* -1px 170px 0 40px; */ /*margin: -1px 140px 0 80px;*/ /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+    float: left;
+    width: 77px; /*Width of left column in pixel*/
+    margin-left: 0px; /*Set margin to that of -(MainContainerWidth)*/
+    background: #C8FC98;
+    height: 500px;
+}
+
+#rightcolumn{
+    background: #D4E9FC;
+    float: right;
+    height: 1100px; /*height: 700px;*/
+    margin-left: 0px; /*margin-left: 765px;*/ /*margin-left: 745px;*/ /*margin-left: -190px;*/ /*Set left margin to -(RightColumnWidth)*/
+    width: 170px; /*width: 190px;*/ /*Width of right column*/
+}
+
+#footer{
+    background: black;
+    clear: left;
+    color: #FFF;
+    margin: 0pt auto;/** ---- **/
+    padding: 4px 0;
+    text-align: center;
+    width: 900px;   /*  width: 100%;  */
+}
+
+#footer a{
+    color: #FFFF80;
+}
+
+.innertube{
+    margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+    margin-top: 0;
+}
+
+/******************************************************************************/
+#guest_wrapper {
+    width: 715;
+    height: 950;
+}
+
+#top_row {
+    background: #777 none repeat scroll 0%;
+    border: 5px none;
+    color : #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px; 
+    padding-left: 10px;
+    width: 710px;
+}
+
+#os_row {
+    background: #bbb none repeat scroll 0%;
+    border: 5px none;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px;
+    padding-left: 10px;
+    width: 710px;
+}
+
+#three_col_wrapper {
+    width: 719;
+    height: 480px;
+}
+
+#narrative_col {
+    border-left: 1px solid #444;
+    float: left;
+    /*height: 445px;*/
+    margin: 1px; 
+    padding: 0px;
+    width: 290px;
+}
+
+#server_col {
+    border-left: 1px solid #444;
+    float: left;
+    font-size: 10px;
+    margin: 1px; 
+    padding: 0px;
+    width: 190px;
+}
+
+#server_config_header {
+    background: #ccc none repeat scroll 0%;
+    color : #000;
+    font-size: 12px;
+    height: 16px;
+    margin-top: 0px;
+    width: 186px;
+}
+
+#server_config_row {
+    height: 20px;
+    padding-left: 5px;
+    width: 170px;
+}
+
+#server_config_line{
+    /*border: 1px solid #000;
+    height: -1px;*/
+}
+
+#infrastructure_col {
+    border-left: 1px solid #444;
+    float: left;
+    font-size: 10px;
+    margin: 1px; /*2px;*/
+    padding: 0px;
+    width: 210px;
+}
+
+#infrastructure_header {
+    background: #ccc none repeat scroll 0%;
+    color : #000;
+    font-size: 12px;
+    height: 16px;
+    width: 220px;
+}
+
+#infrastructure_line{
+    border: 1px solid #000;
+    height: -1px;
+}
+
+#infrastructure_row {
+    height: 16px;
+    margin: 2px;
+    width: 190px;
+}
+
+#hardware_part {
+    float: left;
+    height: 19px;
+    padding: 0px;
+    width: 680px;
+}
+
+#pinnacle_storage_list {
+    float: left;
+    padding: 0px;
+    width: 680px;
+}
+
+#hardware_part_row_header_wrapper {
+    background: #bbb none repeat scroll 0%;
+    border: 5px none;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin-top: 5px; 
+    padding: 0px;
+    padding-left: 10px;
+    width: 680px;
+}
+
+#hardware_part_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 255px;
+}
+
+#hardware_part_part_num_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 100px;
+}
+
+#hardware_part_cost_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 70px;
+}
+
+#hardware_part_provided_by_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 90px;
+}
+
+#hardware_part_inventory_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 80px;
+}
+
+#storage_part_row_header_wrapper {
+    background: #bbb none repeat scroll 0%;
+    border: 5px none;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin-top: 5px; 
+    padding: 0px;
+    padding-left: 10px;
+    width: 705px;
+}
+
+#storage_block {
+    float: left;
+    margin: 2px;
+    margin-left: 5px;
+    width: 260px;
+}
+
+#storage_part_num_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 70px;
+}
+
+#storage_cost_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 100px;
+}
+
+#storage_provided_by_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 90px;
+}
+
+#storage_inventory_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 80px;
+}
+
+#software_part_row_header_wrapper {
+    background: #bbb none repeat scroll 0%;
+    border: 5px none;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin-top: 5px; 
+    padding: 0px;
+    padding-left: 10px;
+    width: 705px;
+}
+
+#software_block {
+    float: left;
+    margin: 2px;
+    margin-left: 5px;
+    width: 260px;
+}
+
+#software_part_num_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 100px;
+}
+
+#software_cost_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 70px;
+}
+
+#software_provided_by_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 90px;
+}
+
+#software_inventory_block {
+    float: left;
+    margin: 2px;
+    margin-left: 15px;
+    width: 80px;
+}
+
+#storage {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 230px;
+}
+
+#software_version {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 230px;
+}
+
+#part_number {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 100px;
+}
+
+#cost {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 71px;
+}
+
+#quantity {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 100px;
+}
+
+#inventory {
+    border: 2px solid #444;
+    float: left;
+    height: 50px;
+    margin: 2px;
+    padding: 0px;
+    width: 82px;
+}
+
+/******************************************************************************/
+/* Menu */
+#menu {
+	float: left;
+}
+
+#menu ul {
+	margin: 0;
+	padding: 5px 0 0 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#menu a:hover {
+  background: #faf1c3 none repeat scroll 0%;
+	border: 3px;
+	padding: 5px 10px;
+	color: #000;
+}
+
+#menu .active a {
+	padding: 5px 10px;
+  border: 3px;
+	border-right-color: #7A6D6D;
+	border-bottom-color: #7A6D6D;
+	color: #000000;
+}
+
+/******************************************************************************/
+/* guestMenu */
+#guestMenu {
+	float: left;
+}
+
+#guestMenu ul {
+	margin: 0;
+	padding: 5px 0 0 0;
+	list-style: none;
+}
+
+#guestMenu li {
+	display: inline;
+}
+
+#guestMenu a {
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#guestMenu a:hover {
+  background: #faf1c3 none repeat scroll 0%;
+	border: 3px;
+	padding: 5px 10px;
+	color: #000;
+}
+
+#guestMenu .active a {
+	padding: 5px 10px;
+  border: 3px;
+	border-right-color: #7A6D6D;
+	border-bottom-color: #7A6D6D;
+  background: #ffcc66;
+}
+
+/******************************************************************************/
+/* Vertical Menu */
+#sowSearchBlock {
+  margin-left: 100px;
+  margin-top:   10px;
+}
+
+
+#ismList {
+  margin-left: 100px;
+  margin-top:   10px;
+}
+
+#verticalMenu {
+	float: left;
+}
+
+#verticalMenu ul {
+	margin: 0;
+	padding: 5px 0 0 0;
+	list-style: none;
+}
+
+#verticalMenu li {
+	display: list-item;
+}
+
+#verticalMenu a {
+	padding: 5px 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#verticalMenu a:hover, #verticalMenu .active a {
+    background: #faf1c3 none repeat scroll 0%;
+	border: 3px;
+	padding: 5px 10px;
+	color: #000;
+}
+
+/******************************************************************************/
+#break {
+    page-break-after: always;
+}
+
+/******************************************************************************/
+#test {
+    background: #ccc none repeat scroll 0%;
+    color : #000;
+    font-size: 12px;
+    height: 16px;
+    width: 190px;
+}
+
+
+/******************************************************************************/
+#network_wrapper {
+    width: 715;
+    height: 1000;
+}
+
+#network_header_row_wrapper {
+    background-color: #dddddd;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    padding: 0px 0px 0px 0px;
+    width: 707px;
+}
+
+#network_header_row_left_block {
+    float: left;
+    margin: 0px;
+    margin-left: 5px;
+    width: 290px;
+}
+
+#network_header_row_center_block {
+    float: left;
+    margin: 0px;
+    width: 100px;
+}
+
+#network_header_row_right_block {
+    float: left;
+    margin: 0px;
+    width: 100px;
+}
+
+/***------------------------------------------------------------------------***/
+#network_row_wrapper {
+    font-size: 12px;
+    height: 20px;
+    margin: 1px;
+    width: 645px;
+}
+
+#network_row_left_block {
+    float: left;
+    font-weight: bold;
+    margin: 0px;
+    margin-left: 5px;
+    width: 290px;
+}
+
+#network_row_indented_left_block {
+    float: left;
+    margin: 0px;
+    margin-left: 15px;
+    width: 290px;
+}
+
+#network_row_center_block {
+    float: left;
+    margin: 0px;
+    width: 100px;
+}
+
+#network_row_right_block {
+    float: left;
+    margin: 0px;
+    width: 100px;
+}
+
+
+/***------------------------------------------------------------------------***/
+#network_vpn_set_up_wrapper {
+    height: 100px;
+}
+
+/***------------------------------------------------------------------------***/
+#network_vlan_set_up_wrapper {
+    height: 100px;
+}
+
+/***------------------------------------------------------------------------***/
+#network_netscalar_set_up_wrapper {
+    height: 40px;
+}
+#netscalar_wrapper {
+    height: 250px;
+    width: 700px;
+}
+#netscalar_left_col {
+    float: left;
+    height: 250px;
+    padding: 0px;
+    width: 350px;
+}
+#netscalar_right_col {
+    /*background: #ddd none repeat scroll 0%;*/
+    color : #000000;
+    font-size: 11px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px;
+    width: 300px;
+}
+
+/***------------------------------------------------------------------------***/
+#network_hardware_wrapper {
+    height: 100px;
+}
+
+/***------------------------------------------------------------------------***/
+#network_port_map_wrapper {
+    height: 100px;
+}
+
+#network_header_port_map_row_wrapper {
+    background-color: #dddddd;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    padding: 0px 0px 0px 10px;
+    width: 710px;
+}
+
+#network_port_map_row_source_block {
+    float: left;
+    margin-left: 5px;
+    width: 165px;
+}
+
+#network_port_map_row_destination_block {
+    float: left;
+    margin-left: 5px;
+    width: 160px;
+}
+
+#network_port_map_row_port_block {
+    float: left;
+    width: 130px;
+}
+
+#network_port_map_row_description_block {
+    float: left;
+    width: 180px;
+}
+
+#network_port_map_row_button_block {
+    float: left;
+    margin: 0px;
+    width: 700px;
+}
+
+/******************************************************************************/
+#contact_wrapper {
+    width: 650;
+    height: 445;
+}
+
+/******************************************************************************/
+#overview_wrapper {
+    width: 720;
+    height: 675;
+}
+
+#project_overview_wrapper {
+    width: 720;
+    height: 180;
+}
+
+#project_overview_row_wrapper {
+    width: 720;
+    height: 20;
+}
+
+#project_overview_left_col {
+    float: left;
+    width: 360;
+    height: 20;
+}
+#project_overview_right_col {
+    float: left;
+    width: 360;
+    height: 20;
+}
+
+#project_narrative_wrapper {
+    width: 720;
+    height: 140;
+}
+
+#project_narrative_row_wrapper {
+    width: 720;
+    height: 17;
+}
+
+/**************************   SOLUTION REVIEW WRAPPER  ************************/
+#project_solution_review_wrapper {
+    width: 710;
+    height: 335;
+}
+
+#solution_review_banner {
+    background: #777 none repeat scroll 0%;
+    border: 5px none;
+    color : #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px; 
+    padding-left: 10px;
+    width: 321px;
+}
+
+#solution_review_header_wrapper {
+    background: #ddd none repeat scroll 0%;
+    border: 5px none;
+    color : #000000;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px; 
+    padding-left: 10px;
+    width: 321px;
+}
+#solution_review_header_left_col {
+    background: #ddd none repeat scroll 0%;
+    border: 5px none;
+    color : #000000;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    width: 190px;
+}
+#solution_review_header_right_col {
+    background: #ddd none repeat scroll 0%;
+    border: 5px none;
+    color : #000000;
+    float: left;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    width: 100px;
+}
+
+#solution_review_col {
+    /*** border-left: 1px solid #444; **/
+    float: left;
+    height: 300px;
+    margin: 1px; 
+    padding: 0px;
+    width: 310px;
+}
+
+#review_row_wrapper {
+    width: 325;
+    height: 17;
+}
+
+#technical_operational_acceptance_col {
+    border-left: 1px solid #888;
+    float: left;
+    height: 333px;
+    margin: 1px; 
+    padding-left: 5px;
+    width: 350px;
+}
+
+#technical_operational_acceptance_banner {
+    background: #777 none repeat scroll 0%;
+    border: 5px none;
+    color : #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px; 
+    padding-left: 10px;
+    width: 360px;
+}
+
+#technical_operational_acceptance_header {
+    background: #ddd none repeat scroll 0%;
+    border: 5px none;
+    color : #000000;
+    font-size: 11px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px; 
+    padding: 0px; 
+    padding-left: 10px;
+    width: 360px;
+}
+
+#toa_wrapper {
+    height: 140px;
+    width: 350px;
+}
+
+#toa_left_col {
+    float: left;
+    height: 130px;
+    padding-left: 5px;
+    width: 175px;
+}
+
+#toa_left_header {
+    background: #ddd none repeat scroll 0%;
+    color : #000000;
+    font-size: 11px;
+    font-weight: bold;
+    height: 16px;
+    padding: 0 0 0 10px;
+    margin: 0 0 0 0px;
+    width: 360px;
+}
+
+#toa_right_col {
+    /*border-left: 1px solid #444;*/
+    float: left;
+    height: 16px;
+    padding: 0px;
+    width: 160px;
+}
+
+#toa_right_header {
+    background: #ddd none repeat scroll 0%;
+    color : #000000;
+    font-size: 11px;
+    font-weight: bold;
+    height: 16px;
+    margin: 0px;
+    width: 150px;
+}
+
+#toa_enterprise_wrapper {
+    height: 100px;
+    width: 350px;
+}
+
+#toa_managed_hosting_wrapper {
+    height: 75px;
+    width: 350px;
+}
+
+/*----------------------------------------------------------------------------*/
+#project_solution_review_row_wrapper {
+    width: 720;
+    height: 17;
+}
+
+#project_sow_change_log_wrapper {
+    width: 720;
+    height: 140;
+}
+
+#project_sow_change_log_row_wrapper {
+    width: 720;
+    height: 17;
+}
+
+/*----------------------------------------------------------------------------*/
+#dedicated_wrapper {
+    width: 650;
+    height: 445;
+}
+
+/*----------------------------------------------------------------------------*/
+#implementation_hours_wrapper {
+    width: 650;
+    height: 445;
+}
+
+#implementation_hours_top_row {
+    background: #777 none repeat scroll 0%;
+    color : #ffffff;
+    font-weight: bold;
+}
+
+#implementation_hours_header_row_wrapper {
+    border-bottom: 1px solid;
+    font-size: 14px;
+    height: 17px;
+    width: 650px;
+}
+
+#implementation_hours_business_unit_row_wrapper {
+    font-size: 14px;
+    height: 17px;
+    width: 650px;
+}
+
+#implementation_hours_row_wrapper {
+    font-size: 14px;
+    height: 17px;
+    width: 650px;
+}
+
+#implementation_hours_row_left_column {
+    float: left;
+    width: 400px;
+}
+
+#implementation_hours_row_right_column {
+    border-bottom: 1px solid;
+    float: right;
+    width: 200px;
+}
+
+/*----------------------------------------------------------------------------*/
+#app_monitoring_wrapper {
+    width: 650;
+    height: 445;
+}
+
+/*----------------------------------------------------------------------------*/
+#client_deliverables_wrapper {
+    font-size: 14px;
+    width: 700px;
+}
+
+#client_deliverables_top_row {
+    background: #777 none repeat scroll 0%;
+    color : #ffffff;
+    font-weight: bold;
+}
+
+#row_description {
+    float: left;
+    width: 490px;
+}
+
+#required_col {
+    float: left;
+    width: 110px;
+}
+
+#sent_col {
+}
+
+#client_deliverables_header_row {
+    background: #ddd none repeat scroll 0%;
+    font-weight: bold;
+}
+
+#client_deliverables_data_row {
+    border-bottom: 1px solid;
+}
+
+/*-----------------------------------------------------------------------------*/
+table.display01 {
+    border-width: 0px;
+    border-spacing: 1px;
+    border-style: none;
+    border-color: gray;
+    border-collapse: separate;
+    background-color: white;
+}
+
+table.display01 th {
+    border-width: 0px;
+    padding: 1px;
+    border-style: inset;
+    border-color: gray;
+    background-color: white;
+    -moz-border-radius;
+}
+
+table.display01 td {
+    border-width: 0px;
+    padding: 1px;
+    border-style: inset;
+    border-color: gray;
+    background-color: white:
+    -moz-border-radius: ;
+}
+
+aNewLabelClass span {
+    width: 10px;
+}
+
+</style>

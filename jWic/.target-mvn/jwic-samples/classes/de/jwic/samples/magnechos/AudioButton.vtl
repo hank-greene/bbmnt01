@@ -1,0 +1,10 @@
+<button onclick="soundPlayer.play('$control.audioLink')"  
+        #if($!control.tooltip != "")title="$jwic.formatInp($!control.tooltip)"
+        #end tabindex="-1" class="j-button $control.cssClass" 
+        id="btn_${control.controlID}" 
+        #if($control.enabled == false)disabled   
+        #end>
+        
+        $control.title
+        
+</button>

@@ -1,0 +1,5 @@
+#if ($control.isEnabled())
+<a id="$control.controlID" class="$!control.cssClass" #if($control.infoMessage)title="$control.infoMessage"#end href="#" $jwic.generateCssProperty($control)>$control.title</a>
+#else
+$control.title
+#end
