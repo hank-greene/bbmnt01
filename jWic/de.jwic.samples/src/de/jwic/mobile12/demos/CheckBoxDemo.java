@@ -1,10 +1,10 @@
-package de.jwic.mobile11.demos;
+package de.jwic.mobile12.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile03.IconPos;
+//import de.jwic.controls.mobile03.IconPos;
 import de.jwic.controls.mobile03.MButton;
 import de.jwic.controls.mobile03.MCheckBox;
 
@@ -13,7 +13,7 @@ import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile11.MobileDemoModule;
+import de.jwic.mobile12.MobileDemoModule;
 
 /**
  * Created by boogie on 10/30/14.

@@ -1,4 +1,4 @@
-package de.jwic.mobile11;
+package de.jwic.mobile12;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,11 @@ import java.util.List;
 import de.jwic.base.Application;
 import de.jwic.base.Control;
 import de.jwic.base.IControlContainer;
-import de.jwic.mobile11.demos.EchoWindow;
-import de.jwic.mobile11.demos.InputDemo;
-import de.jwic.mobile11.demos.SelectMenuDemo11;
-import de.jwic.mobile11.demos.AudioDevPage;
+import de.jwic.mobile12.demos.EchoWindow;
+import de.jwic.mobile12.demos.InputDemo;
+import de.jwic.mobile12.demos.SelectMenuDemo12;
+import de.jwic.mobile12.demos.AudioDevPage;
+import de.jwic.mobile12.demos.MobileAudioRND;
 
 public class MobileDemoApplication extends Application {
 
@@ -18,9 +19,10 @@ public class MobileDemoApplication extends Application {
 		
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
+		mobileDemoModules.add(new MobileAudioRND());
 		mobileDemoModules.add(new EchoWindow());
 		mobileDemoModules.add(new AudioDevPage());
-		mobileDemoModules.add(new SelectMenuDemo11());
+		mobileDemoModules.add(new SelectMenuDemo12());
 		mobileDemoModules.add(new InputDemo());
 		
 		return new MobileDemoPage(container, "demoPage", mobileDemoModules);

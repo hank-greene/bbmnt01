@@ -1,4 +1,4 @@
-package de.jwic.mobile11;
+package de.jwic.mobile12;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;

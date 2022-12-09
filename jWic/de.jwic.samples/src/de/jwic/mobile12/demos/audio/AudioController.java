@@ -1,4 +1,4 @@
-package de.jwic.mobile11.demos.audio;
+package de.jwic.mobile12.demos.audio;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;

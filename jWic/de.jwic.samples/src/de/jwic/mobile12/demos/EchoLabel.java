@@ -1,4 +1,4 @@
-package de.jwic.mobile11.demos;
+package de.jwic.mobile12.demos;
 
 import de.jwic.controls.HTMLElement;
 import java.util.HashMap;

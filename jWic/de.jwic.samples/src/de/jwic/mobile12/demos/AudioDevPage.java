@@ -1,12 +1,11 @@
-package de.jwic.mobile11.demos;
+package de.jwic.mobile12.demos;
 
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
-import de.jwic.data.ISelectElement;
-import de.jwic.mobile11.MobileDemoModule;
+import de.jwic.mobile12.MobileDemoModule;
 
-import de.jwic.mobile11.demos.audio.VideoController;
+import de.jwic.mobile12.demos.audio.VideoController;
 
 /**
  * @author vedad

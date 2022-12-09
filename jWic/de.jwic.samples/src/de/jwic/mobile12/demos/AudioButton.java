@@ -2,7 +2,7 @@
  * de.jwic.controls.AudioButton
  * $Id: Button.java,v 1.3 2011/09/09 15:09:01 adrianionescu12 Exp $
  */
-package de.jwic.mobile11.demos;
+package de.jwic.mobile12.demos;
 
 import de.jwic.base.IControlContainer;
 import de.jwic.base.ImageRef;
@@ -17,7 +17,7 @@ import de.jwic.controls.mobile04.IconPos;
 import de.jwic.controls.mobile04.Theme;
 
 //adding audio.Player 
-import de.jwic.mobile11.demos.audio.Player;
+import de.jwic.mobile12.demos.audio.Player;
 
 /**
  * Represents the &lt;button&gt; html element. 

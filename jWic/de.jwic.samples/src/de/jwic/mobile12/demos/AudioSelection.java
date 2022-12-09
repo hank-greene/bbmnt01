@@ -1,16 +1,14 @@
-package de.jwic.mobile11.demos;
+package de.jwic.mobile12.demos;
 
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;
-import de.jwic.controls.mobile04.MButton;
 import de.jwic.controls.mobile08.MCheckBox;
 
-import de.jwic.mobile11.demos.audio.Player;
-import de.jwic.mobile11.demos.audio.AudioController;
+import de.jwic.mobile12.demos.audio.AudioController;
 
 public class AudioSelection implements SelectionListener {
 	
-	private String    audioTitle = "not set";
+	private String    audioTitle = " ";
 	private AudioController audioCtl = null;
 	
 	public AudioSelection(String t, EchoLabel lbl, MCheckBox ckbx, AudioController ac){
