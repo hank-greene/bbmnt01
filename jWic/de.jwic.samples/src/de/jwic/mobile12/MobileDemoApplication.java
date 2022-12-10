@@ -19,10 +19,15 @@ public class MobileDemoApplication extends Application {
 		
 		final List<MobileDemoModule> mobileDemoModules = new ArrayList<MobileDemoModule>();
 
+		System.out.println("::MobileAudioRND()");
 		mobileDemoModules.add(new MobileAudioRND());
+		System.out.println("::EchoWindow()");
 		mobileDemoModules.add(new EchoWindow());
+		System.out.println("::AudioDevPage()");
 		mobileDemoModules.add(new AudioDevPage());
+		System.out.println("::SelectMenuDemo12()");
 		mobileDemoModules.add(new SelectMenuDemo12());
+		System.out.println("::InputDemo()");
 		mobileDemoModules.add(new InputDemo());
 		
 		return new MobileDemoPage(container, "demoPage", mobileDemoModules);
