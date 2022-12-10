@@ -633,6 +633,7 @@ de/jwic/demo/chart/ChartDemo$5.class
 de/jwic/mobile03/demos/tbv/CellLabel.class
 de/jwic/mobile03/demos/CheckBoxDemo$1.class
 de/jwic/demo/container/TabStripDemo$2.class
+de/jwic/mobile12/demos/MobileAudioRND$1.class
 de/jwic/samples/controls/ProgressBarDemo$2.class
 de/jwic/samples/controls/RadioGroupDemo$7.class
 de/jwic/demo/wizard/GeneratedFile.class
@@ -676,6 +677,7 @@ de/jwic/mobile08/MobileDemoPage.class
 de/jwic/mobile03/demos/tbv/RowContext.class
 de/jwic/demo/wizard/WizardDemo.class
 de/jwic/demo/chart/ChartDemo.class
+de/jwic/mobile12/demos/audio/AC2.class
 de/jwic/mobile07/demos/EchoWindow.class
 de/jwic/demo/chart/ChartDemo$7.class
 de/jwic/mobile11/demos/CheckBoxDemo$2.class
