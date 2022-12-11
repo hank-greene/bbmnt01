@@ -22,11 +22,11 @@ de/jwic/controls/WindowControl.class
 de/jwic/controls/SubFrameControl.class
 de/jwic/controls/InputBoxControl.class
 de/jwic/ecolib/minichart/IChartDataProvider.class
-de/jwic/controls/TabStripControl.class
 de/jwic/controls/RadioGroupControl.class
+de/jwic/controls/TabStripControl.class
 de/jwic/controls/TreeEntry.class
-de/jwic/controls/ActionBarControl.class
 de/jwic/controls/ListControl.class
+de/jwic/controls/ActionBarControl.class
 de/jwic/ecolib/controls/balloon/BalloonControl.class
 de/jwic/controls/TreeControl.class
 de/jwic/controls/AnchorLinkControl.class
