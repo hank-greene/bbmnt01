@@ -3,7 +3,7 @@
 	 * Invoked before the element is updated.
 	 */ 
 	beforeUpdate: function() {
-    	alert("AudioController beforeUpdate");
+    	//alert("AudioController beforeUpdate");
 	},
 	
 	/**
@@ -13,7 +13,7 @@
 	 * true, to prevent the update.
 	 */
 	doUpdate: function(element) {
-    	alert("AudioController doUpdate");
+    	//alert("AudioController doUpdate");
 	},
 
 	/**
@@ -22,7 +22,7 @@
 	 */
     afterUpdate: function ButtonAfterUpdate(){
     	
-    	alert("AudioController afterUpdate");
+    	//alert("AudioController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	
     	//alert("AudioController afterUpdate mediaElements.length "+total);
@@ -68,6 +68,6 @@
 	 * Invoked when the existing element is removed from the DOM tree.
 	 */
 	destroy: function(element) {
-    	alert("AudioController destroy");
+    	//alert("AudioController destroy");
 	}
 }

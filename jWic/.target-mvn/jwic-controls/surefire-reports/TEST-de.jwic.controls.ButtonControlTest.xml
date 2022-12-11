@@ -61,10 +61,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testClick" time="0.001"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testClick" time="0.003"/>
   <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetConfirmMsg" time="0.002"/>
   <testcase classname="de.jwic.controls.ButtonControlTest" name="testHasIcon" time="0.002"/>
   <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTooltip" time="0"/>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testGetIconUrl" time="0.001"/>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTitle" time="0.001"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testGetIconUrl" time="0"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTitle" time="0"/>
 </testsuite>
