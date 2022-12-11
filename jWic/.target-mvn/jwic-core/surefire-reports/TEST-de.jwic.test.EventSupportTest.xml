@@ -64,6 +64,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.test.EventSupportTest" name="testRemoveListener" time="0.002"/>
-  <testcase classname="de.jwic.test.EventSupportTest" name="testFireEvent" time="0.003"/>
-  <testcase classname="de.jwic.test.EventSupportTest" name="testConcurrentModification" time="0.02"/>
+  <testcase classname="de.jwic.test.EventSupportTest" name="testFireEvent" time="0.001"/>
+  <testcase classname="de.jwic.test.EventSupportTest" name="testConcurrentModification" time="0.022"/>
 </testsuite>

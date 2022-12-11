@@ -30,14 +30,17 @@ public class AC2 extends ControlContainer {
 		this.container = new ControlContainer(this, "content");
 	}
 	
-	String audioStr = "not set";
+	String audioStr = "select an audio";
 	public void setAudio(String a) {
 		System.out.println("AudioController.setAudio "+a);
 		audioStr = a;
 	}
 	public String getAudio() {
-		System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+audioStr);
-		return "http://localhost:8080/01-amp3s/"+audioStr;
+		//System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+audioStr);
+		//return "http://localhost:8080/01-amp3s/"+audioStr;
+
+		System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+"1989-Doug-Wead-FreshSnowFreshStuck-1-o-2.mp3");
+		return "http://localhost:8080/01-amp3s/"+"1989-Doug-Wead-FreshSnowFreshStuck-1-o-2.mp3";
 	}
 	public String getTitle() {
 		return audioStr;
