@@ -64,10 +64,10 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testGetSelectedKey" time="0.002"/>
-  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testClear" time="0"/>
+  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testClear" time="0.001"/>
   <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testEvent" time="0"/>
-  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testAddElement" time="0"/>
-  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testGetSelectedKeys" time="0.001"/>
+  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testAddElement" time="0.001"/>
+  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testGetSelectedKeys" time="0"/>
   <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testIsKeySelected" time="0"/>
-  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testRemoveElement" time="0.001"/>
+  <testcase classname="de.jwic.controls.RadioGroupControlTest" name="testRemoveElement" time="0"/>
 </testsuite>

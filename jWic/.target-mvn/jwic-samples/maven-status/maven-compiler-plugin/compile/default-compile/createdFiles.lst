@@ -5,7 +5,6 @@ de/jwic/demo/advanced/CKEditorDemo$2.class
 de/jwic/demo/basics/DatePickerDemo$6.class
 de/jwic/ecolib/samples/controls/TestAction.class
 de/jwic/samples/filebrowser/FileListView.class
-de/jwic/samples/magnechos/AudioSelection.class
 de/jwic/demo/tbv/DemoTaskContentProvider$1.class
 de/jwic/samples/controls/CheckboxGroupDemo$5.class
 de/jwic/mobile06/demos/AudioButton.class
@@ -56,7 +55,6 @@ de/jwic/mobile03/demos/tbv/DefaultTableRenderer.class
 de/jwic/mobile02/demos/SelectMenuDemo.class
 de/jwic/demo/chart/ChartDemo$4.class
 de/jwic/mobile/demos/ButtonDemo$4.class
-de/jwic/samples/magnechos/layout/TableData.class
 de/jwic/samples/controls/InputBoxDemo$2.class
 de/jwic/mobile06/MobileDemoPage$1.class
 de/jwic/demo/tbv/FileLabelProvider.class
@@ -68,7 +66,6 @@ de/jwic/demo/container/ScrollableContainerDemo$3.class
 de/jwic/mobile03/demos/EchoTable.class
 de/jwic/demo/tbv/TableViewerDemo$9.class
 de/jwic/samples/controls/TabStripDemo$1.class
-de/jwic/samples/linder01/demos/tbv/DemoTask.class
 de/jwic/demo/model/ColorDemo.class
 de/jwic/mobile10/MobileDemoModule.class
 de/jwic/demo/tbv/slickgrid/SlickGridDemo.class
@@ -154,7 +151,6 @@ de/jwic/demo/advanced/CKEditorDemo$6.class
 de/jwic/samples/controls/ProgressBarDemo.class
 de/jwic/samples/mechos01/Mechos01.class
 de/jwic/demo/chart/TableElementContentProvider.class
-de/jwic/samples/mobile04/demos/tbv/DemoTask.class
 de/jwic/demo/wizard/WizardDemoControl$2.class
 de/jwic/samples/controls/propeditor/EnumListBoxControl.class
 de/jwic/mobile04/demos/EchoTable.class
@@ -336,7 +332,6 @@ de/jwic/demo/container/TabStripDemoModule.class
 de/jwic/samples/controls/WindowDemo.class
 de/jwic/mobile05/MobileDemoModule.class
 de/jwic/mobile06/demos/InputDemo$1.class
-de/jwic/samples/magnechos/IEchoController.class
 de/jwic/samples/filebrowser/PathInfoControl$2.class
 de/jwic/mobile12/demos/InputDemo.class
 de/jwic/demo/chart/StackedBarChartModule.class
@@ -472,7 +467,6 @@ de/jwic/demo/container/GroupControlDemo$3.class
 de/jwic/linder01/demos/AudioSelection.class
 de/jwic/samples/layers/OtherPage.class
 de/jwic/mobile12/MobileDemoPage$1.class
-de/jwic/samples/magnechos/layout/Row.class
 de/jwic/demo/basics/Calculator$1.class
 de/jwic/demo/basics/InputBoxDemoModule$2.class
 de/jwic/samples/filebrowser/FileBrowserControl$2.class
@@ -485,7 +479,6 @@ de/jwic/mobile03/demos/tbv/MobileTableRenderer.class
 de/jwic/demo/chart/AddTableElementDialog$2.class
 de/jwic/demo/wizard/WizardBasicsPage.class
 de/jwic/samples/controls/CheckboxGroupDemo.class
-de/jwic/samples/magnechos/Echo_Control_Factory.class
 de/jwic/demo/advanced/ColumnSelectorDemoModule.class
 de/jwic/samples/controls/CheckboxGroupDemo$3.class
 de/jwic/demo/tbv/BasicTBVDemo$6.class
@@ -493,6 +486,7 @@ de/jwic/demo/tbv/slickgrid/CostData.class
 de/jwic/demo/advanced/DemoBackgroundProcess.class
 de/jwic/demo/tbv/DemoTaskContentProvider.class
 de/jwic/mobile05/MobileDemoPage$1.class
+de/jwic/linder01/demos/tbv/DemoTask.class
 de/jwic/mobile06/MobileDemoPage.class
 de/jwic/mobile06/demos/InputDemo.class
 de/jwic/samples/mechos01/Mechos01$5.class
@@ -511,6 +505,7 @@ de/jwic/demo/tbv/LabelProvider.class
 de/jwic/mobile05/demos/EchoTable$2.class
 de/jwic/mobile10/demos/InputDemo$2.class
 de/jwic/demo/advanced/CKEditorDemo$5.class
+de/jwic/mobile04/demos/tbv/DemoTask.class
 de/jwic/samples/controls/ButtonDemo$3.class
 de/jwic/mobile02/demos/CheckBoxDemo$1.class
 de/jwic/samples/controls/ButtonDemo.class
@@ -522,8 +517,6 @@ de/jwic/samples/controls/ListBoxDemo$EventLogListener.class
 de/jwic/demo/advanced/ErrorWarningDemo$2.class
 de/jwic/ecolib/samples/controls/ColumnSelectorDemo$1.class
 de/jwic/samples/controls/RadioGroupDemo$10.class
-de/jwic/samples/magnechos/EchoControllerWrapper.class
-de/jwic/samples/magnechos/layout/Cell.class
 de/jwic/samples/controls/NumericInputControlDemo$2.class
 de/jwic/ecolib/samples/controls/ColumnSelectorResult.class
 de/jwic/samples/controls/ListBoxDemo$4.class
@@ -562,7 +555,6 @@ de/jwic/ecolib/samples/controls/ChartDemo.class
 de/jwic/samples/filebrowser/FileInfoControl.class
 de/jwic/samples/controls/RadioGroupDemo$4.class
 de/jwic/samples/controls/AnchorLinkDemo$2.class
-de/jwic/samples/magnechos/layout/TableLayoutContainer.class
 de/jwic/mobile/MobileDemoPage.class
 de/jwic/mobile03/demos/tbv/TableModelAdapter.class
 de/jwic/mobile02/MobileDemoPage.class
@@ -577,8 +569,6 @@ de/jwic/ecolib/samples/controls/ControlDemoApplication$1.class
 de/jwic/demo/DemoModule.class
 de/jwic/mobile02/demos/CheckBoxDemo$2.class
 de/jwic/demo/tbv/TableViewerDemo$12.class
-de/jwic/samples/magnechos/ScrollingListOfEchos.class
-de/jwic/samples/magnechos/AudioButton.class
 de/jwic/mobile11/demos/EchoWindow.class
 de/jwic/samples/controls/ButtonDemo$1.class
 de/jwic/demo/basics/RadioGroupDemo.class
@@ -604,7 +594,6 @@ de/jwic/demo/model/ColorModel.class
 de/jwic/samples/controls/TreeDemo$1.class
 de/jwic/samples/filebrowser/FileBrowserDemo.class
 de/jwic/samples/controls/WindowDemo$1.class
-de/jwic/samples/mobile06/demos/tbv/DemoTask.class
 de/jwic/ecolib/samples/controls/CKEditorDemo$2.class
 de/jwic/mobile02/demos/RadioButtonDemo.class
 de/jwic/samples/controls/CheckboxGroupDemo$4.class
@@ -709,6 +698,7 @@ de/jwic/samples/controls/PleaseWaitDemo$6.class
 de/jwic/demo/basics/LabelDemoModule.class
 de/jwic/mobile04/demos/InputDemo.class
 de/jwic/demo/pojoedit/MyPojoEditor$1.class
+de/jwic/mobile06/demos/tbv/DemoTask.class
 de/jwic/demo/basics/LabelDemo$1.class
 de/jwic/mobile03/demos/tbv/StatusBarControl.class
 de/jwic/demo/ImageLibrary.class
@@ -767,7 +757,6 @@ de/jwic/samples/sample3/FarenheitStrategy.class
 de/jwic/linder01/demos/EchoLabel.class
 de/jwic/samples/controls/PleaseWaitDemo$4.class
 de/jwic/mobile03/demos/tbv/StatusBarControl$2.class
-de/jwic/samples/magnechos/MagnEchos.class
 de/jwic/demo/advanced/LazyTooltipDemo$1.class
 de/jwic/samples/filebrowser/FileTreeNode.class
 de/jwic/demo/basics/ToolBarDemoModule.class
