@@ -36,11 +36,11 @@ public class AudioButton extends SelectableControl {
 	
 	private Menu menu = null;
 
-	private boolean corners = true;
-	private boolean inline = false;
-	private boolean mini = false;
-	private boolean shadow = true;
-	private String wrapperClass = null;
+	//private boolean corners = true;
+	//private boolean inline = false;
+	//private boolean mini = false;
+	//private boolean shadow = true;
+	//private String wrapperClass = null;
 		
 	/**
 	 * @param container
