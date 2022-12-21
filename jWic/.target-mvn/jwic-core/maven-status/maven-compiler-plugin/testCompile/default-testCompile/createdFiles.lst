@@ -10,5 +10,5 @@ de/jwic/test/MyTestEvent.class
 de/jwic/test/EventSupportTest$TestListener.class
 de/jwic/base/SessionStorageTest.class
 de/jwic/test/TestUIModel.class
-de/jwic/test/EventSupportTest$1.class
 de/jwic/test/TestJWicRuntimeProvider.class
+de/jwic/test/EventSupportTest$1.class

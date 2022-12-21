@@ -12,7 +12,6 @@ import de.jwic.mobile12.demos.audio.AC2;
 public class AC2 extends ControlContainer {
 	
 	private ControlContainer container;
-	private PlayPause playPause;
 	
 	/**
 	 * Constructor.

@@ -11,11 +11,16 @@ public class AudioSelection implements SelectionListener {
 	private String    audioTitle = " ";
 	private AudioController audioCtl = null;
 	
-	public AudioSelection(String t, EchoLabel lbl, MCheckBox ckbx, AudioController ac){
+	//public AudioSelection(String t, EchoLabel lbl, MCheckBox ckbx, AudioController ac){
+	//	audioTitle = t;
+	//	audioCtl = ac;
+	//}
+	
+	public AudioSelection(String t, MCheckBox ckbx, AudioController ac){
 		audioTitle = t;
 		audioCtl = ac;
 	}
-	
+
 	public void objectSelected(SelectionEvent event){
 		System.out.println("objectSelected = "+audioTitle);
 		try {

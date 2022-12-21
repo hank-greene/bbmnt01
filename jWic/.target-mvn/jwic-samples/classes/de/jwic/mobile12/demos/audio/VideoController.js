@@ -50,11 +50,11 @@
 	 */
     afterUpdate: function ButtonAfterUpdate(){
     	
-    	alert("VideoController afterUpdate");
+    	//alert("VideoController afterUpdate");
     	var mediaElements = document.querySelectorAll('video, audio'), i, total = mediaElements.length;
     	//var mediaElements = document.querySelectorAll('video'), i, total = mediaElements.length;
     	
-    	alert("VideoController afterUpdate mediaElements.length "+total);
+    	//alert("VideoController afterUpdate mediaElements.length "+total);
     	
     	var audio_id
     	
@@ -65,13 +65,13 @@
 			stretching: stretching,
 			pluginPath: '../build/',
 			success: function (media) {
-					alert("VideoController afterUpdate: i "+i);
-					alert("VideoController afterUpdate: media.id " + media.id);
+					//alert("VideoController afterUpdate: i "+i);
+					//alert("VideoController afterUpdate: media.id " + media.id);
 					
 					audio_id = media.id;
 					
 					var renderer = document.getElementById(media.id + '-rendername');
-					alert("VideoController afterUpdate: media.id " + media.id + '-rendername');
+					//alert("VideoController afterUpdate: media.id " + media.id + '-rendername');
 					
 					//media.addEventListener('loadedmetadata', function () {
 					//	alert("VideoController afterUpdate: media.addEventListener ");
@@ -106,9 +106,9 @@
 
 			
 			try {
-				alert("before await sleep(1000)");
+				//alert("before await sleep(1000)");
 				//await sleep(1000);
-				alert("after await sleep(1000)");
+				//alert("after await sleep(1000)");
 			} catch(err) {
 				alert(".play error message "+err.message);
 			}
