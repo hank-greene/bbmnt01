@@ -122,7 +122,6 @@ de/jwic/mobile05/demos/EchoTable.class
 de/jwic/demo/framework/AsyncRenderDemoModule.class
 de/jwic/demo/advanced/ComboLifeSearchDemo$2.class
 de/jwic/demo/tbv/FileTreeDemo$6.class
-de/jwic/samples/mobile05/demos/tbv/DemoTask.class
 de/jwic/samples/sample4/TableLayoutDemo.class
 de/jwic/demo/advanced/ProcessInfoDemo$5.class
 de/jwic/mobile02/demos/ComboDemo$1.class
@@ -232,6 +231,7 @@ de/jwic/mobile/demos/CheckBoxDemo$2.class
 de/jwic/samples/controls/RadioButtonDemo.class
 de/jwic/samples/sample3/TemperatureModel.class
 de/jwic/demo/basics/MenuDemoModule.class
+de/jwic/mobile05/demos/tbv/DemoTask.class
 de/jwic/linder01/demos/IAction2.class
 de/jwic/linder01/MobileDemoApplication.class
 de/jwic/mobile/demos/InputDemo.class

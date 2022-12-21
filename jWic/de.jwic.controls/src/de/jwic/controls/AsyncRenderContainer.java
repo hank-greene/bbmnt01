@@ -36,7 +36,7 @@ import de.jwic.base.ControlContainer;
 import de.jwic.base.Dimension;
 import de.jwic.base.IControlContainer;
 import de.jwic.base.IResourceControl;
-import de.jwic.base.ImageRef;
+//import de.jwic.base.ImageRef;
 import de.jwic.base.JWicException;
 import de.jwic.base.JavaScriptSupport;
 import de.jwic.base.RenderContext;
