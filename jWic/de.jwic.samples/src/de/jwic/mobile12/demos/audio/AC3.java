@@ -3,11 +3,21 @@ package de.jwic.mobile12.demos.audio;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 
+/***
+ * AC3 - Used in the Front Page
+ * 
+ * TODO: rename to reflect actual usage, intent, meaning !!!!!!!!!!!!!
+ * 
+ * 
+ */
 public class AC3 extends ControlContainer {
 	
 	private ControlContainer container;
 	
 	/**
+	 * 
+	 * TODO: rename, used in front page
+	 * 
 	 * Constructor.
 	 * @param parent
 	 */
