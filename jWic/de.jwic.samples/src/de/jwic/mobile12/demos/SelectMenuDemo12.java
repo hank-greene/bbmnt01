@@ -25,7 +25,7 @@ public final class SelectMenuDemo12 extends MobileDemoModule {
 	 * @param title
 	 */
 	public SelectMenuDemo12() {
-		super("Echo List");
+		super("Magnetic Echo List");
 	}
 
 	/* (non-Javadoc)

@@ -64,6 +64,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testClick" time="0.001"/>
-  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetInfoMessage" time="0"/>
-  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetTitle" time="0.001"/>
+  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetInfoMessage" time="0.001"/>
+  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetTitle" time="0"/>
 </testsuite>

@@ -16,7 +16,7 @@ public final class AudioDevPage extends MobileDemoModule {
 	private VideoController audioCtlr;
 	
 	public AudioDevPage() {
-		super("VideoDev");
+		super("Videos");
 	}
 	
 	/* (non-Javadoc)

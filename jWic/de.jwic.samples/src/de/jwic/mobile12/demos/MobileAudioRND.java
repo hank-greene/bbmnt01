@@ -8,19 +8,12 @@ import de.jwic.base.IControlContainer;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-//import de.jwic.controls.mobile04.MButton;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
 import de.jwic.mobile12.demos.audio.AC2;
 
-//---------------------------------------------------------------------
-//import de.jwic.mobile12.demos.audio.AudioController;
-
-//---------------------------------------------------------------------
 import de.jwic.controls.layout.TableLayoutContainer;
-//import de.jwic.events.SelectionEvent;
-//import de.jwic.events.SelectionListener;
 
 import de.jwic.controls.ScrollableContainer;
 
@@ -37,7 +30,7 @@ public class MobileAudioRND extends MobileDemoModule  {
 	protected transient Log log = LogFactory.getLog(getClass());
 
     public MobileAudioRND() {
-        super("Mobile Audio RND");
+        super("Magnetic Echo Table");
     }
 
 
@@ -49,20 +42,6 @@ public class MobileAudioRND extends MobileDemoModule  {
 		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
 
 		final AC2 audioCtlX = new AC2( container );
-
-		/****
-		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
-		toggleFromJava.setTitle("Send");
-		toggleFromJava.addSelectionListener(new SelectionListener() {
-			@Override
-			public void objectSelected(SelectionEvent event) {
-				System.out.println("Toggle?");
-				//checkBox.setChecked(!checkBox.isChecked());
-			}
-		});
-		 */
-
-		//final AudioController audioCtl = new AudioController( container );
 		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
@@ -97,12 +76,6 @@ public class MobileAudioRND extends MobileDemoModule  {
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				arrayOButtons[i] = new AudioButton(tlc);
-				//--------------------------------
-				//arrayOButtons[i].addSelectionListener(
-				//	    (new AudioSelection(""+arr.get(i), null, null, audioCtl)));
-				//--------------------------------
-				//arrayOButtons[i].addSelectionListener(
-				//	    (new AudioSelection2(""+arr.get(i), null, null, audioCtlX)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(
 					    (new AudioSelection2(""+arr.get(i), null, audioCtlX)));

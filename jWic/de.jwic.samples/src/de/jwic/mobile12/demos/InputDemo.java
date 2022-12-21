@@ -7,9 +7,6 @@ import de.jwic.controls.Label;
 import de.jwic.controls.mobile04.MInputBox;
 import de.jwic.controls.mobile04.MButton;
 
-import de.jwic.events.ValueChangedEvent;
-import de.jwic.events.ValueChangedListener;
-
 import de.jwic.mobile12.MobileDemoModule;
 
 import de.jwic.events.SelectionEvent;
@@ -29,7 +26,7 @@ public class InputDemo extends MobileDemoModule {
 		ControlContainer container = new ControlContainer(controlContainer);
 
 		final Label labelForTextInput = new Label(container, "labelForTextInput");
-		labelForTextInput.setText("Prospect mobile or email");
+		labelForTextInput.setText("Enter your Prospect's mobile number or email.");
 		
 		final MInputBox textInput = new MInputBox(container, "textInput");
 		textInput.setText(" ");
@@ -40,28 +37,12 @@ public class InputDemo extends MobileDemoModule {
 		             
 		labelForTextInputWithUpdateOnBlur.setText("Text Input With Mini and Update on Blur");
 		
-		final Label labelForTextInputWithUpdateOnBlur2 = 
-		             new Label(container, "labelForTextInputWithUpdateOnBlur2");
-
-		final MInputBox textInputWithUpdateOnBlur = 
-		             new MInputBox(container, "textInputWithUpdateOnBlur");
-		textInputWithUpdateOnBlur.setUpdateOnBlur(true);
-		textInputWithUpdateOnBlur.setMini(true);
-		
-		textInputWithUpdateOnBlur.addValueChangedListener(new ValueChangedListener() {
-			@Override
-			public void valueChanged(ValueChangedEvent event) {
-				labelForTextInputWithUpdateOnBlur2.setText(textInputWithUpdateOnBlur.getText());
-			}
-		});
-
 		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
 		toggleFromJava.setTitle("Send");
 		toggleFromJava.addSelectionListener(new SelectionListener() {
 			@Override
 			public void objectSelected(SelectionEvent event) {
-				System.out.println("Toggle?");
-				//checkBox.setChecked(!checkBox.isChecked());
+				System.out.println("Txt or eamil a link to a prospect");
 			}
 		});
 

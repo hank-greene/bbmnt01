@@ -15,7 +15,7 @@ public class FrontPage2 extends MobileDemoModule  {
 	protected transient Log log = LogFactory.getLog(getClass());
 
     public FrontPage2() {
-        super("Front Page nubmer 2");
+        super("Front Page");
     }
 
 
