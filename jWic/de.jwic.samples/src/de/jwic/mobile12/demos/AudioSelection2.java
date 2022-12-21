@@ -10,12 +10,7 @@ public class AudioSelection2 implements SelectionListener {
 
 	private String audioTitle = " ";
 	private AC2    audioCtl = null;
-	
-	//public AudioSelection2(String t, EchoLabel lbl, MCheckBox ckbx, AC2 ac){
-	//	audioTitle = t;
-	//	audioCtl = ac;
-	//}
-	
+		
 	public AudioSelection2(String t, MCheckBox ckbx, AC2 ac){
 		audioTitle = t;
 		audioCtl = ac;

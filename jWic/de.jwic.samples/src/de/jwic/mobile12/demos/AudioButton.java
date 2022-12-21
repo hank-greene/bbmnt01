@@ -11,14 +11,6 @@ import de.jwic.base.JavaScriptSupport;
 import de.jwic.controls.menu.Menu;
 import de.jwic.controls.SelectableControl;
 
-//whew this is messy
-//import de.jwic.controls.mobile04.Icon;
-//import de.jwic.controls.mobile04.IconPos;
-//import de.jwic.controls.mobile04.Theme;
-
-//adding audio.Player 
-import de.jwic.mobile12.demos.audio.Player;
-
 /**
  * Represents the &lt;button&gt; html element. 
  * This button displays links to an audio, and - future - video file.
@@ -48,13 +40,8 @@ public class AudioButton extends SelectableControl {
 	private boolean inline = false;
 	private boolean mini = false;
 	private boolean shadow = true;
-	//private Icon iconClass = null;
-	//private IconPos iconpos = IconPos.LEFT;
-	//private Theme theme = null;
 	private String wrapperClass = null;
-	
-	private Player player = null;
-	
+		
 	/**
 	 * @param container
 	 */
@@ -73,18 +60,7 @@ public class AudioButton extends SelectableControl {
 		init();
 		System.out.println("AudioButton(IControlContainer container, String name)");
 	}
-	
-	/**
-	 * @param container
-	 * @param name
-	 */
-	public AudioButton(IControlContainer container, String name, Player p) {
-		super(container, name);
-		init();
-		System.out.println("AudioButton(IControlContainer container, String name, Player p)");
-		player = p;
-	}
-	
+		
 	/* (non-Javadoc)
 	 * @see de.jwic.base.Control#init()
 	 */
@@ -128,18 +104,15 @@ public class AudioButton extends SelectableControl {
 		return title!=null && !title.isEmpty();
 	}
 	
-	//private String audioLink = "not set";
 	public void setAudioLink(String l) {
 		System.out.println("AudioButton.setAudioLink  is debug .. ");
-		//audiolink = l;  <<<<<<<<<<<<<<<<<<<  working
 		audiolink = "";
 	}
 	
 	public String getAudioLink() {
 		return audiolink;
 	}
-	
-	
+		
 	/**
 	 * Returns the icon for the button depending on the state.
 	 * @return

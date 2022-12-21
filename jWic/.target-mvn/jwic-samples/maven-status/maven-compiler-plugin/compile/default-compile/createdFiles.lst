@@ -611,7 +611,6 @@ de/jwic/samples/controls/AsyncRenderContainerDemo$1.class
 de/jwic/samples/controls/AsyncRenderContainerDemo.class
 de/jwic/demo/tbv/TableViewerDemo$1.class
 de/jwic/samples/controls/ListBoxDemo$1.class
-de/jwic/mobile12/demos/audio/Player.class
 de/jwic/demo/tbv/AddDemoTaskDialog$2.class
 de/jwic/demo/basics/DatePickerDemo$7.class
 de/jwic/demo/chartdb/DashboardModel.class
@@ -665,7 +664,6 @@ de/jwic/samples/filebrowser/FileInfoControl$1.class
 de/jwic/demo/model/ColorDemoContainer$1.class
 de/jwic/ecolib/samples/controls/CKEditorDemo$4.class
 de/jwic/samples/controls/CheckboxGroupDemo$EventLogListener.class
-de/jwic/mobile12/demos/audio/MediaPlayCounter.class
 de/jwic/samples/controls/CheckboxGroupDemo$6.class
 de/jwic/samples/controls/ControlDemoApplication$1.class
 de/jwic/mobile12/demos/audio/VideoController.class

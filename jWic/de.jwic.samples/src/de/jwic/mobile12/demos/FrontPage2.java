@@ -25,9 +25,7 @@ public class FrontPage2 extends MobileDemoModule  {
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
-
 		final AC3 audioCtlX = new AC3( container );
-
 		return container;
 	}		 
 }

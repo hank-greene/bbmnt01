@@ -61,18 +61,9 @@ public final class SelectMenuDemo12 extends MobileDemoModule {
 		   
 			JSONArray arr = myresponse.getJSONArray("echo-list");
 			
-			//AudioButton[] arrayOButtons = new AudioButton[arr.length()];
-			
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
 				selectmenu.addElement(""+arr.get(i), ""+i+"-"+arr.get(i));
-		    /**
-				arrayOButtons[i] = new AudioButton(tlc);
-				arrayOButtons[i].addSelectionListener(
-					                       (new AudioSelection(""+arr.get(i))));
-				arrayOButtons[i].setTitle(""+arr.get(i));
-				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
-			**/
 			}
 		   
 		} catch(Exception e) {
