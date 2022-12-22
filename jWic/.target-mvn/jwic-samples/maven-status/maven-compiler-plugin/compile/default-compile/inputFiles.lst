@@ -22,7 +22,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/tbv/FileTreeDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/linder01/demos/AudioButton.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/basics/FileUploadDemo.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/audio/AudioController.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/TableElementContentProvider.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/DateTimeChartDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/advanced/BlueBox.java
@@ -37,7 +36,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/ComboLifeSearchDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/linder01/demos/IAction2.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/layers/TestApplication.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/SelectMenuDemo10.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/advanced/ComboLifeSearchDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/ComboDropDownDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile11/MobileDemoApplication.java
@@ -52,7 +50,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chartdb/GlobalFilters.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/wizard/WizardGeneratorModel.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/basics/CheckBoxDemo.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/MobileDemoApplication.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile/MobileDemoApplication.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/wizard/GeneratedFile.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/PleaseWaitDemo.java
@@ -63,7 +60,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/sample3/FarenheitStrategy.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/InputBoxDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/ecolib/samples/controls/ColumnSelectorResult.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/AudioButton.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/NumericInputControlDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile12/demos/InputDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/linder01/demos/CheckBoxDemo.java
@@ -122,7 +118,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile12/MobileDemoPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/AnchorLinkDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/basics/CheckBoxGroupDemoModule.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/MobileDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/TabStripDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/JavaScriptDemoControl.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/filebrowser/FileBrowserDemo.java
@@ -137,14 +132,12 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/SingleCheckBoxDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/PartObjectContentProvider.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/basics/CheckBoxGroupDemo.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/audio/PlayPause.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/filebrowser/FileTreeView.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile12/demos/audio/AC3.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/ListBoxDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/wizard/IPageEditorControlObserver.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/container/ScrollableContainerDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/LabelProvider.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/audio/VideoController.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/framework/AsyncRenderContainerDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/advanced/ErrorWariningDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/filebrowser/viewer/ImagePreview.java
@@ -185,12 +178,10 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/model/ColorChanger.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/container/WindowDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/tbv/TableViewerDemoModule.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/MobileDemoPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/wizard/PageConfigurationPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/pojoedit/PojoEditorDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/tbv/FileLabelProvider.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/container/GroupControlDemo.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/VideoPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/WindowDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/AddTableElementDialog.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chartdb/DashboardModel.java
@@ -206,7 +197,6 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/pojoedit/MyPojoEditor.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/OverlayChartDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/filebrowser/ClosedEvent.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/InputDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/RadarChartDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/wizard/PageEditorControl.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile/demos/TabsDemo.java
@@ -250,14 +240,12 @@
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/container/WindowDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/DemoPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/chart/StackedBarChartModule.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/AudioSelection.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/ecolib/samples/controls/ChartDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/basics/FileUploadDemoModule.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/propeditor/BooleanMapper.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/DemoHost.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/filebrowser/PathInfoControl.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile11/demos/SelectMenuDemo11.java
-/home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/mobile10/demos/AudioPage.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/sample3/TemperatureDemo.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/samples/controls/SlowRenderingControl.java
 /home/u2/dev/git-bbmnt/bbmnt01/jWic/de.jwic.samples/src/de/jwic/demo/tbv/DemoTaskContentProvider.java
