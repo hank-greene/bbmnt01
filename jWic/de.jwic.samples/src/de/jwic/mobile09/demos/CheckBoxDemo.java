@@ -12,7 +12,7 @@ import de.jwic.events.SelectionListener;
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;
 
-import de.jwic.mobile06.MobileDemoModule;
+import de.jwic.mobile09.MobileDemoModule;
 
 /**
  * Created by boogie on 10/30/14.

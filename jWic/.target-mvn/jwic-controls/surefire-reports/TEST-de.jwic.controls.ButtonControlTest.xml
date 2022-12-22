@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="de.jwic.controls.ButtonControlTest" time="0.006" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="de.jwic.controls.ButtonControlTest" time="0.003" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-arm64/jre/lib/aarch64"/>
@@ -63,10 +63,10 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testClick" time="0.004"/>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetConfirmMsg" time="0.001"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testClick" time="0"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetConfirmMsg" time="0"/>
   <testcase classname="de.jwic.controls.ButtonControlTest" name="testHasIcon" time="0"/>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTooltip" time="0.001"/>
-  <testcase classname="de.jwic.controls.ButtonControlTest" name="testGetIconUrl" time="0"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTooltip" time="0"/>
+  <testcase classname="de.jwic.controls.ButtonControlTest" name="testGetIconUrl" time="0.003"/>
   <testcase classname="de.jwic.controls.ButtonControlTest" name="testSetTitle" time="0"/>
 </testsuite>
