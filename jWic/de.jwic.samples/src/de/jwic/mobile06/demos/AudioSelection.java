@@ -2,8 +2,7 @@ package de.jwic.mobile06.demos;
 
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;
-import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile03.MCheckBox;
+import de.jwic.controls.mobile02.MCheckBox;
 
 public class AudioSelection implements SelectionListener {
 	private String    audioTitle = "not set";
@@ -31,7 +30,7 @@ public class AudioSelection implements SelectionListener {
 			System.out.println("AudioSelection.objectSelected "+ex.toString());
 		}
 		try {
-			ckBoxAsLbl.setLabel(audioTitle);
+			//ckBoxAsLbl.setLabel(audioTitle);
 		} catch( Exception ex) {
 			System.out.println("AudioSelection.objectSelected "+ex.toString());
 		}
