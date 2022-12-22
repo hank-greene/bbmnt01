@@ -10,7 +10,6 @@ import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
-import de.jwic.demo.tbv.BasicTBVDemo;
 import de.jwic.demo.tbv.DemoTaskContentProvider;
 import de.jwic.demo.tbv.DemoTask;
 import de.jwic.demo.tbv.LabelProvider;
@@ -23,7 +22,6 @@ import de.jwic.controls.tableviewer.TableModel;
 import de.jwic.controls.tableviewer.TableModelAdapter;
 import de.jwic.controls.tableviewer.TableColumn;
 import de.jwic.controls.tableviewer.TableModelEvent;
-import de.jwic.controls.tableviewer.MobileTableRenderer;
 
 import de.jwic.controls.actions.Action;
 import de.jwic.controls.actions.IAction;
@@ -32,11 +30,8 @@ import de.jwic.controls.Button;
 import de.jwic.controls.ToolBar;
 import de.jwic.controls.ToolBarGroup;
 
-import java.util.Iterator;
 import de.jwic.base.ImageRef;
 import de.jwic.demo.ImageLibrary;
-
-//import de.jwic.samples.mobile04.demos.tbv.DemoTask;
 
 public class EchoTable extends MobileDemoModule implements ElementSelectedListener {
 
@@ -75,11 +70,9 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		container = new ControlContainer(controlContainer, "container");
 
 		final TableViewer table = new TableViewer(container, "table1");
-		//DemoTaskContentProvider contentProvider = new DemoTaskContentProvider(createDemoData());
 		contentProvider = new DemoTaskContentProvider(createDemoData());
 		table.setContentProvider(contentProvider);
 		table.setTableLabelProvider(new LabelProvider());
-		//table.setTableRenderer(new MobileTableRenderer());
 		table.setScrollable(true);
 		table.setShowStatusBar(true);
 		table.setResizeableColumns(true);
@@ -108,7 +101,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 			}
 		});
 		model.setSelectionMode(TableModel.SELECTION_SINGLE);
-		//createColumns();
 		createActions();
 		
 		// create the toolbar
@@ -132,7 +124,6 @@ public class EchoTable extends MobileDemoModule implements ElementSelectedListen
 		
 		// Add the listener after all other controls have been created
 		model.addElementSelectedListener(listener);
-		//model.addElementSelectedListener(this);
 				
 		return container;
 	}

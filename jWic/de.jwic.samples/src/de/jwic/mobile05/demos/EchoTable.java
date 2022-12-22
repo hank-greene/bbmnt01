@@ -10,7 +10,6 @@ import de.jwic.events.ElementSelectedListener;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
-import de.jwic.demo.tbv.BasicTBVDemo;
 import de.jwic.demo.tbv.DemoTaskContentProvider;
 import de.jwic.demo.tbv.DemoTask;
 import de.jwic.demo.tbv.LabelProvider;
@@ -23,7 +22,6 @@ import de.jwic.controls.tableviewer.TableModel;
 import de.jwic.controls.tableviewer.TableModelAdapter;
 import de.jwic.controls.tableviewer.TableColumn;
 import de.jwic.controls.tableviewer.TableModelEvent;
-import de.jwic.controls.tableviewer.MobileTableRenderer;
 
 import de.jwic.controls.actions.Action;
 import de.jwic.controls.actions.IAction;

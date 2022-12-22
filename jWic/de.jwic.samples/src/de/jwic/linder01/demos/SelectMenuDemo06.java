@@ -3,7 +3,7 @@ package de.jwic.linder01.demos;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
-import de.jwic.controls.mobile04.MSelectmenu;
+import de.jwic.controls.mobile.MSelectmenu;
 import de.jwic.data.ISelectElement;
 import de.jwic.linder01.MobileDemoModule;
 
@@ -14,10 +14,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.Map;
-import java.util.HashMap;
-
-import de.jwic.events.SelectionListener;
 
 /**
  * @author vedad

@@ -4,8 +4,8 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile04.MInputBox;
-import de.jwic.controls.mobile04.MButton;
+import de.jwic.controls.mobile.MInputBox;
+import de.jwic.controls.mobile.MButton;
 
 import de.jwic.events.ValueChangedEvent;
 import de.jwic.events.ValueChangedListener;

@@ -3,7 +3,7 @@ package de.jwic.mobile10.demos;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
-import de.jwic.controls.mobile04.MSelectmenu;
+import de.jwic.controls.mobile.MSelectmenu;
 import de.jwic.data.ISelectElement;
 import de.jwic.mobile10.MobileDemoModule;
 
