@@ -11,7 +11,6 @@ de/jwic/controls/mobile04/MFlipSwitch.class
 de/jwic/controls/slickgrid/SlickGrid$2.class
 de/jwic/controls/dialogs/MessageDialog$1.class
 de/jwic/controls/slickgrid/SlickGridColumn$Formatters.class
-de/jwic/controls/mobile08/MCheckBox.class
 de/jwic/controls/slickgrid/SlickGridDataRowGsonAdapter.class
 de/jwic/controls/chart/impl/ErrorLineChart.class
 de/jwic/controls/mobile02/MCheckBox.class
@@ -122,7 +121,6 @@ de/jwic/controls/HTMLElement.class
 de/jwic/controls/ToolBarSpacer.class
 de/jwic/controls/chart/api/Chart.class
 de/jwic/controls/SelectableControl.class
-de/jwic/controls/mobile08/MTransitionBox.class
 de/jwic/controls/mobile02/Theme.class
 de/jwic/controls/ckeditor/ToolBarBand.class
 de/jwic/controls/slickgrid/ISlickGridDataProvider.class
