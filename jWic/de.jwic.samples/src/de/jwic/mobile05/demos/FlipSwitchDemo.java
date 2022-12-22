@@ -29,18 +29,6 @@ public class FlipSwitchDemo extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 
-		/****
-		final MFlipSwitch checkBox = new MFlipSwitch(container, "checkBox");
-		checkBox.addValueChangedListener(new ValueChangedListener() {
-			
-			@Override
-			public void valueChanged(ValueChangedEvent event) {
-				final boolean state = checkBox.isChecked();
-				label.setText("FlipSwitch is " + (state ? "checked" : "not checked"));
-			}
-		});
-		 */
-
 		label = new Label(container, "label");
 		label.setText("");
 

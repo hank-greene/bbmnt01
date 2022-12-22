@@ -11,12 +11,6 @@ import de.jwic.base.JavaScriptSupport;
 import de.jwic.controls.menu.Menu;
 import de.jwic.controls.SelectableControl;
 
-//whew thi is messy
-import de.jwic.controls.mobile04.Icon;
-import de.jwic.controls.mobile04.IconPos;
-import de.jwic.controls.mobile04.Theme;
-
-
 /**
  * Represents the &lt;button&gt; html element. 
  * This button displays links to an audio, and - future - video file.
@@ -46,9 +40,6 @@ public class AudioButton extends SelectableControl {
 	private boolean inline = false;
 	private boolean mini = false;
 	private boolean shadow = true;
-	private Icon iconClass = null;
-	private IconPos iconpos = IconPos.LEFT;
-	private Theme theme = null;
 	private String wrapperClass = null;
 	
 	/**

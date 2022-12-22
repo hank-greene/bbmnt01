@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="de.jwic.controls.AnchorLinkControlTest" time="0.005" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="de.jwic.controls.AnchorLinkControlTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-arm64/jre/lib/aarch64"/>
@@ -64,6 +64,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testClick" time="0.001"/>
-  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetInfoMessage" time="0"/>
-  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetTitle" time="0.004"/>
+  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetInfoMessage" time="0.001"/>
+  <testcase classname="de.jwic.controls.AnchorLinkControlTest" name="testSetTitle" time="0"/>
 </testsuite>
