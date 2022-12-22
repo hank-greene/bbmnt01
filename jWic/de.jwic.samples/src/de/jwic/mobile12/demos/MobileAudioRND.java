@@ -78,7 +78,7 @@ public class MobileAudioRND extends MobileDemoModule  {
 				arrayOButtons[i] = new AudioButton(tlc);
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(
-					    (new AudioSelection2(""+arr.get(i), null, audioCtlX)));
+					    (new AudioSelection2(""+arr.get(i),audioCtlX)));
 				//--------------------------------
 				arrayOButtons[i].addSelectionListener(new SelectionListener(){
 					@Override

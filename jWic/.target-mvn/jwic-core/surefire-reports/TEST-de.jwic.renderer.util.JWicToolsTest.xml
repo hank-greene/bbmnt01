@@ -65,7 +65,7 @@
   </properties>
   <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatInp" time="0"/>
   <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatDate" time="0"/>
-  <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatHtml" time="0.001"/>
+  <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatHtml" time="0"/>
   <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatTime" time="0"/>
-  <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatDateTime" time="0"/>
+  <testcase classname="de.jwic.renderer.util.JWicToolsTest" name="testFormatDateTime" time="0.001"/>
 </testsuite>
