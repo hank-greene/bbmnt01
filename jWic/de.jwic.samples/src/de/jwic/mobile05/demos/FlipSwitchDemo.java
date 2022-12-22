@@ -5,7 +5,7 @@ import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
 import de.jwic.controls.mobile04.MButton;
-import de.jwic.controls.mobile05.MFlipSwitch;
+//import de.jwic.controls.mobile05.MFlipSwitch;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
@@ -29,7 +29,7 @@ public class FlipSwitchDemo extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 
-
+		/****
 		final MFlipSwitch checkBox = new MFlipSwitch(container, "checkBox");
 		checkBox.addValueChangedListener(new ValueChangedListener() {
 			
@@ -39,6 +39,7 @@ public class FlipSwitchDemo extends MobileDemoModule {
 				label.setText("FlipSwitch is " + (state ? "checked" : "not checked"));
 			}
 		});
+		 */
 
 		label = new Label(container, "label");
 		label.setText("");
@@ -51,7 +52,7 @@ public class FlipSwitchDemo extends MobileDemoModule {
 			@Override
 			public void objectSelected(SelectionEvent event) {
 				System.out.println("Toggle?");
-				checkBox.setChecked(!checkBox.isChecked());
+				//checkBox.setChecked(!checkBox.isChecked());
 			}
 		});
 

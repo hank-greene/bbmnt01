@@ -64,10 +64,10 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.controls.ListBoxControlTest" name="testGetSelectedKey" time="0.002"/>
-  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testClear" time="0"/>
+  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testClear" time="0.001"/>
   <testcase classname="de.jwic.controls.ListBoxControlTest" name="testEvent" time="0.001"/>
   <testcase classname="de.jwic.controls.ListBoxControlTest" name="testAddElement" time="0"/>
-  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testGetSelectedKeys" time="0.001"/>
-  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testIsKeySelected" time="0"/>
-  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testRemoveElement" time="0.001"/>
+  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testGetSelectedKeys" time="0"/>
+  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testIsKeySelected" time="0.001"/>
+  <testcase classname="de.jwic.controls.ListBoxControlTest" name="testRemoveElement" time="0"/>
 </testsuite>

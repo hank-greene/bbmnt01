@@ -21,7 +21,6 @@ de/jwic/mobile06/MobileDemoModule.class
 de/jwic/demo/container/GroupControlDemo$1.class
 de/jwic/demo/wizard/PageConfigurationPage.class
 de/jwic/samples/controls/ProgressBarDemo$1.class
-de/jwic/mobile05/demos/EchoWindow$1.class
 de/jwic/demo/advanced/ProcessInfoDemo$4.class
 de/jwic/mobile02/demos/TabsDemo.class
 de/jwic/ecolib/samples/controls/CKEditorDemo$3.class
@@ -534,7 +533,6 @@ de/jwic/demo/advanced/ProcessInfoDemo.class
 de/jwic/samples/controls/CheckboxGroupDemo$2.class
 de/jwic/mobile02/demos/ComboDemo.class
 de/jwic/mobile11/MobileDemoModule.class
-de/jwic/mobile05/demos/FlipSwitchDemo$2.class
 de/jwic/samples/controls/RadioGroupDemo$3.class
 de/jwic/demo/wizard/WizardGeneratorWizard.class
 de/jwic/demo/advanced/ErrorWarningDemo$3.class

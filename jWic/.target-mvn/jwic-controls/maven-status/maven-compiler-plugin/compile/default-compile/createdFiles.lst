@@ -5,7 +5,6 @@ de/jwic/controls/DatePicker.class
 de/jwic/controls/ckeditor/ToolBarButton$1.class
 de/jwic/controls/chart/impl/util/DataConverter$1.class
 de/jwic/controls/chart/impl/ErrorBarChart.class
-de/jwic/controls/mobile05/MFlipSwitch.class
 de/jwic/controls/chart/api/JsonChartName.class
 de/jwic/controls/mobile04/MFlipSwitch.class
 de/jwic/controls/slickgrid/SlickGrid$2.class
@@ -15,7 +14,6 @@ de/jwic/controls/slickgrid/SlickGridDataRowGsonAdapter.class
 de/jwic/controls/chart/impl/ErrorLineChart.class
 de/jwic/controls/mobile02/MCheckBox.class
 de/jwic/controls/coledit/ColumnSelector$7.class
-de/jwic/controls/mobile06/MFlipSwitch.class
 de/jwic/controls/CheckBoxGroup.class
 de/jwic/controls/tableviewer/TableModel.class
 de/jwic/controls/wizard/AbstractWizard.class
