@@ -1,11 +1,9 @@
 de/jwic/controls/wizard/WizardContainer$NavigationController.class
-de/jwic/controls/mobile04/Icon.class
 de/jwic/controls/DatePicker.class
 de/jwic/controls/ckeditor/ToolBarButton$1.class
 de/jwic/controls/chart/impl/util/DataConverter$1.class
 de/jwic/controls/chart/impl/ErrorBarChart.class
 de/jwic/controls/chart/api/JsonChartName.class
-de/jwic/controls/mobile04/MFlipSwitch.class
 de/jwic/controls/slickgrid/SlickGrid$2.class
 de/jwic/controls/dialogs/MessageDialog$1.class
 de/jwic/controls/slickgrid/SlickGridColumn$Formatters.class
@@ -45,7 +43,6 @@ de/jwic/controls/lazytooltip/ILazyTooltipProvider.class
 de/jwic/controls/tableviewer/StatusBarControl$2.class
 de/jwic/controls/tableviewer/DefaultTableRenderer.class
 de/jwic/controls/mobile/MFieldSetLayout.class
-de/jwic/controls/mobile04/MFieldSetLayout$Type.class
 de/jwic/controls/mobile/MCheckBox.class
 de/jwic/controls/ClientNotifierControl.class
 de/jwic/controls/chart/impl/DateTimeChartModel.class
@@ -72,7 +69,6 @@ de/jwic/controls/slickgrid/ISlickGridColumnValueProvider.class
 de/jwic/controls/layout/Row.class
 de/jwic/controls/chart/api/Chart$1.class
 de/jwic/controls/mobile/MRadioButton.class
-de/jwic/controls/mobile04/MCheckBox.class
 de/jwic/controls/InputBox.class
 de/jwic/controls/AnchorLink.class
 de/jwic/controls/chart/impl/LineChartConfiguration.class
@@ -99,7 +95,6 @@ de/jwic/controls/tableviewer/CellLabel.class
 de/jwic/controls/balloon/Balloon$RegisterOnEvent.class
 de/jwic/controls/DatePicker$1.class
 de/jwic/controls/coledit/ColumnSelector$2.class
-de/jwic/controls/mobile04/MSelectBox.class
 de/jwic/controls/AbstractImageMap.class
 de/jwic/controls/mobile02/MRadioButton.class
 de/jwic/controls/dialogs/DialogEvent.class
@@ -120,10 +115,8 @@ de/jwic/controls/slickgrid/ISlickGridDataProvider.class
 de/jwic/controls/coledit/ColumnSelector$5.class
 de/jwic/controls/actions/Action.class
 de/jwic/controls/slickgrid/SlickGrid.class
-de/jwic/controls/mobile04/MPanel$Display.class
 de/jwic/controls/slickgrid/SlickGridListDataProvider.class
 de/jwic/controls/pojoedit/IFieldHandler.class
-de/jwic/controls/mobile04/MFieldSetLayout.class
 de/jwic/controls/mobile02/IconPos.class
 de/jwic/controls/chart/impl/OverlayChart.class
 de/jwic/controls/tableviewer/StatusBarControl$1.class
@@ -137,7 +130,6 @@ de/jwic/controls/wizard/WizardPage.class
 de/jwic/controls/AsyncRenderContainer.class
 de/jwic/controls/coledit/ColumnSelector$6.class
 de/jwic/controls/chart/api/ValueListDataset.class
-de/jwic/controls/mobile04/MPanel$Position.class
 de/jwic/controls/chart/impl/RadarChartConfiguration.class
 de/jwic/controls/StackedContainer.class
 de/jwic/controls/slickgrid/SlickGridColumn$IEditors.class
@@ -155,7 +147,6 @@ de/jwic/controls/slickgrid/SlickGrid$3.class
 de/jwic/controls/coledit/ColumnSelector$1.class
 de/jwic/controls/mobile02/MCombo.class
 de/jwic/controls/chart/impl/CircleChart.class
-de/jwic/controls/mobile04/MCombo.class
 de/jwic/controls/mobile/MDatePicker.class
 de/jwic/controls/tableviewer/ITableLabelProvider.class
 de/jwic/controls/mobile02/MSelectmenu.class
@@ -164,7 +155,6 @@ de/jwic/controls/chart/api/Chart$LegendLocation.class
 de/jwic/controls/slickgrid/SlickGridChangeEvent.class
 de/jwic/controls/slickgrid/SlickGridOptions$SelectionModel.class
 de/jwic/controls/mobile/MTabStrip.class
-de/jwic/controls/mobile04/MButton.class
 de/jwic/controls/TabStrip.class
 de/jwic/controls/menu/Menu.class
 de/jwic/controls/mobile/Icon.class
@@ -180,7 +170,6 @@ de/jwic/controls/pojoedit/handler/AbstractFieldHandler.class
 de/jwic/controls/pojoedit/handler/TextFieldHandler.class
 de/jwic/controls/dialogs/InputDialog$1.class
 de/jwic/controls/combo/ComboBehavior.class
-de/jwic/controls/mobile04/IconPos.class
 de/jwic/controls/mobile02/MDatePicker.class
 de/jwic/controls/LazyInitializationHandler.class
 de/jwic/controls/combo/DropDown.class
@@ -188,7 +177,6 @@ de/jwic/controls/tableviewer/MobileTableRenderer.class
 de/jwic/controls/actions/ActionButton$1.class
 de/jwic/controls/dialogs/InputDialog.class
 de/jwic/controls/chart/impl/RadarChart.class
-de/jwic/controls/mobile04/MPage.class
 de/jwic/controls/mobile02/MPage.class
 de/jwic/controls/ListBox.class
 de/jwic/controls/tableviewer/ITableRenderer.class
@@ -210,7 +198,6 @@ de/jwic/controls/mobile/MButton.class
 de/jwic/controls/actions/Navigator$1.class
 de/jwic/controls/actions/Navigator$ActionUpdateListener.class
 de/jwic/controls/AbstractListControl.class
-de/jwic/controls/mobile04/MPanel.class
 de/jwic/controls/wizard/WizardContainer$1.class
 de/jwic/controls/NumericInputBox$SymbolPlacement.class
 de/jwic/controls/chart/api/ChartType.class
@@ -242,7 +229,6 @@ de/jwic/controls/slickgrid/SlickGrid$1.class
 de/jwic/controls/ToolBar.class
 de/jwic/controls/tableviewer/TableColumn.class
 de/jwic/controls/NumericInputBox$DigitalGroup.class
-de/jwic/controls/mobile04/MInputBox.class
 de/jwic/controls/menu/MenuEvent.class
 de/jwic/controls/slickgrid/SlickGridOptions.class
 de/jwic/controls/mobile/MInputBox.class
@@ -252,13 +238,11 @@ de/jwic/controls/slickgrid/SlickGridChange.class
 de/jwic/controls/tableviewer/TableModelAdapter.class
 de/jwic/controls/chart/api/util/ChartHelper.class
 de/jwic/controls/RadioButton.class
-de/jwic/controls/mobile04/Theme.class
 de/jwic/controls/mobile/MCombo.class
 de/jwic/controls/accordion/Accordion$HeightStyle.class
 de/jwic/controls/dialogs/DialogListener.class
 de/jwic/controls/combo/Combo.class
 de/jwic/controls/mobile/MPanel$Position.class
-de/jwic/controls/mobile04/MSelectmenu.class
 de/jwic/controls/mobile02/MTabStrip.class
 de/jwic/controls/slickgrid/SlickGridModel.class
 de/jwic/controls/slickgrid/SlickGridDataRow.class
