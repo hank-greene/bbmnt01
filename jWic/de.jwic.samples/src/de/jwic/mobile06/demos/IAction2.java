@@ -4,10 +4,6 @@
 package de.jwic.mobile06.demos;
 
 import de.jwic.controls.actions.IAction;
-import java.beans.PropertyChangeListener;
-import java.io.Serializable;
-
-import de.jwic.base.ImageRef;
 
 /**
  * Represents the backend side of a command which may be triggered by the end user. Actions

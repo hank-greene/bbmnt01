@@ -1,15 +1,9 @@
 package de.jwic.controls.mobile02;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import de.jwic.base.IControlContainer;
 import de.jwic.base.IncludeJsOption;
 import de.jwic.base.JavaScriptSupport;
 import de.jwic.controls.combo.Combo;
-import de.jwic.controls.combo.ComboBehavior;
-import de.jwic.data.ISelectElement;
-import de.jwic.data.SelectElement;
 
 /**
  * 

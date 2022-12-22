@@ -4,13 +4,10 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile04.MButton;
-//import de.jwic.controls.mobile05.MFlipSwitch;
+import de.jwic.controls.mobile.MButton;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
-import de.jwic.events.ValueChangedEvent;
-import de.jwic.events.ValueChangedListener;
 
 import de.jwic.mobile05.MobileDemoModule;
 
@@ -40,7 +37,6 @@ public class FlipSwitchDemo extends MobileDemoModule {
 			@Override
 			public void objectSelected(SelectionEvent event) {
 				System.out.println("Toggle?");
-				//checkBox.setChecked(!checkBox.isChecked());
 			}
 		});
 

@@ -10,10 +10,6 @@ import de.jwic.controls.ScrollableContainer;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-//import de.jwic.controls.mobile05.MFlipSwitch;
-import de.jwic.events.ValueChangedEvent;
-import de.jwic.events.ValueChangedListener;
-
 public class EchoWindow extends MobileDemoModule {
 	
     protected transient Log log = LogFactory.getLog(getClass());
@@ -28,16 +24,6 @@ public class EchoWindow extends MobileDemoModule {
 	public Control createPage(IControlContainer controlContainer) {
 		final ControlContainer container = new ControlContainer(controlContainer);
 		
-		//final MFlipSwitch checkBox = new MFlipSwitch(container, "checkBox");
-		//checkBox.addValueChangedListener(new ValueChangedListener() {
-		//	
-		//	@Override
-		//	public void valueChanged(ValueChangedEvent event) {
-				//final boolean state = checkBox.isChecked();
-				//label.setText("FlipSwitch is " + (state ? "checked" : "not checked"));
-		//	}
-		//});
-		
 		label = new EchoLabel(container, "label");
 		label.setText("Magnetic Echo");
 		
@@ -46,7 +32,6 @@ public class EchoWindow extends MobileDemoModule {
 		sc.setHeight("250px");
 		sc.setWidth("250px");
 		
-		//EchoWindowList ewList = new EchoWindowList( sc, label, checkBox );
 		EchoWindowList ewList = new EchoWindowList( sc, label );
 		
 		return container;

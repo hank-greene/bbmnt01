@@ -4,7 +4,6 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile.IconPos;
 import de.jwic.controls.mobile.MButton;
 import de.jwic.controls.mobile.MCheckBox;
 import de.jwic.events.SelectionEvent;

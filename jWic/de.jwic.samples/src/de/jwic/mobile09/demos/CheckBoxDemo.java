@@ -4,9 +4,8 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.mobile02.IconPos;
-import de.jwic.controls.mobile02.MButton;
-import de.jwic.controls.mobile02.MCheckBox;
+import de.jwic.controls.mobile.MButton;
+import de.jwic.controls.mobile.MCheckBox;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;

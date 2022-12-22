@@ -1,7 +1,5 @@
 package de.jwic.mobile05.demos;
 
-import de.jwic.controls.actions.IAction;
-import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
 
 import org.apache.commons.logging.Log;

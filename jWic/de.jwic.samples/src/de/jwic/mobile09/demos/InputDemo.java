@@ -4,7 +4,6 @@ import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
 import de.jwic.controls.Label;
-import de.jwic.controls.InputBox.InputType;
 import de.jwic.controls.mobile04.MInputBox;
 import de.jwic.controls.mobile04.MButton;
 
@@ -15,9 +14,6 @@ import de.jwic.mobile09.MobileDemoModule;
 
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
-import de.jwic.events.ValueChangedEvent;
-import de.jwic.events.ValueChangedListener;
-
 
 /**
  * Created by boogie on 10/29/14.

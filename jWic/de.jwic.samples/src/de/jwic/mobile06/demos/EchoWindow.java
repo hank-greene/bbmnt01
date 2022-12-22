@@ -23,7 +23,7 @@ import de.jwic.controls.layout.TableLayoutContainer;
 import de.jwic.events.SelectionEvent;
 import de.jwic.events.SelectionListener;
 
-import de.jwic.controls.mobile02.MCheckBox;
+import de.jwic.controls.mobile.MCheckBox;
 
 public class EchoWindow extends MobileDemoModule {
 	

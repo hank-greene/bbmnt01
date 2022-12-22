@@ -10,14 +10,11 @@ import java.util.Random;
 import de.jwic.base.Control;
 import de.jwic.base.ControlContainer;
 import de.jwic.base.IControlContainer;
-import de.jwic.controls.combo.LifeSearchCombo;
 import de.jwic.controls.mobile.MCombo;
 import de.jwic.data.DataLabel;
 import de.jwic.data.IBaseLabelProvider;
 import de.jwic.demo.advanced.PartObject;
 import de.jwic.demo.advanced.PartObjectContentProvider;
-import de.jwic.events.ElementSelectedEvent;
-import de.jwic.events.ElementSelectedListener;
 import de.jwic.mobile.MobileDemoModule;
 
 /**

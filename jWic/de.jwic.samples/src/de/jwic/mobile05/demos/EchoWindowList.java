@@ -20,8 +20,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-//import de.jwic.controls.mobile05.MFlipSwitch;
-
 
 public class EchoWindowList extends ControlContainer {
 	
@@ -33,44 +31,12 @@ public class EchoWindowList extends ControlContainer {
 	private Hashtable<Integer,String> keyEchoTbl = new Hashtable<Integer,String>();
 	
 	private EchoLabel echoLabel;
-	//private MFlipSwitch flipSwitch;
-	
-	/*****
-	public EchoWindowList( IControlContainer container ) {
-		super(container);
-		echoList();
-	}
 	
 	public EchoWindowList( IControlContainer container, EchoLabel lbl ) {
 		super(container);
 		echoLabel = lbl;
 		echoList();
 	}
-	public EchoWindowList( IControlContainer container, EchoLabel lbl, MFlipSwitch mfs ) {
-		super(container);
-		echoLabel = lbl;
-		echoList();
-	}
-	*****/
-	
-	public EchoWindowList( IControlContainer container, EchoLabel lbl ) {
-		super(container);
-		echoLabel = lbl;
-		//flipSwitch = mfs;
-		echoList();
-	}
-	
-	/***
-    public void addAction(IAction action) {
-        Integer key = new Integer(action.getTitle());
-        actionOrder.add(key);
-        actionMap.put(key, action);
-    }
-	
-    public List getActionKeys() {
-        return actionOrder;
-    }
-	 */
 
     public IAction getActionByKey(Integer key) {
     	System.out.println("EchoWindowList.getActionByKey( "+key+" )");
@@ -116,8 +82,6 @@ public class EchoWindowList extends ControlContainer {
 			
 			for (int i = 0; i < arr.length(); i++) {
 				System.out.println(" " + arr.get(i));
-				//addAction(new IndexAction( i, ""+arr.get(i) ));
-				//addAction(new AudioButton( ewlContainer, ""+arr.get(i), i ));
 				keyEchoTbl.put(new Integer(i), ""+arr.get(i));
 			}
 		   

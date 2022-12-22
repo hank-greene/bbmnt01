@@ -2,7 +2,6 @@ package de.jwic.mobile09.demos;
 
 import de.jwic.events.SelectionListener;
 import de.jwic.events.SelectionEvent;
-//import de.jwic.controls.mobile08.MCheckBox;
 
 import de.jwic.mobile09.demos.audio.Player;
 
