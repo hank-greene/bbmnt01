@@ -64,6 +64,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.controls.TabStripControlTest" name="testAddTabString" time="0.001"/>
-  <testcase classname="de.jwic.controls.TabStripControlTest" name="testGetActiveTabName" time="0.001"/>
-  <testcase classname="de.jwic.controls.TabStripControlTest" name="testRemoveControl" time="0"/>
+  <testcase classname="de.jwic.controls.TabStripControlTest" name="testGetActiveTabName" time="0"/>
+  <testcase classname="de.jwic.controls.TabStripControlTest" name="testRemoveControl" time="0.001"/>
 </testsuite>
