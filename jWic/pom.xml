@@ -513,6 +513,14 @@
 				<version>4.11</version>
 				<scope>test</scope>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+			<dependency>
+				<groupId>org.apache.kafka</groupId>
+				<artifactId>kafka-clients</artifactId>
+				<version>3.3.1</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 

@@ -14,6 +14,8 @@ import de.jwic.mobile12.demos.MobileAudioRND;
 
 public class MobileDemoApplication extends Application {
 
+	BBMNTProperties bbmntProps = BBMNTProperties.getInstance();
+
 	@Override
 	public Control createRootControl(IControlContainer container) {
 		
