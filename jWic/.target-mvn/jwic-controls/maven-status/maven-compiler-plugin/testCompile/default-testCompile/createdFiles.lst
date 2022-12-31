@@ -4,14 +4,14 @@ de/jwic/test/TestLauncher.class
 de/jwic/base/ControlTest$DummyControl.class
 de/jwic/base/ControlTest.class
 de/jwic/controls/AnchorLinkControlTest$1.class
-de/jwic/controls/ButtonControlTest$1.class
 de/jwic/base/XmlApplicationSetupTest.class
+de/jwic/controls/ButtonControlTest$1.class
 de/jwic/ecolib/controls/StackedContainerTest.class
 de/jwic/base/ControlMovementTest.class
 de/jwic/controls/InputBoxControlTest$1.class
 de/jwic/controls/AnchorLinkControlTest.class
 de/jwic/controls/chart/ScatterChartTest.class
-de/jwic/controls/InputBoxControlTest.class
-de/jwic/controls/ButtonControlTest.class
 de/jwic/test/JWicTestSuite.class
+de/jwic/controls/ButtonControlTest.class
+de/jwic/controls/InputBoxControlTest.class
 de/jwic/controls/chart/ChartTest.class
