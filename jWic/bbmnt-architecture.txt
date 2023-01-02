@@ -1,0 +1,39 @@
+
+
+
+
+
+      browser
+
+    +--------------+
+    |  gateway 
+    |  
+
+    +--------------+
+    |  router 
+    |  89.1
+
+    +--------------+
+    |  
+    |  bbmnt.media 
+    |  89.93:8080
+    |  tomcat - jWic
+    |         - media / mp3s
+    |         - samples/mobile12
+    |                kafka producer  
+    |  
+    |  java -version "11.0.17" 2022-10-18  
+    |  
+
+    +-----------------------------------+
+    |  
+    |  kafka - service
+    |  89.95 or 94:9092
+    |  
+    |  kafka consumer
+    |     send txt or email  
+    |  
+    |  
+
+
+

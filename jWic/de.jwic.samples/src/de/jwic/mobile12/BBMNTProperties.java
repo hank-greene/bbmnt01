@@ -1,5 +1,6 @@
 package de.jwic.mobile12;
 
+import java.io.Serializable;
 import de.jwic.base.JWicRuntime;
 
 import java.io.File;
@@ -9,7 +10,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Properties;
 
-public class BBMNTProperties {
+public class BBMNTProperties implements Serializable {
 
     private static BBMNTProperties bbmntProps = null;
 
