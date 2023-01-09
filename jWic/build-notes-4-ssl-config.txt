@@ -1,0 +1,199 @@
+https://medium.com/analytics-vidhya/a-step-by-step-guide-to-apache-tomcat-with-ssl-configuration-8e407bc6b503
+
+https://www.namecheap.com/support/knowledgebase/article.aspx/9441/33/installing-an-ssl-certificate-on-tomcat/
+
+https://www.ssltrust.com/help/setup-guides/apache-tomcat-ssl-install-guide
+
+https://geekflare.com/tomcat-ssl-guide/
+
+https://www.digitalocean.com/community/tutorials/steps-to-configure-ssl-on-tomcat-and-setup-auto-redirect-from-http-to-https
+
+
+############### new steps, order is key
+-----------------------------------------------------------------------
+
+1. DONE  buy domain from ionos              matt1316.online
+
+2. DONE  buy email service for the domain
+
+3. DONE  create an admin@<domain> email address 
+
+4. generate jks CSR
+root@lnn01:/opt/tomcat/conf# keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore .....
+Enter keystore password:  
+Re-enter new password: 
+What is your first and last name?
+  [Unknown]:  ......
+What is the name of your organizational unit?
+  [Unknown]:  it
+What is the name of your organization?
+  [Unknown]:  ....
+What is the name of your City or Locality?
+  [Unknown]:  ....
+What is the name of your State or Province?
+  [Unknown]:  md
+What is the two-letter country code for this unit?
+  [Unknown]:  us
+Is CN=...., OU=it, O=..., L=..., ST=md, C=us correct?
+  [no]:  yes
+
+
+5. generated a cert 
+root@lnn01:/opt/tomcat/conf# keytool -certreq -keyalg RSA -alias tomcat -file ......csr -keystore ......jks
+Enter keystore password:  
+root@lnn01:/opt/tomcat/conf# 
+
+6. apply for cert at gogitssl, oops gogetssl
+
+
+7. import cert 
+
+root@lnn01:/home/lnn01/matt1316-crt-work-gogetssl# keytool -import -trustcacerts -alias tomcat -keystore .......jks -file ......crt 
+Enter keystore password:  
+Certificate reply was installed in keystore
+
+8. configure nameservice for domain in FreeDNS
+
+9. that should do the trick - for now
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+########### actual
+-----------------------------------------------------------------
+root@lnn01:/opt/tomcat/conf# keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore .......jks
+Enter keystore password:  
+Re-enter new password: 
+They don't match. Try again
+Enter keystore password:  
+Re-enter new password: 
+What is your first and last name?
+  [Unknown]:  ......
+What is the name of your organizational unit?
+  [Unknown]:  IT
+What is the name of your organization?
+  [Unknown]:  .....
+What is the name of your City or Locality?
+  [Unknown]:  ....
+What is the name of your State or Province?
+  [Unknown]:  ...
+What is the two-letter country code for this unit?
+  [Unknown]:  us
+Is CN=....., OU=IT, O=...., L=...., ST=md, C=us correct?
+  [no]:  yes
+
+
+
+root@lnn01:/opt/tomcat/conf# keytool -certreq -keyalg RSA -alias tomcat -file ......csr -keystore ......jks
+Enter keystore password:  
+root@lnn01:/opt/tomcat/conf# ls -l
+total 244
+-rw------- 1 tomcat tomcat   1400 Sep 23 07:22 context.xml
+-rw------- 1 tomcat tomcat   1149 Sep 23 07:22 jaspic-providers.xml
+-rw------- 1 tomcat tomcat   2313 Sep 23 07:22 jaspic-providers.xsd
+-rw------- 1 tomcat tomcat   4144 Sep 23 07:22 logging.properties
+.
+.
+-rw-r--r-- 1 root   root     1089 Jan  3 22:20 .....csr
+-rw-r--r-- 1 root   root     2728 Jan  3 22:17 .......jks
+.
+.
+-rw------- 1 tomcat tomcat   7580 Sep 23 07:22 server.xml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+####### create keystore
+---------------------------------------------------------------------------
+$JAVA_HOME/bin/keytool -genkey -alias tomcat -keyalg RSA
+
+keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore yourkeystore.jks
+
+keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore yourdomain.com.jks
+
+keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore mark414.online.jks
+
+####### PASSWORD ---
+Enter the Keystore Password: (Make sure it is something you remember as you will need the password to access your keystore later)
+......
+
+[root@geekflare ssl]# keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore ......jks
+Enter keystore password:
+Re-enter new password:
+What is your first and last name?
+[Unknown]: bloggerflare.com ---------------------> .....
+What is the name of your organizational unit?
+[Unknown]: Blogging
+What is the name of your organization?
+[Unknown]: Geek Flare
+What is the name of your City or Locality?
+[Unknown]:
+What is the name of your State or Province?
+[Unknown]:
+What is the two-letter country code for this unit?
+[Unknown]:
+Is CN=bloggerflare.com, OU=Blogging, O=Geek Flare, L=Unknown, ST=Unknown, C=Unknown correct?
+[no]: yes
+Enter key password for <bloggerflare>
+(RETURN if same as keystore password):
+
+######## Generate CSR
+--------------------------------------------------------------------------
+keytool -certreq -keyalg RSA -alias tomcat -file .....csr -keystore .........jks
+
+
+######## Order CERT 
+-----------------------------------------------------------------------------
+https://my.gogetssl.com/en/user/sslcerts/addcsr/new/2394559
+
+
+###### Import CERT 
+--------------------------------------------------------------------------
+Example 1
+---------
+keytool -import -trustcacerts -alias tomcat -file certificate.p7b -keystore yourkeystore.jks
+
+Example 2
+---------
+To import your main certificate:-
+sudo keytool -import -trustcacerts -alias yourdomain -keystore yourdomain.com.jks -file /etc/ssl/certs/name-of-your-certificate.cer
+To import any intermediate certificates:-
+
+sudo keytool -import -trustcacerts -alias yourdomain -keystore yourdomain.com.jks -file /etc/ssl/certs/name-of-your-intermediate-certificate.cer
+To import the root certificate:-
+
+sudo keytool -import -trustcacerts -alias yourdomain -keystore yourdomain.com.jks -file /etc/ssl/certs/name-of-your-root-certificate.cer
+
+Example 3
+---------
+Import root certificate is given by the provider
+keytool -importcert -alias root -file root -keystore bloggerflare.jks
+Import intermediate certificate
+keytool -importcert -alias intermediate -file intermediate -keystore bloggerflare.jks
+Note: without importing root & intermediate, you won’t be able to import domain certificate into keystore. If you have more than one intermediate, then you got to import them all.
+
+Import domain certificate
+keytool -importcert -file bloggerflare.cer -keystore bloggerflare.jks -alias bloggerflare
+

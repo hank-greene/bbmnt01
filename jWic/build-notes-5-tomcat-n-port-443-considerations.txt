@@ -1,0 +1,39 @@
+
+https://serverfault.com/questions/953046/modern-installation-of-tomcat-with-ssl-on-port-443
+
+Keep port >1024 and prefer reverse proxy - haproxy, nginx, apache etc. 
+The main reason is that once you are not running tomcat as root (I hope you don't ;-) ) 
+you may have issue with starting on ports below 1024 - "permission denied". 
+
+With running tomcat on port up the 1024 you are safe even for future updates / changes. 
+Mentioned reverse proxies are prepared and ready more or less out of the box to operate 
+these "lower ports". Tomcat is great tool but main focus is just not to handle system 
+reserved ports
+
+https://www.digitalocean.com/community/tutorials/how-to-encrypt-tomcat-8-connections-with-apache-or-nginx-on-centos-7
+
+SSL with Tomcat has a number of drawbacks that make it difficult to manage:
+
+Tomcat, when run as recommended with an unprivileged user, 
+cannot bind to restricted ports like the conventional SSL port 443: 
+    There are workarounds to this, like using the authbind 
+    program to map an unprivileged program with a restricted port, setting up port forwarding with 
+    a firewall, etc., but they each introduce additional complexity.
+
+SSL with Tomcat is not as widely supported by other software: 
+    Projects like Let’s Encrypt provide no native way of interacting with Tomcat. 
+    Furthermore, the Java keystore format requires conventional certificates to be 
+    converted before use, which complicates automation.
+
+Conventional web servers release more frequently than Tomcat: 
+    This can have significant security implications for your applications. For instance, 
+    the supported Tomcat SSL cipher suite can become out-of-date quickly, 
+    leaving your applications with suboptimal protection. In the event that security 
+    updates are needed, it is likely easier to update a web server than your Tomcat installation.
+
+A reverse proxy solution bypasses many of these issues by simply putting a 
+strong web server in front of the Tomcat installation. The web server can handle 
+client requests with SSL, functionality it is specifically designed to handle. 
+It can then proxy requests to Tomcat running in its normal, unprivileged configuration.
+
+This separation of concerns simplifies the configuration, even if it does mean running an additional piece of software.

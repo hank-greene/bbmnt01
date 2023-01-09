@@ -1,0 +1,160 @@
+https://tomcat.apache.org/tomcat-9.0-doc/apr.html
+
+https://tomcat.apache.org/native-doc/
+
+
+
+
+  388  cd /etc/systemd/system
+  390  cat tomcat.service
+  391  export JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64
+  392  echo $JAVA_HOME
+  393  cd /home/lnn01
+  397  cd tomcat-native-1.2.35-src/
+  399  cd native
+  401  ./configure --with-apr=/usr/bin/apr-1-config
+  403  vi tomcat-native-notes.txt
+
+
+root@lnn01:/home/lnn01/tmp/tomcat-native-1.2.35-src/native# ./configure --with-apr=/usr/bin/apr-1-config
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking target system type... x86_64-pc-linux-gnu
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for working mkdir -p... yes
+Tomcat Native Version: 1.2.35
+checking for chosen layout... tcnative
+checking for APR... yes
+configure: APR 1.6.5 detected.
+  setting CC to "x86_64-linux-gnu-gcc"
+  setting CPP to "x86_64-linux-gnu-gcc -E"
+  adding "-I/usr/lib/jvm/java-1.11.0-openjdk-amd64/include" to TCNATIVE_PRIV_INCLUDES
+checking for JDK os include directory...  linux
+  adding "-I/usr/lib/jvm/java-1.11.0-openjdk-amd64/include/linux" to TCNATIVE_PRIV_INCLUDES
+checking for gcc... x86_64-linux-gnu-gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether x86_64-linux-gnu-gcc accepts -g... yes
+checking for x86_64-linux-gnu-gcc option to enable C11 features... none needed
+checking for OpenSSL library... using openssl from /usr/lib64 and /usr/include
+checking OpenSSL library version >= 1.0.2... ok
+checking for OpenSSL DSA support... yes
+  setting TCNATIVE_LDFLAGS to "-lssl -lcrypto"
+  adding "-DHAVE_OPENSSL" to CFLAGS
+  setting TCNATIVE_LIBS to ""
+  setting TCNATIVE_LIBS to " /usr/lib/x86_64-linux-gnu/libapr-1.la "
+  adding "-DTCNATIVE_LINUX" to CFLAGS
+checking for apr_pollset_wakeup in -lapr-1... yes
+  adding "-DHAVE_POLLSET_WAKEUP" to CFLAGS
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: executing default commands
+root@lnn01:/home/lnn01/tmp/tomcat-native-1.2.35-src/native#
+root@lnn01:/home/lnn01/tmp# 
+
+
+
+
+root@lnn01:/etc/systemd/system# vi tomcat.service 
+root@lnn01:/etc/systemd/system# echo $LD_LIBRARY_PATH
+
+root@lnn01:/etc/systemd/system# vi tomcat.service 
+root@lnn01:/etc/systemd/system# cat tomcat.service 
+[Unit]
+Description=Tomcat
+After=network.target
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib"
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
+Environment="CATALINA_BASE=/opt/tomcat"
+Environment="CATALINA_HOME=/opt/tomcat"
+Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+root@lnn01:/home/lnn01/tmp#
+
+
+
+
+root@lnn01:/etc/systemd/system# vi tomcat.service 
+root@lnn01:/etc/systemd/system# echo $LD_LIBRARY_PATH
+
+root@lnn01:/etc/systemd/system# vi tomcat.service 
+root@lnn01:/etc/systemd/system# cat tomcat.service 
+[Unit]
+Description=Tomcat
+After=network.target
+
+[Service]
+Type=forking
+
+User=tomcat
+Group=tomcat
+
+Environment="LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/apr/lib"
+Environment="JAVA_HOME=/usr/lib/jvm/java-1.11.0-openjdk-amd64"
+Environment="JAVA_OPTS=-Djava.security.egd=file:///dev/urandom"
+Environment="CATALINA_BASE=/opt/tomcat"
+Environment="CATALINA_HOME=/opt/tomcat"
+Environment="CATALINA_PID=/opt/tomcat/temp/tomcat.pid"
+Environment="CATALINA_OPTS=-Xms512M -Xmx1024M -server -XX:+UseParallelGC"
+
+ExecStart=/opt/tomcat/bin/startup.sh
+ExecStop=/opt/tomcat/bin/shutdown.sh
+
+RestartSec=10
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+root@lnn01:/home/lnn01/tmp#
+
+
+
+
+
+https://tomcat.apache.org/tomcat-8.5-doc/apr.html
+
+https://sheroz.com/pages/blog/installing-apache-tomcat-native-linux-ubuntu-1204.html
+
+
+
+
+root@lnn01:/home/lnn01# cat server.xml-8443-conf 
+
+
+    <Connector port="8443"
+               maxHttpHeaderSize="8192" 
+               maxThreads="150"
+               enableLookups="false"
+               disableUploadTimeout="true"
+               acceptCount="100" 
+               SSLEnabled="true"
+               scheme="https" 
+               secure="true"
+               keystoreFile=".............." 
+               keystorePass=".........."
+               clientAuth="false" 
+               sslProtocol="TLS" 
+               sslVerifyClient="optional"
+               sslEnabledProtocols="TLSv1.2,TLSv1.1,SSLv2Hello"  />
+
