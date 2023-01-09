@@ -1,0 +1,28 @@
+https://stackoverflow.com/questions/24735916/exception-when-starting-tomcat-with-user-account
+
+
+If using Linux 2.6.24 or later, you can set up a file capability on the java executable, 
+to give elevated privileges to allow opening privileged ports only, and no other superuser privileges:
+
+# setcap cap_net_bind_service+ep /path/to/bin/java
+
+    <Connector port="443"
+               maxHttpHeaderSize="8192" 
+               maxThreads="150"
+               enableLookups="false"
+               disableUploadTimeout="true"
+               acceptCount="100" 
+               SSLEnabled="true"
+               scheme="https" 
+               secure="true"
+               keystoreFile="/opt/tomcat/conf/matt1316.online.jks" 
+               keystorePass="0UUegQQkSjHc"
+               clientAuth="false" 
+               sslProtocol="TLS" 
+               sslVerifyClient="optional"
+               sslEnabledProtocols="TLSv1.2,TLSv1.1,SSLv2Hello"  />
+
+root@lnn01:/etc/systemd/system# setcap cap_net_bind_service+ep /usr/lib/jvm/java-1.11.0-openjdk-amd64/bin/java
+root@lnn01:/etc/systemd/system# systemctl restart tomcat
+
+
