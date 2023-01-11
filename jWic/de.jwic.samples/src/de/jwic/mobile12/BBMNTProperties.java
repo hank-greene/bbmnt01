@@ -3,37 +3,32 @@ package de.jwic.mobile12;
 import java.io.Serializable;
 import de.jwic.base.JWicRuntime;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Properties;
 
 public class BBMNTProperties implements Serializable {
 
-    private static BBMNTProperties bbmntProps = null;
+    private static BBMNTProperties instance = null;
+    private static Properties props;
 
-    private BBMNTProperties(){}
-
-    public static BBMNTProperties getInstance(){
-
-        String contextPath = JWicRuntime.getJWicRuntime().getContextPath();
-        System.out.println(" contextPath "+contextPath);
-        System.out.println("    rootPath "+JWicRuntime.getJWicRuntime().getRootPath());
-        try (InputStream input = new FileInputStream(JWicRuntime.getJWicRuntime().getRootPath()+"bbmnt.properties")) {
-
-            Properties props = new Properties();
-            props.load(input);
-            System.out.println(props.getProperty("kafkaIP"));
+    private BBMNTProperties(){
+        try {
+            props = new Properties();
+            props.load(getClass().getResourceAsStream(JWicRuntime.getJWicRuntime().getRootPath()+"bbmnt.properties"));
         } catch (IOException ex) {
             System.out.println(ex.toString());
         }
+    }
 
-        if (bbmntProps == null){
-            bbmntProps = new BBMNTProperties();
+    public static BBMNTProperties getInstance(){
+        if (instance == null){
+            instance = new BBMNTProperties();
         }
-        return bbmntProps;
+        return instance;
+    }
+
+    public String getValue(String key) {
+        return props.getProperty(key);
     }
     
 }

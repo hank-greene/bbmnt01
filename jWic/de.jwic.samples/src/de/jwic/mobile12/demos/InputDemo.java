@@ -37,7 +37,7 @@ public class InputDemo extends MobileDemoModule {
 		props.put("buffer.memory", 33554432);
 		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 		props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
-		producer = new KafkaProducer<String, String>(props);
+		//producer = new KafkaProducer<String, String>(props);
 	}
 
 	@Override
@@ -58,9 +58,12 @@ public class InputDemo extends MobileDemoModule {
 			public void objectSelected(SelectionEvent event) {
 				System.out.println("Txt or eamil, send a link to a prospect");
 				System.out.println(textInput.getText());
+				producer = new KafkaProducer<String, String>(props);
 				producer.send( 
 					new ProducerRecord<String, String>(topicName, textInput.getText(), textInput.getText())
 				);
+				producer.close();
+				producer = null;
 			}
 		});
 
