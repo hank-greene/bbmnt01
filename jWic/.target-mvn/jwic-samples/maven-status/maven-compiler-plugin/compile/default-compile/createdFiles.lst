@@ -303,6 +303,7 @@ de/jwic/demo/basics/FileUploadDemoModule.class
 de/jwic/demo/basics/CheckBoxGroupDemoModule.class
 de/jwic/demo/wizard/WizardPageConfig.class
 de/jwic/mobile12/demos/FrontPage2.class
+de/jwic/mobile12/BBMNTConstants.class
 de/jwic/demo/basics/DatePickerDemo$4.class
 de/jwic/demo/chart/ChartDemo$6.class
 de/jwic/ecolib/samples/controls/CKEditorDemo$6.class

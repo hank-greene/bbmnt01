@@ -12,23 +12,26 @@ public class BBMNTProperties implements Serializable {
     private static Properties props;
 
     private BBMNTProperties(){
-        try {
-            props = new Properties();
-            props.load(getClass().getResourceAsStream(JWicRuntime.getJWicRuntime().getRootPath()+"bbmnt.properties"));
-        } catch (IOException ex) {
-            System.out.println(ex.toString());
-        }
     }
 
-    public static BBMNTProperties getInstance(){
+    public BBMNTProperties getInstance(){
+        /****
         if (instance == null){
+            try {
+                props = new Properties();
+                props.load(getClass().getResourceAsStream(JWicRuntime.getJWicRuntime().getRootPath()+"bbmnt.properties"));
+            } catch (IOException ex) {
+                System.out.println(ex.toString());
+            }
             instance = new BBMNTProperties();
         }
+         */
         return instance;
     }
 
     public String getValue(String key) {
         return props.getProperty(key);
+        //return "not set";
     }
     
 }
