@@ -42,13 +42,9 @@ public class AC2 extends ControlContainer {
 		audioStr = a;
 	}
 	public String getAudio() {
-		//System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+audioStr);
-		//return "http://localhost:8080/01-amp3s/"+audioStr;
-		//return "http://173.166.130.89:8080/01-amp3s/"+audioStr;
 		String temp = bbmntProps.getValue(BBMNTConstants.MEDIA_URL)+"/01-amp3s/"+audioStr;
 		System.out.println(">>>>>> " + temp );
 		return temp;
-		//return media_url+"/01-amp3s/"+audioStr;
 	}
 	public String getTitle() {
 		return audioStr;

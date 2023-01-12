@@ -55,23 +55,24 @@ public class MobileAudioRND extends MobileDemoModule  {
 
 		try {
 			
-		    String url = "http://localhost:8080/01-amp3s/01-amp3s.json";
+			String url = bbmntProps.getValue(BBMNTConstants.MEDIA_URL)+"/01-amp3s/01-amp3s.json";
 		    URL obj = new URL(url);
 		    HttpURLConnection con = (HttpURLConnection)obj.openConnection();
 		    int responseCode = con.getResponseCode();
 		    System.out.println("\nSending 'GET' request to URL : " + url);
 		    System.out.println("Response Code : " + responseCode);
-		    BufferedReader in =new BufferedReader(
-		    		new InputStreamReader(con.getInputStream()));
+
+		    BufferedReader in =new BufferedReader( new InputStreamReader(con.getInputStream()) );
 		    String inputLine;
 		    StringBuffer response = new StringBuffer();
 		    while ((inputLine = in.readLine()) != null) {
 			  response.append(inputLine);
-		    } in .close();
+		    } 
+			in .close();
 		    //print in String
 		    System.out.println(response.toString());
+
 		    JSONObject myresponse = new JSONObject(response.toString());
-		   
 			JSONArray arr = myresponse.getJSONArray("echo-list");
 			
 			AudioButton[] arrayOButtons = new AudioButton[arr.length()];
@@ -92,7 +93,6 @@ public class MobileAudioRND extends MobileDemoModule  {
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
-				//arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
 				arrayOButtons[i].setAudioLink(bbmntProps.getValue(BBMNTConstants.MEDIA_URL)+"/01-amp3s/"+arr.get(i));
 			}
 

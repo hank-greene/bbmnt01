@@ -60,7 +60,7 @@ public class InputDemo extends MobileDemoModule {
 				System.out.println(textInput.getText());
 				producer = new KafkaProducer<String, String>(props);
 				producer.send( 
-					new ProducerRecord<String, String>(topicName, textInput.getText(), textInput.getText())
+					new ProducerRecord<String, String>(topicName, "mobile", textInput.getText())
 				);
 				producer.close();
 				producer = null;
