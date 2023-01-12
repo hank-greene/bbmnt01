@@ -14,7 +14,6 @@ import de.jwic.events.SelectionListener;
 import de.jwic.mobile12.demos.audio.AC2;
 
 import de.jwic.controls.layout.TableLayoutContainer;
-
 import de.jwic.controls.ScrollableContainer;
 
 import java.io.BufferedReader;
@@ -25,14 +24,18 @@ import java.net.URL;
 import org.json.JSONObject;
 import org.json.JSONArray;
 
+import de.jwic.mobile12.BBMNTProperties;
+import de.jwic.mobile12.BBMNTConstants;
+
 public class MobileAudioRND extends MobileDemoModule  {
 
 	protected transient Log log = LogFactory.getLog(getClass());
 
+	BBMNTProperties bbmntProps = BBMNTProperties.getInstance();
+
     public MobileAudioRND() {
         super("Magnetic Echo Table");
     }
-
 
 	/* (non-Javadoc)
 	 * @see de.jwic.mobile.MobileDemoModule#createPage(de.jwic.base.IControlContainer)
@@ -89,7 +92,8 @@ public class MobileAudioRND extends MobileDemoModule  {
 					}
 				});
 				arrayOButtons[i].setTitle(""+arr.get(i));
-				arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
+				//arrayOButtons[i].setAudioLink("http://localhost:8080/01-amp3s/"+arr.get(i));
+				arrayOButtons[i].setAudioLink(bbmntProps.getValue(BBMNTConstants.MEDIA_URL)+"/01-amp3s/"+arr.get(i));
 			}
 
 		} catch(Exception e){

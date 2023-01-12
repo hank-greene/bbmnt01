@@ -8,10 +8,15 @@ import de.jwic.base.JavaScriptSupport;
 
 import de.jwic.mobile12.demos.audio.AC2;
 
+import de.jwic.mobile12.BBMNTProperties;
+import de.jwic.mobile12.BBMNTConstants;
+
 @JavaScriptSupport
 public class AC2 extends ControlContainer {
-	
+
+	BBMNTProperties bbmntProps = BBMNTProperties.getInstance();
 	private ControlContainer container;
+	private String media_url = "notset";
 	
 	/**
 	 * Constructor.
@@ -20,6 +25,8 @@ public class AC2 extends ControlContainer {
 	public AC2 (IControlContainer parent) {
 		super(parent);
 		internalInit();
+		media_url = bbmntProps.getValue(BBMNTConstants.MEDIA_URL);
+		System.out.println("AC2 "+media_url);
 	}
 	
 	/**
@@ -37,7 +44,11 @@ public class AC2 extends ControlContainer {
 	public String getAudio() {
 		//System.out.println("Player.setAudio "+"http://localhost:8080/01-amp3s/"+audioStr);
 		//return "http://localhost:8080/01-amp3s/"+audioStr;
-		return "http://173.166.130.89:8080/01-amp3s/"+audioStr;
+		//return "http://173.166.130.89:8080/01-amp3s/"+audioStr;
+		String temp = bbmntProps.getValue(BBMNTConstants.MEDIA_URL)+"/01-amp3s/"+audioStr;
+		System.out.println(">>>>>> " + temp );
+		return temp;
+		//return media_url+"/01-amp3s/"+audioStr;
 	}
 	public String getTitle() {
 		return audioStr;

@@ -1,10 +1,9 @@
 package de.jwic.mobile12;
 
 import java.io.Serializable;
-import de.jwic.base.JWicRuntime;
-
 import java.io.IOException;
 import java.util.Properties;
+import java.io.FileInputStream;
 
 public class BBMNTProperties implements Serializable {
 
@@ -12,26 +11,24 @@ public class BBMNTProperties implements Serializable {
     private static Properties props;
 
     private BBMNTProperties(){
+        try {
+            props = new Properties();
+            FileInputStream fis = new FileInputStream("/opt/tomcat/webapps/samples/bbmnt.properties");
+            props.load(fis);
+        } catch (IOException ex) {
+            System.out.println(ex.toString());
+        }
     }
 
-    public BBMNTProperties getInstance(){
-        /****
+    public static BBMNTProperties getInstance(){
         if (instance == null){
-            try {
-                props = new Properties();
-                props.load(getClass().getResourceAsStream(JWicRuntime.getJWicRuntime().getRootPath()+"bbmnt.properties"));
-            } catch (IOException ex) {
-                System.out.println(ex.toString());
-            }
             instance = new BBMNTProperties();
         }
-         */
         return instance;
     }
 
     public String getValue(String key) {
         return props.getProperty(key);
-        //return "not set";
     }
     
 }
