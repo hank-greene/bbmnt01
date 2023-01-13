@@ -1,6 +1,6 @@
 
 
-  ionos.com mark414.online for domain
+  ionos.com mark1316.online for domain
   dns.he.net for name service
 
 
@@ -14,11 +14,12 @@
     +--------------+
     |  router 
     |  89.1
+    |
 
-    +--------------+
+    +---------------------------------------+
     |  
     |  bbmnt.media 
-    |  89.93:8080
+    |  89.93:8080 / cert on 8443   
     |  tomcat - jWic
     |         - media / mp3s
     |         - samples/mobile12
@@ -27,7 +28,7 @@
     |  java -version "11.0.17" 2022-10-18  
     |  
 
-    +-----------------------------------+
+    +---------------------------------------+
     |  
     |  kafka - service
     |  89.95 or 94:9092
@@ -35,7 +36,13 @@
     |  kafka consumer
     |     send txt or email  
     |  
-    |  
-
-
-
+    |
+    |     +---------------------
+    |     |  
+    |     |  java program - sends txt with link to site
+    |     |    
+    |     |
+    |     +---------------------
+    |
+    |
+    |

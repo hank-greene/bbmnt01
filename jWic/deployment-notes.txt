@@ -1,0 +1,15 @@
+
+
+
+1. tomcat node
+   - ip address
+   - tomcat install
+   - domain name
+   - cert
+   - jks install
+   
+
+2. kafka node
+
+3. database node
+

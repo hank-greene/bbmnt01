@@ -1,0 +1,4 @@
+
+configured tomcat with a cert and to run on 443
+blocked port 8080 from the front router
+changed the tomcat icon
