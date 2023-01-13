@@ -67,7 +67,7 @@ public class InputDemo extends MobileDemoModule {
 				System.out.println("Txt or eamil, send a link to a prospect");
 				System.out.println(textInput.getText());
 
-				// TODO - much todo here, but it's growing
+				// TODO - much todo here
 				//        What if the email or number ALREADY as a UID <<<< !!!!!!!!
 				/***
 				 * 
@@ -121,6 +121,9 @@ public class InputDemo extends MobileDemoModule {
 
 				System.out.println("uuid = textInput.getText() + @ + " + uuid);
 				
+				String prospectMsg = textInput.getText() + ":" + uuid;
+
+
 				/**** 
 				 * 
 				 * 
@@ -128,8 +131,7 @@ public class InputDemo extends MobileDemoModule {
 
 				producer = new KafkaProducer<String, String>(props);
 				producer.send( 
-					//new ProducerRecord<String, String>(topicName, "mobile", textInput.getText())
-					new ProducerRecord<String, String>( topicName, "mobile", uuid )
+					new ProducerRecord<String, String>( topicName, "mobile", prospectMsg )
 				);
 				producer.close();
 				producer = null;
@@ -177,9 +179,7 @@ public class InputDemo extends MobileDemoModule {
 			System.out.println(ex.toString());
 			newUID = "file creation failed";
 		}
+		newUID = uid + ".xwic";
 		return newUID;
 	}
-
-
-
 }

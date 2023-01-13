@@ -1,0 +1,37 @@
+
+    +--------------
+    |    Browser - send link
+    +--------------
+                |
+                v
+    +-----------------
+    |
+    |
+    |   tomcat / bbmnt - node
+    |      send link
+    |         message producer
+    |
+    +-----------------
+                |
+                v
+           
+        key: mobile or email
+        value:   < 10 digits or email@address > : <bbmnt uuid>
+
+                |
+                |
+                v
+    +------------------
+    |   kafka message broker
+    +-------------------
+                |
+                v
+    +----------------------
+    |
+    |   message consumer
+    |
+    +----------------------
+                |
+                |
+                v
+        email or txt message 
