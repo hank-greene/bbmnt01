@@ -1,3 +1,148 @@
 
 
-will add soon
+
+
+
+
+
+
++----------------------------------------------------------------------
+| crtp1 
+| 93.10
+|
+|
+|        +----------------                         +------------------------
+|        | media vm                                | stats vm
+|        | 93.11                                   | 93.14
+|        |                                         |                                            
+|        |                                         |
+|        |                                         |
+|
+|                I    
+|                    +-----------------
+|                    | msg broker vm
+|                    | kafka
+|                    | 93.12
+|                    |
+|                    |
+|                    |
+|
+|
+|
+|
+|                               +------------------
+|                               | db vm
+|                               | 93.13
+|                               |
+|                               |
+|
+|
+|
+|
+|
+| ubuntu 20.04
+| kvm
+|
+|
+
+
+
+##########################################################################33
+crtp1@crtp1:~$ sudo lscpu
+Architecture:            x86_64
+  CPU op-mode(s):        32-bit, 64-bit
+  Address sizes:         46 bits physical, 48 bits virtual
+  Byte Order:            Little Endian
+CPU(s):                  16
+  On-line CPU(s) list:   0-15
+Vendor ID:               GenuineIntel
+  Model name:            Intel(R) Xeon(R) CPU E5-2670 0 @ 2.60GHz
+    CPU family:          6
+    Model:               45
+    Thread(s) per core:  2
+    Core(s) per socket:  8
+    Socket(s):           1
+    Stepping:            6
+    CPU max MHz:         3300.0000
+    CPU min MHz:         1200.0000
+    BogoMIPS:            5187.02
+    Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts ac
+                         pi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfm
+                         on pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 
+                         monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic popc
+                         nt tsc_deadline_timer aes xsave avx lahf_lm epb pti ssbd ibrs ibpb stibp tpr_shadow vn
+                         mi flexpriority ept vpid xsaveopt dtherm ida arat pln pts md_clear flush_l1d
+Virtualization features: 
+  Virtualization:        VT-x
+Caches (sum of all):     
+  L1d:                   256 KiB (8 instances)
+  L1i:                   256 KiB (8 instances)
+  L2:                    2 MiB (8 instances)
+  L3:                    20 MiB (1 instance)
+NUMA:                    
+  NUMA node(s):          1
+  NUMA node0 CPU(s):     0-15
+Vulnerabilities:         
+  Itlb multihit:         KVM: Mitigation: Split huge pages
+  L1tf:                  Mitigation; PTE Inversion; VMX conditional cache flushes, SMT vulnerable
+  Mds:                   Mitigation; Clear CPU buffers; SMT vulnerable
+  Meltdown:              Mitigation; PTI
+  Mmio stale data:       Unknown: No mitigations
+  Retbleed:              Not affected
+  Spec store bypass:     Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+  Spectre v1:            Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+  Spectre v2:            Mitigation; Retpolines, IBPB conditional, IBRS_FW, STIBP conditional, RSB filling, PBR
+                         SB-eIBRS Not affected
+  Srbds:                 Not affected
+  Tsx async abort:       Not affected
+crtp1@crtp1:~$ 
+
+
+
+crtp1@crtp1:~$ sudo lsblk
+NAME                         MAJ:MIN RM   SIZE RO TYPE MOUNTPOINTS
+loop0                          7:0    0    62M  1 loop /snap/core20/1587
+loop1                          7:1    0  79.9M  1 loop /snap/lxd/22923
+loop3                          7:3    0  49.8M  1 loop /snap/snapd/17950
+loop4                          7:4    0  63.3M  1 loop /snap/core20/1778
+loop5                          7:5    0   103M  1 loop /snap/lxd/23541
+sda                            8:0    0   1.8T  0 disk 
+├─sda1                         8:1    0     1G  0 part /boot/efi
+├─sda2                         8:2    0     2G  0 part /boot
+│                                                      /mnt/vms2
+└─sda3                         8:3    0   1.8T  0 part 
+  └─ubuntu--vg--1-ubuntu--lv 253:0    0   100G  0 lvm  /
+sdb                            8:16   0 465.8G  0 disk 
+├─sdb1                         8:17   0     1M  0 part 
+├─sdb2                         8:18   0     2G  0 part 
+└─sdb3                         8:19   0 463.8G  0 part 
+  └─ubuntu--vg-ubuntu--lv    253:1    0   100G  0 lvm  
+sdc                            8:32   0 223.6G  0 disk 
+└─sdc1                         8:33   0    20G  0 part 
+sr0                           11:0    1  1024M  0 rom  
+crtp1@crtp1:~$
+
+############################################################################
+install mariadb on 93.13 
+https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-ubuntu-20-04
+
+
+
+############################################################################
+https://hevodata.com/blog/how-to-install-kafka-on-ubuntu/
+
+############################################################################
+statsvm
+
+sudo apt install openjdk-11-jre-headless
+sudo apt install curl
+sudo groupadd tomcat
+cd /tmp
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+
+or the latest from https://dlcdn.apache/tomcat/tomcat-9
+
+
+
+
+
