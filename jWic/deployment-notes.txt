@@ -1,6 +1,5 @@
 
 
-
 1. tomcat node
    - ip address
    - tomcat install
@@ -8,8 +7,11 @@
    - cert
    - jks install
    
-
 2. kafka node
+   - ip address
+   - kafka install
 
 3. database node
+   - ip address
+   - mariadb install
 

@@ -1,0 +1,14 @@
+
+1. domain name ?  magneticechos.online, bbmnt.online,  
+
+2. install curl
+
+3. install java 11.0.17
+    root@lnn01:/opt/tomcat/conf# java -version
+    openjdk version "11.0.17" 2022-10-18
+    OpenJDK Runtime Environment (build 11.0.17+8-post-Ubuntu-1ubuntu220.04)
+    OpenJDK 64-Bit Server VM (build 11.0.17+8-post-Ubuntu-1ubuntu220.04, mixed mode, sharing)
+
+4. install tomcat 9.0.67
+
+
