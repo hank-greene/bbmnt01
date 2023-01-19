@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>de.xwic.jwic</groupId>
+        <artifactId>jwic</artifactId>
+        <version>5.3.42-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <name>JWIC::WEB::UID</name>
+
+    <artifactId>jwic-uid</artifactId>
+    <packaging>war</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <warName>samples</warName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+        <id>intellij-jetty</id>
+        <build>
+            <plugins>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>maven-jetty-plugin</artifactId>
+
+                    <version>6.1.26</version>
+                    <configuration>
+                        <scanIntervalSeconds>0</scanIntervalSeconds>
+                        <webAppSourceDirectory>web_root</webAppSourceDirectory>
+                        <classesDirectory>${pathTargetFolder}/jwic-uid/classes</classesDirectory>
+                        <webAppConfig>
+                            <extraClasspath>${pathTargetFolder}/jwic-compatibility/clases;${pathTargetFolder}/jwic-controls/classes;${pathTargetFolder}/jwic-core/classes;${pathTargetFolder}/jwic-mobile/classes;${pathTargetFolder}/jwic-samples/classes;${pathTargetFolder}/jwic-uid/classes;${pathTargetFolder}/jwic-web/classes</extraClasspath>
+                        </webAppConfig>
+                        <connectors>
+                            <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                                <port>8088</port>
+                                <maxIdleTime>60000</maxIdleTime>
+                            </connector>
+                        </connectors>
+
+                    </configuration>
+                </plugin>
+            </plugins>
+        </build>
+        <dependencies>
+            <dependency>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <version>6.1.26</version>
+            </dependency>
+        </dependencies>
+    </profile>
+
+
+    </profiles>
+
+    <dependencies>
+		<!-- Related projects -->
+        <dependency>
+            <groupId>de.xwic.jwic</groupId>
+            <artifactId>jwic-core</artifactId>
+            <version>5.3.42-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>de.xwic.jwic</groupId>
+            <artifactId>jwic-controls</artifactId>
+            <version>5.3.42-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>de.xwic.jwic</groupId>
+            <artifactId>jwic-compatibility</artifactId>
+            <version>5.3.42-SNAPSHOT</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>de.xwic.jwic</groupId>
+            <artifactId>jwic-web</artifactId>
+            <version>5.3.42-SNAPSHOT</version>
+        </dependency>
+		
+		<!-- General dependencies -->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dom4j</groupId>
+            <artifactId>dom4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>servlet-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jfree</groupId>
+            <artifactId>jfreechart</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+        </dependency>
+		<dependency>
+			<groupId>de.java2html</groupId>
+			<artifactId>java2html</artifactId>
+		</dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>3.3.1</version>
+        </dependency>
+		
+		<!-- Test dependencies -->
+        <dependency>
+            <groupId>de.xwic.jwic</groupId>
+            <artifactId>jwic-core</artifactId>
+            <version>5.3.42-SNAPSHOT</version>
+            <type>test-jar</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <!-- Common Public License 1.0 -->
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>
