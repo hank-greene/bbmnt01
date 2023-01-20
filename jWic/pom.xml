@@ -530,10 +530,12 @@
 		<module>de.jwic.controls</module>
         <module>de.jwic.compatibility</module>
 		<module>de.jwic.web</module>
-
 		<module>de.jwic.samples</module>
+		<module>de.jwic.uid</module>
+
 		<!--module>de.jwic.maildemo</module-->
 		<!--module>de.jwic.sourceviewer</module-->
+		
 	</modules>
 
 	<profiles>
