@@ -3775,7 +3775,7 @@ var config = exports.config = {
 
 	videoHeight: -1,
 
-	defaultAudioWidth: 400,
+	defaultAudioWidth: 300,
 
 	defaultAudioHeight: 40,
 
