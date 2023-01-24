@@ -1,0 +1,8 @@
+
+domain name notes 
+
+1.  registrar < domain name > at ionos.com ...
+2.  create an email admin@< domain name > at ionos
+3.  configure ionos < domain name > to use names servers at dns.he.net
+    add MX record, Name "@", Priority "10",  Hostname "mx00.ionos.com"
+    then anther record, ....                          "mx01.ionos.com" 

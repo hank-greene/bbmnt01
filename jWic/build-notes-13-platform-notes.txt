@@ -1,0 +1,18 @@
+
+registered magneticechos.online at ionos.com
+created on ionos.com an email account, addmin@magneticechos.online 
+AND added forwarding address ....@.....
+
+
+keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore magneticechos.online.jks
+
+keytool -certreq -keyalg RSA -alias tomcat -file magneticechos.csr --keystore magneticechos.online.jks
+
+certificate signing request, magneticechos.csr
+
+use gogetssl.com to generate the cert, magneticechos_online
+
+NOTE!!! gogetssl.com sent magneticechos_online.ca-bundle  <<<< to the forwarding address ...@.......
+                          ------------------------------
+
+keytool -import -trustcacerts -alias tomcat -keystore magneticechos.online.jks -file magneticechos_online.ca-bundle
