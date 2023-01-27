@@ -1,0 +1,16 @@
+  
+https://computingforgeeks.com/how-to-extend-increase-kvm-virtual-machine-disk-size/
+
+https://computingforgeeks.com/extending-root-filesystem-using-lvm-linux/
+
+
+  129  sudo pvs; sudo vgs; sudo lvs
+  130  lsblk
+  131  sudo growpart /dev/vda 1
+  132  sudo growpart /dev/vda 3
+  133  df -hT | grep /dev/vda3
+  134  sudo resize2fs /dev/vda3
+  135  sudo xfs_growsfs /
+  136  sudo lvextend -l +100%FREE /dev/mapper/ubuntu--vg-ubuntu--lv
+  137  lsblk
+

@@ -43,7 +43,7 @@ root@lnn01:/opt/tomcat/conf# keytool -certreq -keyalg RSA -alias tomcat -file ..
 Enter keystore password:  
 root@lnn01:/opt/tomcat/conf# 
 
-6. apply for cert at gogitssl, oops gogetssl
+6. apply for cert at gogetssl
 
 
 7. import cert 

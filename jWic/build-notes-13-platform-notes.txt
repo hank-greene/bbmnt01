@@ -1,12 +1,13 @@
 
+used Rapidssl at gogetssl
+
 registered magneticechos.online at ionos.com
 created on ionos.com an email account, addmin@magneticechos.online 
 AND added forwarding address ....@.....
 
-
 keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore magneticechos.online.jks
 
-keytool -certreq -keyalg RSA -alias tomcat -file magneticechos.csr --keystore magneticechos.online.jks
+keytool -certreq -keyalg RSA -alias tomcat -file magneticechos.csr -keystore magneticechos.online.jks
 
 certificate signing request, magneticechos.csr
 
@@ -16,3 +17,20 @@ NOTE!!! gogetssl.com sent magneticechos_online.ca-bundle  <<<< to the forwarding
                           ------------------------------
 
 keytool -import -trustcacerts -alias tomcat -keystore magneticechos.online.jks -file magneticechos_online.ca-bundle
+
+-rw-rw-rw- 1 root root 4054 Mar 12  2019 magneticechos_online.ca-bundle
+-rw-rw-rw- 1 root root 2045 Jan 26 00:00 magneticechos_online.crt
+-rw-r--r-- 1 root root 6381 Jan 26 14:29 magneticechos_online.zip
+-rw-r--r-- 1 root root 8328 Jan 26 17:36 magneticechos-ssl.jks
+
+
+# keytool -import -trustcacerts -alias root -keystore magneticechos-ssl.jks -file magneticechos_online.ca-bundle
+                                -----------                                 ------------------------------------keykey
+Enter keystore password:  
+Certificate was added to keystore
+
+# keytool -import -trustcacerts -alias tomcat -keystore magneticechos-ssl.jks -file magneticechos_online.crt
+                                -------------                                 ------------------------------
+Enter keystore password:  
+Certificate reply was installed in keystore
+

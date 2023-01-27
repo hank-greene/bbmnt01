@@ -1,0 +1,54 @@
+
+1. available resources
+        domain name:  magneticechos.online (ionos)
+       damain email: admin@magneteicexhos.online (ionos)
+      forwarding to: nancywu@tgndomains.com
+
+       name servers: dns.he.net 
+
+2. tomcat ssl java key store commands
+
+    gogetssl at landerson321@protonmail.com
+
+2.1 create key store
+
+# keytool -genkey -keysize 2048 -keyalg RSA -alias tomcat -keystore magneticechos-ssl.jks
+Enter keystore password:  
+Re-enter new password: 
+They don't match. Try again
+Enter keystore password:  
+Re-enter new password: 
+What is your first and last name?
+  [Unknown]:  magneticechos.online
+What is the name of your organizational unit?
+  [Unknown]:  it
+What is the name of your organization?
+  [Unknown]:  crtp.io
+What is the name of your City or Locality?
+  [Unknown]:  annapolis
+What is the name of your State or Province?
+  [Unknown]:  md
+What is the two-letter country code for this unit?
+  [Unknown]:  us
+Is CN=magneticechos.online, OU=it, O=crtp.io, L=annapolis, ST=md, C=us correct?
+  [no]:  yes
+
+
+
+2.2 generate a csr - certificate signing request
+
+# keytool -certreq -keyalg RSA -alias tomcat -file magneticechos-ssl.csr -keystore magneticechos-ssl.jks
+Enter keystore password:  
+
+
+2.3
+
+gogetssl @ 90-day trail ssl 
+view
+generate certificate - button ( upper left corner )
+enter csr
+click validate csr
+use - validation methin - admin@magneticechos.online
+
+
+2.4 import cert

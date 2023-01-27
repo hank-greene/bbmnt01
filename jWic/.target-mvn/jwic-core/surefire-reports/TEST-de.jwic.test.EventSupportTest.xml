@@ -32,7 +32,7 @@
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
-    <property name="os.version" value="5.15.0-57-generic"/>
+    <property name="os.version" value="5.15.0-58-generic"/>
     <property name="library.jansi.path" value="/usr/share/maven/lib/jansi-native"/>
     <property name="user.home" value="/home/u2"/>
     <property name="user.timezone" value="America/New_York"/>
@@ -63,6 +63,6 @@
     <property name="sun.cpu.isalist" value=""/>
   </properties>
   <testcase classname="de.jwic.test.EventSupportTest" name="testRemoveListener" time="0.002"/>
-  <testcase classname="de.jwic.test.EventSupportTest" name="testFireEvent" time="0.001"/>
-  <testcase classname="de.jwic.test.EventSupportTest" name="testConcurrentModification" time="0.004"/>
+  <testcase classname="de.jwic.test.EventSupportTest" name="testFireEvent" time="0"/>
+  <testcase classname="de.jwic.test.EventSupportTest" name="testConcurrentModification" time="0.005"/>
 </testsuite>

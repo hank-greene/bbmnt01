@@ -42,10 +42,9 @@ public class MobileAudioRND extends MobileDemoModule  {
 	 */
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
-		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
 
+		final ControlContainer container = new ControlContainer(controlContainer, "controlContainer");
 		final AC2 audioCtlX = new AC2( container );
-		
 		final ScrollableContainer sc = new ScrollableContainer(container);
 		sc.setHeight("350px");
 		sc.setWidth("300px");

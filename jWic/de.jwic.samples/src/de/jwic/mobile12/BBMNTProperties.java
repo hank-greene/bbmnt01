@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.io.IOException;
 import java.util.Properties;
 import java.io.FileInputStream;
+import java.io.File;
 
 public class BBMNTProperties implements Serializable {
 
