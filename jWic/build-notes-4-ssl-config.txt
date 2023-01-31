@@ -38,7 +38,7 @@ Is CN=...., OU=it, O=..., L=..., ST=md, C=us correct?
   [no]:  yes
 
 
-5. generated a cert 
+5. generated a cert request
 root@lnn01:/opt/tomcat/conf# keytool -certreq -keyalg RSA -alias tomcat -file ......csr -keystore ......jks
 Enter keystore password:  
 root@lnn01:/opt/tomcat/conf# 

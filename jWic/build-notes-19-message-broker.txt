@@ -1,0 +1,15 @@
+
+broker node: 10.10.93.12
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+vvvvvvvvvvvvv  
+SET THE ADVERTISED.LISTENERS in the /home/kafka/kafka/config/server.properties
+
+/home/kafka/kafka/config/server.properties
+
+# Listener name, hostname and port the broker will advertise to clients.
+# If not set, it uses the value for "listeners".
+#advertised.listeners=PLAINTEXT://your.host.name:9092
+advertised.listeners=PLAINTEXT://10.10.93.12:9092
+bootstrap.servers=10.10.93.12:9092
+

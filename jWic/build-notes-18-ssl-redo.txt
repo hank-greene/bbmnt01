@@ -52,3 +52,4 @@ use - validation methin - admin@magneticechos.online
 
 
 2.4 import cert
+keytool -import -trustcacerts -alias tomcat -keystore .......jks -file ......crt

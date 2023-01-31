@@ -128,16 +128,9 @@ Restart=always
 WantedBy=multi-user.target
 root@lnn01:/home/lnn01/tmp#
 
-
-
-
-
 https://tomcat.apache.org/tomcat-8.5-doc/apr.html
 
 https://sheroz.com/pages/blog/installing-apache-tomcat-native-linux-ubuntu-1204.html
-
-
-
 
 root@lnn01:/home/lnn01# cat server.xml-8443-conf 
 

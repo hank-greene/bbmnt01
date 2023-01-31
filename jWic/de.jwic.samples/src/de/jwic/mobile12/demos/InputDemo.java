@@ -38,7 +38,7 @@ public class InputDemo extends MobileDemoModule {
 
 	public InputDemo() {
 		super("Prospect Link");
-		props.put("bootstrap.servers", "10.10.89.94:9092");
+		props.put("bootstrap.servers", "10.10.93.12:9092");
 		props.put("acks", "all");
 		props.put("retries", 0);
 		props.put("batch.size", 16384);

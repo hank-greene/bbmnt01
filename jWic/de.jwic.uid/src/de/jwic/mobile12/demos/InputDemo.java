@@ -38,19 +38,13 @@ public class InputDemo extends MobileDemoModule {
 
 	public InputDemo() {
 		super("Prospect Link");
-		props.put("bootstrap.servers", "10.10.89.94:9092");
-		props.put("acks", "all");
-		props.put("retries", 0);
-		props.put("batch.size", 16384);
-		props.put("linger.ms", 1);
-		props.put("buffer.memory", 33554432);
-		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-		props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
 	}
 
 	@Override
 	public Control createPage(IControlContainer controlContainer) {
 		ControlContainer container = new ControlContainer(controlContainer);
+
+		//testSend();
 
 		final Label labelForTextInput = new Label(container, "labelForTextInput");
 		labelForTextInput.setText("Enter your Prospect's mobile number or email.");
@@ -68,6 +62,26 @@ public class InputDemo extends MobileDemoModule {
 				System.out.println(textInput.getText());
 
 				// TODO - much todo here
+				String prospectMsg = textInput.getText();
+
+				props.put("bootstrap.servers", "10.10.93.12:9092");
+				props.put("acks", "all");
+				props.put("retries", 0);
+				props.put("batch.size", 16384);
+				props.put("linger.ms", 1);
+				props.put("buffer.memory", 33554432);
+				props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+				props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
+		
+				topicName = "kafkaDev";
+
+				producer = new KafkaProducer<String, String>(props);
+				producer.send( 
+					new ProducerRecord<String, String>( topicName, "mobile", textInput.getText() )
+				);
+				System.out.println("Message sent");
+				producer.close();
+				producer = null;
 				//        What if the email or number ALREADY as a UID <<<< !!!!!!!!
 				/***
 				 * 
@@ -104,37 +118,18 @@ public class InputDemo extends MobileDemoModule {
 				 *    pull it from some location
 				 * 
 				 */ 
-				
+				/******
 				String uuid = generateUUID();
-
 				System.out.println("uuid = generateUUID() " + uuid);
-
 				while (does_UID_Exist(uuid)) {
 					uuid = generateUUID();
 				}
-
 				uuid = createNewUID(uuid);
-
 				System.out.println("uuid = createNewUID(uuid) " + uuid);
-				
 				uuid = "matt1316.online/samples/mobile12/uid/" + uuid; 
-
 				System.out.println("uuid = textInput.getText() + @ + " + uuid);
-				
 				String prospectMsg = textInput.getText() + ":" + uuid;
-
-
-				/**** 
-				 * 
-				 * 
 				 */
-
-				producer = new KafkaProducer<String, String>(props);
-				producer.send( 
-					new ProducerRecord<String, String>( topicName, "mobile", prospectMsg )
-				);
-				producer.close();
-				producer = null;
 			}
 		});
 		return container;
@@ -181,5 +176,34 @@ public class InputDemo extends MobileDemoModule {
 		}
 		newUID = uid + ".xwic";
 		return newUID;
+	}
+
+
+	public void testSend() {
+		try {
+			Properties props = new Properties();
+			Producer<String, String> producer = null;
+			props.put("bootstrap.servers", "10.10.93.12:9092");
+			props.put("acks", "all");
+			props.put("retries", 0);
+			props.put("batch.size", 16384);
+			props.put("linger.ms", 1);
+			props.put("buffer.memory", 33554432);
+			props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+			props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
+	
+			topicName = "kafkaDev";
+
+			producer = new KafkaProducer<String, String>(props);
+			producer.send( 
+				new ProducerRecord<String, String>( topicName, "mobile", "4434332699" )
+			);
+			System.out.println("Message sent");
+			producer.close();
+	
+		} catch ( Exception ex) {
+			System.out.println(ex.toString());
+			ex.printStackTrace();;
+		}
 	}
 }
