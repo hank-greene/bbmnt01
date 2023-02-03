@@ -34,7 +34,7 @@ public class MobileAudioRND extends MobileDemoModule  {
 	BBMNTProperties bbmntProps = BBMNTProperties.getInstance();
 
     public MobileAudioRND() {
-        super("Magnetic Echo Table");
+        super("Magnetic Echos");
     }
 
 	/* (non-Javadoc)

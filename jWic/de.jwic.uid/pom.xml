@@ -134,6 +134,7 @@
         </dependency>
 
         <!-- https://stackoverflow.com/questions/61819573/how-do-i-fix-slf4j-failed-to-load-class-org-slf4j-impl-staticloggerbinder -->
+        <!--
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-embedder</artifactId>
@@ -161,41 +162,47 @@
             <artifactId>slf4j-log4j12</artifactId>
             <version>1.7.21</version>
         </dependency>
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-nop -->
+        <!--
         <dependency>  
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-nop</artifactId>
             <version>1.7.25</version>
-            <!-- scope> compile or test </scope  -->
         </dependency>
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.apache.maven/maven-plugin-api -->
+        <!--
         <dependency>
             <groupId>org.apache.maven</groupId>
             <artifactId>maven-plugin-api</artifactId>
             <version>3.8.7</version>
         </dependency>
-
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-simple -->
+        <!--
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.6</version>
             <scope>test</scope>
         </dependency>
-
-
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+        <!--
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>2.0.6</version>
         </dependency>
+        -->
 
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+        <!--
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-log4j12</artifactId>
@@ -203,6 +210,7 @@
             <type>pom</type>
             <scope>test</scope>
         </dependency>
+        -->
 
 
 		<!-- Test dependencies -->

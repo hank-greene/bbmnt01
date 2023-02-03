@@ -1,0 +1,22 @@
+
+
+
+- what's the list of existing uids?
+- where is it located?
+
+- use a synchronized hashset
+- store (read/write) the hashset locally
+- on uid.war redeploy ... how to restore data
+
+    store it at webapps?
+    store it in 01-amp3s?
+    store it in the database?
+
+
+- write serialized hashset to /opt/tomcat/webapps.
+- 
+
+
+- on deployment
+     if /opt/tomcat/webapps/uidhashset.dat exists read it
+     if not create a new one

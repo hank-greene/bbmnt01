@@ -1,7 +1,10 @@
 de/jwic/mobile12/BBMNTProperties.class
+de/jwic/mobile12/demos/XWICFileGenerator.class
 de/jwic/mobile12/demos/audio/VideoController.class
+de/jwic/mobile12/demos/UIDManager.class
 de/jwic/mobile12/demos/AudioButton.class
 de/jwic/mobile12/demos/audio/AC2.class
+de/jwic/mobile12/demos/RandomStringGenerator.class
 de/jwic/mobile12/demos/AudioSelection2.class
 de/jwic/mobile12/demos/MobileAudioRND.class
 de/jwic/mobile12/demos/InputDemo$1.class

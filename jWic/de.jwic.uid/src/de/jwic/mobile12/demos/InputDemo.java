@@ -25,6 +25,14 @@ import de.jwic.mobile12.BBMNTConstants;
 import java.io.File;
 import java.nio.file.Files;
 
+import de.jwic.mobile12.demos.UIDManager;
+import de.jwic.mobile12.demos.RandomStringGenerator;
+import java.util.HashSet;
+import java.util.Hashtable;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.lang.ClassNotFoundException;
+
 /**
  * Created by boogie on 10/29/14.
  */
@@ -32,12 +40,190 @@ public class InputDemo extends MobileDemoModule {
 
 	BBMNTProperties bbmntProps = BBMNTProperties.getInstance();
 
+	UIDManager uidManager = new UIDManager();
+
 	Properties props = new Properties();
 	Producer<String, String> producer = null;
+
+	//TODO: read from bbmnt.properties file
 	String topicName = "kafkaDev";
+
+	HashSet<String> uids;
+	HashSet<String> numbers;
+	HashSet<String> addresses;
+	Hashtable<String,String> nx;
+	Hashtable<String,String> ax;
+
+	File uidsFile = new File("/opt/tomcat/webapps/uids.obj");
+	File numbersFile = new File("/opt/tomcat/webapps/numbers.obj");
+	File addressesFile = new File("/opt/tomcat/webapps/addresses.obj");
+	File nxFile = new File("/opt/tomcat/webapps/nx.obj");
+	File axFile = new File("/opt/tomcat/webapps/ax.obj");
 
 	public InputDemo() {
 		super("Prospect Link");
+
+		//------------------------------------------------------------------------
+		if ( uidsFile.exists() ) {
+
+			try {
+				System.out.println( "InputDemo number of uids WTF" );
+				uids = uidManager.readUIDHashset( uidsFile );
+			} catch ( IOException iox ) {
+				iox.printStackTrace();
+			} catch ( ClassNotFoundException cnfe ) {
+				cnfe.printStackTrace();
+			}
+
+			System.out.println( "uids.size " + uids.size() );
+			System.out.println( "uids.contains( abc123.xwic )" + uids.contains("abc123.xwic"));
+
+		} else {
+
+			try {
+				uids = new HashSet<String>();
+				uids.add("abc123.xwic");
+			} catch ( Exception ex1 ) {
+				System.out.println(ex1.toString());
+				ex1.printStackTrace();
+			}
+
+			try {
+				uidManager.writeUIDHashset(uids, uidsFile);
+			} catch ( IOException iox1 ) {
+				System.out.println(iox1.toString());
+				iox1.printStackTrace();
+			}
+		}
+
+		//------------------------------------------------------------------------
+		if ( numbersFile.exists() ) {
+
+			try {
+				numbers = uidManager.readUIDHashset( numbersFile );
+			} catch ( IOException iox ) {
+				iox.printStackTrace();
+			} catch ( ClassNotFoundException cnfe ) {
+				cnfe.printStackTrace();
+			}
+
+			System.out.println( "numbers.size " + numbers.size() );
+			System.out.println( "numbers.contains( 1234567890 )" + uids.contains("1234567890"));
+
+		} else {
+
+			try {
+				numbers = new HashSet<String>();
+				numbers.add("1234567890");
+			} catch ( Exception ex1 ) {
+				System.out.println(ex1.toString());
+				ex1.printStackTrace();
+			}
+
+			try {
+				uidManager.writeNUMBERSHashset(numbers, numbersFile);
+			} catch ( IOException iox1 ) {
+				System.out.println(iox1.toString());
+				iox1.printStackTrace();
+			}
+		}
+
+		//------------------------------------------------------------------------
+		if ( addressesFile.exists() ) {
+
+			try {
+				addresses = uidManager.readADDRESSHashset( addressesFile );
+			} catch ( IOException iox ) {
+				iox.printStackTrace();
+			} catch ( ClassNotFoundException cnfe ) {
+				cnfe.printStackTrace();
+			}
+
+			System.out.println( "addresses.size " + addresses.size() );
+			System.out.println( "addresses.contains( bob@smith.com )" + uids.contains("bob@smith.com"));
+
+		} else {
+
+			try {
+				addresses = new HashSet<String>();
+				addresses.add("bob@smith.com");
+			} catch ( Exception ex1 ) {
+				System.out.println(ex1.toString());
+				ex1.printStackTrace();
+			}
+
+			try {
+				uidManager.writeADDRESSHashset(addresses, addressesFile);
+			} catch ( IOException iox1 ) {
+				System.out.println(iox1.toString());
+				iox1.printStackTrace();
+			}
+		}
+
+		//------------------------------------------------------------------------
+		if ( nxFile.exists() ) {
+
+			try {
+				nx = uidManager.readNXHashtable( nxFile );
+			} catch ( IOException iox ) {
+				iox.printStackTrace();
+			} catch ( ClassNotFoundException cnfe ) {
+				cnfe.printStackTrace();
+			}
+
+			System.out.println( "nx.size " + nx.size() );
+			System.out.println( "addresses.contains( 1234567890 )" + nx.get("1234567890"));
+
+		} else {
+
+			try {
+				nx = new Hashtable<String,String>();
+				nx.put("1234567890","abc123.xwic");
+			} catch ( Exception ex1 ) {
+				System.out.println(ex1.toString());
+				ex1.printStackTrace();
+			}
+
+			try {
+				uidManager.writeNXHashtable(nx, nxFile);
+			} catch ( IOException iox1 ) {
+				System.out.println(iox1.toString());
+				iox1.printStackTrace();
+			}
+		}
+
+		//------------------------------------------------------------------------
+		//File axFile = new File("/opt/tomcat/webapps/ax.obj");
+		if ( axFile.exists() ) {
+
+			try {
+				ax = uidManager.readAXHashtable( axFile );
+			} catch ( IOException iox ) {
+				iox.printStackTrace();
+			} catch ( ClassNotFoundException cnfe ) {
+				cnfe.printStackTrace();
+			}
+
+			System.out.println( "ax.size " + ax.size() );
+			System.out.println( "addresses.contains( bob@smith.com )" + nx.get("bob@smith.com"));
+
+		} else {
+
+			try {
+				ax = new Hashtable<String,String>();
+				ax.put("bob@smith.com","abc123.xwic");
+			} catch ( Exception ex1 ) {
+				System.out.println(ex1.toString());
+				ex1.printStackTrace();
+			}
+
+			try {
+				uidManager.writeAXHashtable( ax, axFile );
+			} catch ( IOException iox1 ) {
+				System.out.println(iox1.toString());
+				iox1.printStackTrace();
+			}
+		}		
 	}
 
 	@Override
@@ -45,7 +231,6 @@ public class InputDemo extends MobileDemoModule {
 		ControlContainer container = new ControlContainer(controlContainer);
 
 		//testSend();
-
 		final Label labelForTextInput = new Label(container, "labelForTextInput");
 		labelForTextInput.setText("Enter your Prospect's mobile number or email.");
 		
@@ -61,6 +246,35 @@ public class InputDemo extends MobileDemoModule {
 				System.out.println("Txt or eamil, send a link to a prospect");
 				System.out.println(textInput.getText());
 
+				String possible_uid = RandomStringGenerator.get(10);
+				possible_uid = possible_uid + ".xwic";
+				System.out.println( "possible_uid " + possible_uid );
+
+				while ( uids.contains( possible_uid ) ) {
+					possible_uid = RandomStringGenerator.get(10);
+					possible_uid = possible_uid + ".xwic";
+					System.out.println( "possible_uid " + possible_uid );
+				}
+
+				uids.add( possible_uid );
+
+				try {
+					uidManager.writeUIDHashset(uids, uidsFile);
+				} catch ( IOException iox1 ) {
+					System.out.println(iox1.toString());
+					iox1.printStackTrace();
+				}
+
+				String clean_up_this_uid = possible_uid;
+
+				possible_uid = possible_uid + ".xml";
+
+				String path = "/opt/tomcat/webapps/uid/";
+				String abc123 = path + "abc123.xwic.xml";
+				String new_uid = path + possible_uid;
+
+				XWICFileGenerator.copyFile( new File( abc123 ), new File( new_uid ) );
+
 				// TODO - much todo here
 				String prospectMsg = textInput.getText();
 
@@ -75,10 +289,17 @@ public class InputDemo extends MobileDemoModule {
 		
 				topicName = "kafkaDev";
 
+
+				String prospectStr = textInput.getText() + ":" + clean_up_this_uid;
+
+
 				producer = new KafkaProducer<String, String>(props);
 				producer.send( 
-					new ProducerRecord<String, String>( topicName, "mobile", textInput.getText() )
+					new ProducerRecord<String, String>( topicName, "mobile", prospectStr )
 				);
+				//producer.send( 
+				//	new ProducerRecord<String, String>( topicName, "mobile", textInput.getText() )
+				//);
 				System.out.println("Message sent");
 				producer.close();
 				producer = null;
@@ -135,9 +356,9 @@ public class InputDemo extends MobileDemoModule {
 		return container;
 	}
 
-	private String generateUUID() {
-		return UUID.randomUUID().toString().replace("-","");
-	}	
+	//private String generateUUID() {
+	//	return UUID.randomUUID().toString().replace("-","");
+	//}	
 
 	/****
 	 * Horible algorithm!!!!  SEE ABOVE NOTE NUMBER 2 
@@ -156,7 +377,6 @@ public class InputDemo extends MobileDemoModule {
 		}
 		return result;
 	}
-
 	
 	/***
 	 * 
@@ -179,31 +399,8 @@ public class InputDemo extends MobileDemoModule {
 	}
 
 
-	public void testSend() {
-		try {
-			Properties props = new Properties();
-			Producer<String, String> producer = null;
-			props.put("bootstrap.servers", "10.10.93.12:9092");
-			props.put("acks", "all");
-			props.put("retries", 0);
-			props.put("batch.size", 16384);
-			props.put("linger.ms", 1);
-			props.put("buffer.memory", 33554432);
-			props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-			props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
-	
-			topicName = "kafkaDev";
-
-			producer = new KafkaProducer<String, String>(props);
-			producer.send( 
-				new ProducerRecord<String, String>( topicName, "mobile", "4434332699" )
-			);
-			System.out.println("Message sent");
-			producer.close();
-	
-		} catch ( Exception ex) {
-			System.out.println(ex.toString());
-			ex.printStackTrace();;
-		}
+	private void setExternalUIDHashsets() {
+		
 	}
+
 }
