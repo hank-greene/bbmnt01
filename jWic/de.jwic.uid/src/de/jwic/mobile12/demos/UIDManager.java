@@ -34,7 +34,7 @@ public class UIDManager implements Serializable {
     private static final long serialVersionUID = 1L;
 
     String UIDS_FILE_NAME = "/opt/tomcat/webapps/uids.obj";
-    String NUMBERS_FILE_NAME = "/opt/tomcat/webapps/numbers.obj";
+    static String NUMBERS_FILE_NAME = "/opt/tomcat/webapps/numbers.obj";
     String ADDRESSES_FILE_NAME = "/opt/tomcat/webapps/addresses.obj";
     String NX_FILE_NAME = "/opt/tomcat/webapps/nx.obj";
     String AX_FILE_NAME = "/opt/tomcat/webapps/ax.obj";
@@ -44,22 +44,22 @@ public class UIDManager implements Serializable {
     File nxFile = new File("/opt/tomcat/webapps/nx.obj");
     File axFile = new File("/opt/tomcat/webapps/ax.obj");
 
-
     private HashSet<String> uidfile = new HashSet<>();
     private HashSet<String> numbers = new HashSet<>();
     private HashSet<String> addresses = new HashSet<>();
     private Hashtable<String,String> nxfile = new Hashtable<>();
     private Hashtable<String,String> axfile = new Hashtable<>();
-    
-    
+        
     public UIDManager() {
     }
 
     // UID
-
-    public HashSet<String> readUIDHashset(File file) throws IOException, ClassNotFoundException {
+    /*****
+     * 
+     * 
+     */
+    public HashSet<String> readUIDHashset( File file ) throws IOException, ClassNotFoundException {
         HashSet<String> uids = null;
-        //try (FileInputStream fis = new FileInputStream(file);
         try (FileInputStream fis = new FileInputStream("/opt/tomcat/webapps/uids.obj");
             ObjectInputStream ois = new ObjectInputStream(fis)) {
 
@@ -87,12 +87,18 @@ public class UIDManager implements Serializable {
         return uids;
     }
 
-    public void writeUIDHashset(HashSet hso, File file) throws IOException {
+    /*****
+     * 
+     * @param hso
+     * @param file
+     * @throws IOException
+     */
+    public void writeUIDHashset( HashSet hso, File file ) throws IOException {
         try (FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
                 oos.writeObject(hso);
                 oos.flush();
-                //oos.close();
+                oos.close();
         }
     }
 
@@ -103,7 +109,7 @@ public class UIDManager implements Serializable {
      * @throws IOException
      * @throws ClassNotFoundException
      */
-    public HashSet<String> readNUMBERSHashset(File file) throws IOException, ClassNotFoundException {
+    public static HashSet<String> readNUMBERSHashset( File file ) throws IOException, ClassNotFoundException {
 
         HashSet<String> nums = null;
         try (FileInputStream fis = new FileInputStream(NUMBERS_FILE_NAME);
@@ -126,12 +132,55 @@ public class UIDManager implements Serializable {
         return nums;
     }
 
-    public void writeNUMBERSHashset(HashSet nso, File file) throws IOException {
-        try (FileOutputStream fos = new FileOutputStream(file);
-            ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+    /***
+     * NUMBERS
+     * @param file
+     * @return
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
+    public static HashSet<String> getNUMBERSHashset() {
+
+        HashSet<String> nums = null;
+        try (FileInputStream fis = new FileInputStream(NUMBERS_FILE_NAME);
+            ObjectInputStream ois = new ObjectInputStream(fis)) {
+
+                Object obj = ois.readObject();
+                System.out.println(obj.getClass());
+
+                nums = (HashSet<String>)obj;
+                //uids = (HashSet) ois.readObject();
+                if ( nums == null ) {
+                    System.out.println( "UIDManager.readNUMBERHashSet uids == null" );
+                } else {
+                    System.out.println( "UIDManager.readNUMBERHashSet number of uids " + nums.size() );       
+                }
+                ois.close();
+
+
+                System.out.println( nums.size() );
+                System.out.println( "nums.contains( 4434332699 ) " + nums.contains( " 4434332699" ));
+
+
+        } catch ( IOException iox ) {
+            iox.printStackTrace();
+        } catch ( ClassCastException cce ) {
+            cce.printStackTrace();
+        } catch (Exception ex ) {
+            ex.printStackTrace();
+        }
+        return nums;
+    }
+
+    /*****
+     * 
+     */
+    public void writeNUMBERSHashset( HashSet nso, File file ) throws IOException {
+        try (FileOutputStream fos = new FileOutputStream( file );
+            ObjectOutputStream oos = new ObjectOutputStream( fos )) {
                 oos.writeObject(nso);
                 oos.flush();
-                //oos.close();
+                oos.close();
         }
     }
 
@@ -167,6 +216,12 @@ public class UIDManager implements Serializable {
         return nums;
     }
 
+    /*****
+     * 
+     * @param nso
+     * @param file
+     * @throws IOException
+     */
     public void writeADDRESSHashset(HashSet nso, File file) throws IOException {
         try (FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -201,6 +256,12 @@ public class UIDManager implements Serializable {
         return nums;
     }
 
+    /******
+     * 
+     * @param nso
+     * @param file
+     * @throws IOException
+     */
     public void writeNXHashtable(Hashtable nso, File file) throws IOException {
         try (FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -211,6 +272,13 @@ public class UIDManager implements Serializable {
     }
 
     // ax
+    /*****
+     * 
+     * @param file
+     * @return
+     * @throws IOException
+     * @throws ClassNotFoundException
+     */
     public Hashtable<String,String> readAXHashtable(File file) throws IOException, ClassNotFoundException {
 
         Hashtable<String,String> nums = null;
@@ -234,6 +302,12 @@ public class UIDManager implements Serializable {
         return nums;
     }
 
+    /****
+     * 
+     * @param nso
+     * @param file
+     * @throws IOException
+     */
     public void writeAXHashtable(Hashtable nso, File file) throws IOException {
         try (FileOutputStream fos = new FileOutputStream(file);
             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
@@ -242,7 +316,4 @@ public class UIDManager implements Serializable {
                 //oos.close();
         }
     }
-
-
-
 }

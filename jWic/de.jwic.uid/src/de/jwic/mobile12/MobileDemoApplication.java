@@ -24,7 +24,7 @@ public class MobileDemoApplication extends Application {
 		mobileDemoModules.add(new FrontPage2());
 		mobileDemoModules.add(new MobileAudioRND());
 		mobileDemoModules.add(new AudioDevPage());
-		//mobileDemoModules.add(new SelectMenuDemo12());
+		mobileDemoModules.add(new SelectMenuDemo12());
 		mobileDemoModules.add(new InputDemo());
 		
 		return new MobileDemoPage(container, "demoPage", mobileDemoModules);

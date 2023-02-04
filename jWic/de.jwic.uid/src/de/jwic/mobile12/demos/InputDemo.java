@@ -17,20 +17,19 @@ import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerRecord;
 
 import java.util.Properties;
-import java.util.UUID;
 
 import de.jwic.mobile12.BBMNTProperties;
-import de.jwic.mobile12.BBMNTConstants;
+//import de.jwic.mobile12.BBMNTConstants;
 
 import java.io.File;
-import java.nio.file.Files;
+//import java.nio.file.Files;
 
-import de.jwic.mobile12.demos.UIDManager;
-import de.jwic.mobile12.demos.RandomStringGenerator;
+//import de.jwic.mobile12.demos.UIDManager;
+//import de.jwic.mobile12.demos.RandomStringGenerator;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.io.IOException;
-import java.io.FileNotFoundException;
+//import java.io.FileNotFoundException;
 import java.lang.ClassNotFoundException;
 
 /**
@@ -48,11 +47,6 @@ public class InputDemo extends MobileDemoModule {
 	//TODO: read from bbmnt.properties file
 	String topicName = "kafkaDev";
 
-	HashSet<String> uids;
-	HashSet<String> numbers;
-	HashSet<String> addresses;
-	Hashtable<String,String> nx;
-	Hashtable<String,String> ax;
 
 	File uidsFile = new File("/opt/tomcat/webapps/uids.obj");
 	File numbersFile = new File("/opt/tomcat/webapps/numbers.obj");
@@ -60,8 +54,172 @@ public class InputDemo extends MobileDemoModule {
 	File nxFile = new File("/opt/tomcat/webapps/nx.obj");
 	File axFile = new File("/opt/tomcat/webapps/ax.obj");
 
+	HashSet<String> uids;
+	HashSet<String> numbers = UIDManager.getNUMBERSHashset();   
+	HashSet<String> addresses;
+	Hashtable<String,String> nx;
+	Hashtable<String,String> ax;
+
 	public InputDemo() {
 		super("Prospect Link");
+		setExternalUIDHashsets();
+	}
+
+	@Override
+	public Control createPage(IControlContainer controlContainer) {
+		ControlContainer container = new ControlContainer(controlContainer);
+
+		System.out.println("numbers = UIDManager.getNUMBERSHashset();");
+		numbers = UIDManager.getNUMBERSHashset();   
+
+		final Label labelForTextInput = new Label(container, "labelForTextInput");
+		labelForTextInput.setText("Enter your Prospect's mobile number or email.");
+		
+		final MInputBox textInput = new MInputBox(container, "textInput");
+		textInput.setText(" ");
+		textInput.setClearBtn(true);
+		
+		final Label labelNotes = new Label(container, "labelNotes");
+		labelNotes.setText("Add a note to remember them, e.g. name, or whatever.");
+
+		final MInputBox textNote = new MInputBox(container, "textNote");
+		textNote.setText(" ");
+		textNote.setClearBtn(true);
+
+		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
+		toggleFromJava.setTitle( "Send" );
+
+		final Label labelSendResult = new Label(container, "labelMSGSent");
+		labelSendResult.setText("<br/>");
+
+		toggleFromJava.addSelectionListener(new SelectionListener() {
+			@Override
+			public void objectSelected(SelectionEvent event) {
+
+				String sendResultMsg = "not set";
+
+				System.out.println("Txt or eamil, send a link to a prospect");
+				System.out.println(textInput.getText().trim());
+				String mobile_num = textInput.getText().trim();
+
+				System.out.println( "numbers file exists " + numbersFile.exists() );
+				System.out.println( "numbers.contains( " + mobile_num.trim() + " ) " + numbers.contains( mobile_num ) );
+
+				if ( numbers.contains( mobile_num.trim() ) ) {
+
+					System.out.println(" " + mobile_num + " has a link " + numbers.contains( mobile_num.trim() ) );
+					System.out.println("            " + nx.get( mobile_num ) );
+					sendResultMsg = mobile_num + " has account, " + nx.get( mobile_num.trim() ) + 
+					                          ". Link sent.";
+
+					String clean_up_this_uid = nx.get( mobile_num.trim() );
+
+					String prospectStr = textInput.getText() + ":" + clean_up_this_uid + ".xwic";
+					push_mobile_and_uid_onto_kafka_channel( prospectStr );
+
+				} else {
+
+					String possible_uid_str = RandomStringGenerator.get(10);
+					String possible_uid = possible_uid_str + ".xwic";
+					System.out.println( "possible_uid " + possible_uid );
+
+					while ( uids.contains( possible_uid ) ) {
+						possible_uid_str = RandomStringGenerator.get(10);
+						possible_uid = possible_uid_str + ".xwic";
+					}
+
+					uids.add( possible_uid_str );
+					numbers.add( mobile_num.trim() );
+					nx.put( mobile_num, possible_uid_str );
+					// address.add ( email_address );
+					// ax.put ( email_address, possible_uid_str );
+
+					try {
+						uidManager.writeUIDHashset( uids, uidsFile );
+						uidManager.writeNUMBERSHashset( numbers, numbersFile );
+						uidManager.writeNXHashtable( nx, nxFile );
+						// uidManager.writeNUMBERSHashset( numbers, numbersFile );
+						// uidManager.writeAXHashtable( ax, axFile );
+					} catch ( IOException iox1 ) {
+						System.out.println( iox1.toString() );
+						iox1.printStackTrace();
+					}
+
+					String clean_up_this_uid = possible_uid;
+					possible_uid = possible_uid + ".xml";
+
+					String path = "/opt/tomcat/webapps/uid/";
+					String abc123 = path + "abc123.xwic.xml";
+					String new_uid = path + possible_uid;
+
+					XWICFileGenerator.copyFile( new File( abc123 ), new File( new_uid ) );
+
+					String prospectStr = textInput.getText() + ":" + clean_up_this_uid;
+
+					push_mobile_and_uid_onto_kafka_channel( prospectStr );
+
+					// TODO - much todo here
+					//String prospectMsg = textInput.getText();
+					/*****
+					props.put("bootstrap.servers", "10.10.93.12:9092");
+					props.put("acks", "all");
+					props.put("retries", 0);
+					props.put("batch.size", 16384);
+					props.put("linger.ms", 1);
+					props.put("buffer.memory", 33554432);
+					props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+					props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
+			
+					topicName = "kafkaDev";
+
+					producer = new KafkaProducer<String, String>(props);
+					producer.send( 
+						new ProducerRecord<String, String>( topicName, "mobile", prospectStr )
+					);
+					 */
+					//producer.send( 
+					//	new ProducerRecord<String, String>( topicName, "mobile", textInput.getText() )
+					//);
+
+					System.out.println("Message sent");
+					producer.close();
+					producer = null;
+
+					sendResultMsg = " User ID, " + possible_uid_str + ", sent to " + mobile_num + ".";
+
+				} 
+
+				textInput.setText(" ");
+				labelSendResult.setText( sendResultMsg );
+
+			}
+		});
+
+		return container;
+	}
+
+
+	private void push_mobile_and_uid_onto_kafka_channel( String muid ) {
+
+		props.put("bootstrap.servers", "10.10.93.12:9092");
+		props.put("acks", "all");
+		props.put("retries", 0);
+		props.put("batch.size", 16384);
+		props.put("linger.ms", 1);
+		props.put("buffer.memory", 33554432);
+		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+		props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
+
+		topicName = "kafkaDev";
+
+		producer = new KafkaProducer<String, String>(props);
+		producer.send( 
+			new ProducerRecord<String, String>( topicName, "mobile", muid )
+		);
+
+	}
+	
+	private void setExternalUIDHashsets() {
 
 		//------------------------------------------------------------------------
 		if ( uidsFile.exists() ) {
@@ -225,182 +383,4 @@ public class InputDemo extends MobileDemoModule {
 			}
 		}		
 	}
-
-	@Override
-	public Control createPage(IControlContainer controlContainer) {
-		ControlContainer container = new ControlContainer(controlContainer);
-
-		//testSend();
-		final Label labelForTextInput = new Label(container, "labelForTextInput");
-		labelForTextInput.setText("Enter your Prospect's mobile number or email.");
-		
-		final MInputBox textInput = new MInputBox(container, "textInput");
-		textInput.setText(" ");
-		textInput.setClearBtn(true);
-		
-		final MButton toggleFromJava = new MButton(container, "toggleFromJava");
-		toggleFromJava.setTitle("Send");
-		toggleFromJava.addSelectionListener(new SelectionListener() {
-			@Override
-			public void objectSelected(SelectionEvent event) {
-				System.out.println("Txt or eamil, send a link to a prospect");
-				System.out.println(textInput.getText());
-
-				String possible_uid = RandomStringGenerator.get(10);
-				possible_uid = possible_uid + ".xwic";
-				System.out.println( "possible_uid " + possible_uid );
-
-				while ( uids.contains( possible_uid ) ) {
-					possible_uid = RandomStringGenerator.get(10);
-					possible_uid = possible_uid + ".xwic";
-					System.out.println( "possible_uid " + possible_uid );
-				}
-
-				uids.add( possible_uid );
-
-				try {
-					uidManager.writeUIDHashset(uids, uidsFile);
-				} catch ( IOException iox1 ) {
-					System.out.println(iox1.toString());
-					iox1.printStackTrace();
-				}
-
-				String clean_up_this_uid = possible_uid;
-
-				possible_uid = possible_uid + ".xml";
-
-				String path = "/opt/tomcat/webapps/uid/";
-				String abc123 = path + "abc123.xwic.xml";
-				String new_uid = path + possible_uid;
-
-				XWICFileGenerator.copyFile( new File( abc123 ), new File( new_uid ) );
-
-				// TODO - much todo here
-				String prospectMsg = textInput.getText();
-
-				props.put("bootstrap.servers", "10.10.93.12:9092");
-				props.put("acks", "all");
-				props.put("retries", 0);
-				props.put("batch.size", 16384);
-				props.put("linger.ms", 1);
-				props.put("buffer.memory", 33554432);
-				props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-				props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
-		
-				topicName = "kafkaDev";
-
-
-				String prospectStr = textInput.getText() + ":" + clean_up_this_uid;
-
-
-				producer = new KafkaProducer<String, String>(props);
-				producer.send( 
-					new ProducerRecord<String, String>( topicName, "mobile", prospectStr )
-				);
-				//producer.send( 
-				//	new ProducerRecord<String, String>( topicName, "mobile", textInput.getText() )
-				//);
-				System.out.println("Message sent");
-				producer.close();
-				producer = null;
-				//        What if the email or number ALREADY as a UID <<<< !!!!!!!!
-				/***
-				 * 
-				 * this implementation is not going to scale, but it starts working
-				 * 
-				 * DATA GETS WIPED OUT
-				 * everytime a new war gets deployed this data gets wiped out
-				 * 
-				 * 
-				 * IDEA number 1
-				 * the CURRENT ALGORYTHM
-				 *     generate a uuid
-				 * 
-				 * 	   uuid_exists = true;
-				 *     while uuid_exists loop {
-				 *        for ( loop throug uids, x++ ) {
-				 *             if ( uid[x].contains(uuid) == true) {
-				 *             } else {
-				 *             }
-				 *        }
-				 *     }
-				 * 
-				 * IDEA number 2
-				 * if uid_hash_table exists then
-				 *    while uid_hash_table.contains( uid ) {
-				 *      generate a new uid
-				 *    )
-				 *    uid_hast_table put uid
-				 *    copy file abc123.xwic.xml to uid.xwic.xml
-				 * 
-				 * else if uid_hash_table does not exists then
-				 *    create it?
-				 *    or
-				 *    pull it from some location
-				 * 
-				 */ 
-				/******
-				String uuid = generateUUID();
-				System.out.println("uuid = generateUUID() " + uuid);
-				while (does_UID_Exist(uuid)) {
-					uuid = generateUUID();
-				}
-				uuid = createNewUID(uuid);
-				System.out.println("uuid = createNewUID(uuid) " + uuid);
-				uuid = "matt1316.online/samples/mobile12/uid/" + uuid; 
-				System.out.println("uuid = textInput.getText() + @ + " + uuid);
-				String prospectMsg = textInput.getText() + ":" + uuid;
-				 */
-			}
-		});
-		return container;
-	}
-
-	//private String generateUUID() {
-	//	return UUID.randomUUID().toString().replace("-","");
-	//}	
-
-	/****
-	 * Horible algorithm!!!!  SEE ABOVE NOTE NUMBER 2 
-	 * @param id
-	 * @return
-	 */
-	private boolean does_UID_Exist(String id) {
-		boolean result = false;
-		File uid = new File("/opt/tomcat/webapps/samples/mobile12/uid");
-		File[] uids = uid.listFiles();
-
-		for (int x=0; x<uids.length; x++) {
-			if (uids[x].getName().contains(id)==true){
-				result = true;
-			}
-		}
-		return result;
-	}
-	
-	/***
-	 * 
-	 * 
-	 * 
-	 * @param uid
-	 */
-	private String createNewUID(String uid) {
-		String newUID = uid+".xwic.xml";
-		try {
-			File source = new File("/opt/tomcat/webapps/samples/mobile12/uid/abc123.xwic.xml");
-			File dest = new File("/opt/tomcat/webapps/samples/mobile12/uid/"+newUID);
-        	Files.copy(source.toPath(), dest.toPath());
-		} catch (Exception ex) {
-			System.out.println(ex.toString());
-			newUID = "file creation failed";
-		}
-		newUID = uid + ".xwic";
-		return newUID;
-	}
-
-
-	private void setExternalUIDHashsets() {
-		
-	}
-
 }
