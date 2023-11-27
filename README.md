@@ -1,6 +1,10 @@
 # magneticechos.online
 
-A desire to listen to a bunch of old Amway and sermon tapes inspired the creation of this site, this locally run server (which crashed a while ago).
+A desire to listen to a bunch of old Amway and sermon tapes inspired the creation of this site on a locally run server.
+
+The server crashed and it's in the process of being rebuilt.
+
+The cert has expired and will be updated after the rebuild.
 
 Previous work over the years with jWic propelled its continued usage as the web framewrok for this sytem.
 
