@@ -8,7 +8,7 @@ Orinially called Brown Box Motivation and Training pics of the site follow.
 
 ### starting page
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/01-front-page.png?raw=true"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/01-front-page.png?raw=true" width="50%" height="50%"/>
 
 ### menu
 
