@@ -6,3 +6,4 @@ Previous work over the years with jWic propelled its continued usage as the web 
 
 Orinially called Brown Box Motivation and Training pics of the site follow.
 
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/01-front-page.png?raw=true"/>
