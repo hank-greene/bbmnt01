@@ -24,8 +24,7 @@ Orinially called Brown Box Motivation and Training pics of the site follow.
 
 ### different view of "echos"
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/05-echo-list
-.png?raw=true" style="width:200px ; height:300px"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/05-echo-list.png?raw=true" style="width:200px ; height:300px"/>
 
 ### send to prospect
 
