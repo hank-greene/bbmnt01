@@ -1,12 +1,8 @@
-# bbmnt01
-Brown Box Motivation and Training
+# magneticechos.online
 
-## build bbmnt
+A desire to listen to a bunch of old Amway and sermon tapes inspired the creation of this site, this locally run server (which crashed a while ago).
 
-sudo apt-get install openjdk-8-jdk
+Previous work over the years with jWic propelled its continued usage as the web framewrok for this sytem.
 
-sudo apt install maven
+Orinially called Brown Box Motivation and Training pics of the site follow.
 
-cd jWic
-
-mvn build
