@@ -12,26 +12,26 @@ Orinially called Brown Box Motivation and Training pics of the site follow.
 
 ### menu
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/02-menu.png?raw=true"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/02-menu.png?raw=true" style="width:200px ; height:300px"/>
 
 ### table of "echos"
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/03-table.png?raw=true"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/03-table.png?raw=true" style="width:200px ; height:300px"/>
 
 ### videos
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/04-videos.png?raw=true"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/04-videos.png?raw=true" style="width:200px ; height:300px"/>
 
 ### different view of "echos"
 
 <img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/05-echo-list
-.png?raw=true"/>
+.png?raw=true" style="width:200px ; height:300px"/>
 
 ### send to prospect
 
 Use this to build an Amway business, but that's no longer an objective.
 
-<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/06-send-to-prospect.png?raw=true"/>
+<img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/06-send-to-prospect.png?raw=true" style="width:200px ; height:300px"/>
 
 
 
