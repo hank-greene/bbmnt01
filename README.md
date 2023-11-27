@@ -32,7 +32,7 @@ Orinially called Brown Box Motivation and Training pics of the site follow.
 
 ### send to prospect
 
-Use this to build an Amway business, but that's no longer an objective.
+No longer an objective, the idea was to use this to build an Amway business.
 
 <img src="https://github.com/hank-greene/magneticechos.online/blob/main/00-pics/06-send-to-prospect.png?raw=true" style="width:200px ; height:300px"/>
 
